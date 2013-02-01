@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95497F1716BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
+		95497F1916BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
+		95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1A16BB637000952D2A /* CoreGraphics.framework */; };
+		95497F2116BB637000952D2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95497F1F16BB637000952D2A /* InfoPlist.strings */; };
+		95497F2316BB637000952D2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F2216BB637000952D2A /* main.m */; };
+		95497F2716BB637000952D2A /* PAYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F2616BB637000952D2A /* PAYAppDelegate.m */; };
+		95497F2916BB637000952D2A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2816BB637000952D2A /* Default.png */; };
+		95497F2B16BB637000952D2A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2A16BB637000952D2A /* Default@2x.png */; };
+		95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2C16BB637000952D2A /* Default-568h@2x.png */; };
+		95497F3016BB637000952D2A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */; };
+		95497F3316BB637000952D2A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */; };
+		95497F3616BB637000952D2A /* PAYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F3516BB637000952D2A /* PAYViewController.m */; };
+		95497F3E16BB637000952D2A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F3D16BB637000952D2A /* SenTestingKit.framework */; };
+		95497F3F16BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
+		95497F4016BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
+		95497F4816BB637000952D2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95497F4616BB637000952D2A /* InfoPlist.strings */; };
+		95497F4B16BB637000952D2A /* EZ_Payment_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F4A16BB637000952D2A /* EZ_Payment_CalculatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95497F4116BB637000952D2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95497F0916BB637000952D2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95497F1116BB637000952D2A;
+			remoteInfo = "EZ Payment Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95497F1216BB637000952D2A /* EZ Payment Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Payment Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		95497F1A16BB637000952D2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		95497F1E16BB637000952D2A /* EZ Payment Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZ Payment Calculator-Info.plist"; sourceTree = "<group>"; };
+		95497F2016BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		95497F2216BB637000952D2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		95497F2416BB637000952D2A /* EZ Payment Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZ Payment Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		95497F2516BB637000952D2A /* PAYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAYAppDelegate.h; sourceTree = "<group>"; };
+		95497F2616BB637000952D2A /* PAYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAYAppDelegate.m; sourceTree = "<group>"; };
+		95497F2816BB637000952D2A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		95497F2A16BB637000952D2A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		95497F2C16BB637000952D2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		95497F2F16BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		95497F3216BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		95497F3416BB637000952D2A /* PAYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAYViewController.h; sourceTree = "<group>"; };
+		95497F3516BB637000952D2A /* PAYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAYViewController.m; sourceTree = "<group>"; };
+		95497F3C16BB637000952D2A /* EZ Payment CalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EZ Payment CalculatorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95497F3D16BB637000952D2A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		95497F4516BB637000952D2A /* EZ Payment CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZ Payment CalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		95497F4716BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		95497F4916BB637000952D2A /* EZ_Payment_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZ_Payment_CalculatorTests.h; sourceTree = "<group>"; };
+		95497F4A16BB637000952D2A /* EZ_Payment_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZ_Payment_CalculatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95497F0F16BB637000952D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95497F1716BB637000952D2A /* UIKit.framework in Frameworks */,
+				95497F1916BB637000952D2A /* Foundation.framework in Frameworks */,
+				95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95497F3816BB637000952D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95497F3E16BB637000952D2A /* SenTestingKit.framework in Frameworks */,
+				95497F3F16BB637000952D2A /* UIKit.framework in Frameworks */,
+				95497F4016BB637000952D2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95497F0716BB637000952D2A = {
+			isa = PBXGroup;
+			children = (
+				95497F1C16BB637000952D2A /* EZ Payment Calculator */,
+				95497F4316BB637000952D2A /* EZ Payment CalculatorTests */,
+				95497F1516BB637000952D2A /* Frameworks */,
+				95497F1316BB637000952D2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95497F1316BB637000952D2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95497F1216BB637000952D2A /* EZ Payment Calculator.app */,
+				95497F3C16BB637000952D2A /* EZ Payment CalculatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95497F1516BB637000952D2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95497F1616BB637000952D2A /* UIKit.framework */,
+				95497F1816BB637000952D2A /* Foundation.framework */,
+				95497F1A16BB637000952D2A /* CoreGraphics.framework */,
+				95497F3D16BB637000952D2A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95497F1C16BB637000952D2A /* EZ Payment Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				95497F2516BB637000952D2A /* PAYAppDelegate.h */,
+				95497F2616BB637000952D2A /* PAYAppDelegate.m */,
+				95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */,
+				95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */,
+				95497F3416BB637000952D2A /* PAYViewController.h */,
+				95497F3516BB637000952D2A /* PAYViewController.m */,
+				95497F1D16BB637000952D2A /* Supporting Files */,
+			);
+			path = "EZ Payment Calculator";
+			sourceTree = "<group>";
+		};
+		95497F1D16BB637000952D2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95497F1E16BB637000952D2A /* EZ Payment Calculator-Info.plist */,
+				95497F1F16BB637000952D2A /* InfoPlist.strings */,
+				95497F2216BB637000952D2A /* main.m */,
+				95497F2416BB637000952D2A /* EZ Payment Calculator-Prefix.pch */,
+				95497F2816BB637000952D2A /* Default.png */,
+				95497F2A16BB637000952D2A /* Default@2x.png */,
+				95497F2C16BB637000952D2A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95497F4316BB637000952D2A /* EZ Payment CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				95497F4916BB637000952D2A /* EZ_Payment_CalculatorTests.h */,
+				95497F4A16BB637000952D2A /* EZ_Payment_CalculatorTests.m */,
+				95497F4416BB637000952D2A /* Supporting Files */,
+			);
+			path = "EZ Payment CalculatorTests";
+			sourceTree = "<group>";
+		};
+		95497F4416BB637000952D2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95497F4516BB637000952D2A /* EZ Payment CalculatorTests-Info.plist */,
+				95497F4616BB637000952D2A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95497F1116BB637000952D2A /* EZ Payment Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment Calculator" */;
+			buildPhases = (
+				95497F0E16BB637000952D2A /* Sources */,
+				95497F0F16BB637000952D2A /* Frameworks */,
+				95497F1016BB637000952D2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EZ Payment Calculator";
+			productName = "EZ Payment Calculator";
+			productReference = 95497F1216BB637000952D2A /* EZ Payment Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95497F3B16BB637000952D2A /* EZ Payment CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95497F5116BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment CalculatorTests" */;
+			buildPhases = (
+				95497F3716BB637000952D2A /* Sources */,
+				95497F3816BB637000952D2A /* Frameworks */,
+				95497F3916BB637000952D2A /* Resources */,
+				95497F3A16BB637000952D2A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95497F4216BB637000952D2A /* PBXTargetDependency */,
+			);
+			name = "EZ Payment CalculatorTests";
+			productName = "EZ Payment CalculatorTests";
+			productReference = 95497F3C16BB637000952D2A /* EZ Payment CalculatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95497F0916BB637000952D2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PAY;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = GroundSpeed;
+			};
+			buildConfigurationList = 95497F0C16BB637000952D2A /* Build configuration list for PBXProject "EZ Payment Calculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 95497F0716BB637000952D2A;
+			productRefGroup = 95497F1316BB637000952D2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95497F1116BB637000952D2A /* EZ Payment Calculator */,
+				95497F3B16BB637000952D2A /* EZ Payment CalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95497F1016BB637000952D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95497F2116BB637000952D2A /* InfoPlist.strings in Resources */,
+				95497F2916BB637000952D2A /* Default.png in Resources */,
+				95497F2B16BB637000952D2A /* Default@2x.png in Resources */,
+				95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */,
+				95497F3016BB637000952D2A /* MainStoryboard_iPhone.storyboard in Resources */,
+				95497F3316BB637000952D2A /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95497F3916BB637000952D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95497F4816BB637000952D2A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95497F3A16BB637000952D2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95497F0E16BB637000952D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95497F2316BB637000952D2A /* main.m in Sources */,
+				95497F2716BB637000952D2A /* PAYAppDelegate.m in Sources */,
+				95497F3616BB637000952D2A /* PAYViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95497F3716BB637000952D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95497F4B16BB637000952D2A /* EZ_Payment_CalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95497F4216BB637000952D2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95497F1116BB637000952D2A /* EZ Payment Calculator */;
+			targetProxy = 95497F4116BB637000952D2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95497F1F16BB637000952D2A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95497F2016BB637000952D2A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95497F2F16BB637000952D2A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95497F3216BB637000952D2A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		95497F4616BB637000952D2A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95497F4716BB637000952D2A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95497F4C16BB637000952D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95497F4D16BB637000952D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95497F4F16BB637000952D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment Calculator/EZ Payment Calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		95497F5016BB637000952D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment Calculator/EZ Payment Calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		95497F5216BB637000952D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZ Payment Calculator.app/EZ Payment Calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment CalculatorTests/EZ Payment CalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		95497F5316BB637000952D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZ Payment Calculator.app/EZ Payment Calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment CalculatorTests/EZ Payment CalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95497F0C16BB637000952D2A /* Build configuration list for PBXProject "EZ Payment Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95497F4C16BB637000952D2A /* Debug */,
+				95497F4D16BB637000952D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95497F4F16BB637000952D2A /* Debug */,
+				95497F5016BB637000952D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		95497F5116BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95497F5216BB637000952D2A /* Debug */,
+				95497F5316BB637000952D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95497F0916BB637000952D2A /* Project object */;
+}
