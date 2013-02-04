@@ -24,6 +24,12 @@
 		95497F4016BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
 		95497F4816BB637000952D2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95497F4616BB637000952D2A /* InfoPlist.strings */; };
 		95497F4B16BB637000952D2A /* EZ_Payment_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F4A16BB637000952D2A /* EZ_Payment_CalculatorTests.m */; };
+		95497F5916BB6FC200952D2A /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F5816BB6FC200952D2A /* house.png */; };
+		95497F5D16BB725200952D2A /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F5C16BB725200952D2A /* other.png */; };
+		95497F6116BB786800952D2A /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6016BB786800952D2A /* refresh.png */; };
+		95497F6316BB789C00952D2A /* calculate.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6216BB789C00952D2A /* calculate.png */; };
+		95497F6A16BC149B00952D2A /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6816BC149B00952D2A /* settings.png */; };
+		95497F6B16BC149B00952D2A /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6916BC149B00952D2A /* settings@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,12 @@
 		95497F4716BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95497F4916BB637000952D2A /* EZ_Payment_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZ_Payment_CalculatorTests.h; sourceTree = "<group>"; };
 		95497F4A16BB637000952D2A /* EZ_Payment_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZ_Payment_CalculatorTests.m; sourceTree = "<group>"; };
+		95497F5816BB6FC200952D2A /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		95497F5C16BB725200952D2A /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
+		95497F6016BB786800952D2A /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		95497F6216BB789C00952D2A /* calculate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculate.png; sourceTree = "<group>"; };
+		95497F6816BC149B00952D2A /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		95497F6916BC149B00952D2A /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +131,12 @@
 		95497F1C16BB637000952D2A /* EZ Payment Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				95497F5516BB654200952D2A /* Models */,
+				95497F5416BB653C00952D2A /* Views */,
+				95497F5616BB656300952D2A /* Controllers */,
 				95497F2516BB637000952D2A /* PAYAppDelegate.h */,
 				95497F2616BB637000952D2A /* PAYAppDelegate.m */,
-				95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */,
-				95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */,
-				95497F3416BB637000952D2A /* PAYViewController.h */,
-				95497F3516BB637000952D2A /* PAYViewController.m */,
+				95497F5716BB656A00952D2A /* Images */,
 				95497F1D16BB637000952D2A /* Supporting Files */,
 			);
 			path = "EZ Payment Calculator";
@@ -161,6 +173,44 @@
 				95497F4616BB637000952D2A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95497F5416BB653C00952D2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */,
+				95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		95497F5516BB654200952D2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		95497F5616BB656300952D2A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95497F3416BB637000952D2A /* PAYViewController.h */,
+				95497F3516BB637000952D2A /* PAYViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		95497F5716BB656A00952D2A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				95497F6816BC149B00952D2A /* settings.png */,
+				95497F6916BC149B00952D2A /* settings@2x.png */,
+				95497F6016BB786800952D2A /* refresh.png */,
+				95497F6216BB789C00952D2A /* calculate.png */,
+				95497F5C16BB725200952D2A /* other.png */,
+				95497F5816BB6FC200952D2A /* house.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +291,12 @@
 				95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */,
 				95497F3016BB637000952D2A /* MainStoryboard_iPhone.storyboard in Resources */,
 				95497F3316BB637000952D2A /* MainStoryboard_iPad.storyboard in Resources */,
+				95497F5916BB6FC200952D2A /* house.png in Resources */,
+				95497F5D16BB725200952D2A /* other.png in Resources */,
+				95497F6116BB786800952D2A /* refresh.png in Resources */,
+				95497F6316BB789C00952D2A /* calculate.png in Resources */,
+				95497F6A16BC149B00952D2A /* settings.png in Resources */,
+				95497F6B16BC149B00952D2A /* settings@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
