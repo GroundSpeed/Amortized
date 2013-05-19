@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:EZ Payment Calculator.xcodeproj">
+      location = "self:Pay Calc.xcodeproj">
    </FileRef>
 </Workspace>

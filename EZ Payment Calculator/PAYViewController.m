@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self getInterestRates];
+    //[self getInterestRates];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,57 +84,28 @@ numberOfRowsInComponent:(NSInteger)component
 
 }
 
--(void)getInterestRates
-{    
-    // Variable to store our API Key
-    NSString* const API_KEY = @"X1-ZWz1bim5o6gxsb_5i268";
-    NSString* searchURL = [NSString
-                           stringWithFormat:@"http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=%@&output=json",
-                           API_KEY];
-    
-    NSLog(@"%@", searchURL);
-    
-    NSError *error = nil;
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:searchURL]];
-    
-    if (jsonData)
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    if (touch != nil)
     {
-        id jsonObjects = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                         options:NSJSONReadingMutableContainers
-                                                           error:&error];
-        
-        if (error)
-        {
-            NSLog(@"error is %@", [error localizedDescription]);
-            
-            // Handle Error and return
-            return;
-        }
-        
-       	NSDictionary *dictInterest = [jsonObjects objectForKey:@"response"];
-        NSLog(@"%@", dictInterest);
-        
-        NSDictionary *today = [dictInterest objectForKey:@"today"];
-        NSLog(@"%@", today);
-        
-        NSString *thirtyYearFixed = [today objectForKey:@"thirtyYearFixed"];
-        NSLog(@"%@", thirtyYearFixed);
-        [_arrayInterestRates addObject:thirtyYearFixed];
-        [_arrayInterestLabels addObject:@"30 Year Fixed"];
+        [_txtAmount resignFirstResponder];
+        [_txtDownPayment resignFirstResponder];
+        [_txtInterestRate resignFirstResponder];
+        [_txtPMI resignFirstResponder];
+    }
+}
 
-        NSString *fifteenYearFixed = [today objectForKey:@"fifteenYearFixed"];
-        NSLog(@"%@", fifteenYearFixed);
-        [_arrayInterestRates addObject:fifteenYearFixed];
-        [_arrayInterestLabels addObject:@"15 Year Fixed"];
-        
-        NSString *fiveOneARM = [today objectForKey:@"fiveOneARM"];
-        NSLog(@"%@", fiveOneARM);
-        [_arrayInterestRates addObject:fiveOneARM];
-        [_arrayInterestLabels addObject:@"5/1 Year ARM"];        
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (_txtTerm.tag == 30)
+    {
+        [_txtTerm resignFirstResponder];
+        [_pickTerms setHidden:NO];
     }
     else
     {
-        // Handle Error
+        [_pickTerms setHidden:YES];
     }
 }
 

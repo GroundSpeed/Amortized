@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95497F1116BB637000952D2A"
                BuildableName = "EZ Payment Calculator.app"
-               BlueprintName = "EZ Payment Calculator"
-               ReferencedContainer = "container:EZ Payment Calculator.xcodeproj">
+               BlueprintName = "Pay Calc"
+               ReferencedContainer = "container:Pay Calc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95497F3B16BB637000952D2A"
                BuildableName = "EZ Payment CalculatorTests.octest"
-               BlueprintName = "EZ Payment CalculatorTests"
-               ReferencedContainer = "container:EZ Payment Calculator.xcodeproj">
+               BlueprintName = "Pay CalcTests"
+               ReferencedContainer = "container:Pay Calc.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95497F1116BB637000952D2A"
             BuildableName = "EZ Payment Calculator.app"
-            BlueprintName = "EZ Payment Calculator"
-            ReferencedContainer = "container:EZ Payment Calculator.xcodeproj">
+            BlueprintName = "Pay Calc"
+            ReferencedContainer = "container:Pay Calc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95497F1116BB637000952D2A"
             BuildableName = "EZ Payment Calculator.app"
-            BlueprintName = "EZ Payment Calculator"
-            ReferencedContainer = "container:EZ Payment Calculator.xcodeproj">
+            BlueprintName = "Pay Calc"
+            ReferencedContainer = "container:Pay Calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95497F1116BB637000952D2A"
             BuildableName = "EZ Payment Calculator.app"
-            BlueprintName = "EZ Payment Calculator"
-            ReferencedContainer = "container:EZ Payment Calculator.xcodeproj">
+            BlueprintName = "Pay Calc"
+            ReferencedContainer = "container:Pay Calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

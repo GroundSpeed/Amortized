@@ -7,12 +7,43 @@
 //
 
 #import "PAYAppDelegate.h"
+#import "AMSlideOutNavigationController.h"
 
 @implementation PAYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    
+	UIViewController* controller;
+	
+	self.slideoutController = [AMSlideOutNavigationController slideOutNavigation];
+	
+	[self.slideoutController addSectionWithTitle:@""];
+	
+	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYCalcAmortController"];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:1 withTitle:@"Calculate Amortization" andIcon:@""];
+	
+	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYShowRatesController"];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Show Rates by Zillow" andIcon:@""];
+
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYSettingsController"];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Settings" andIcon:@""];
+
+//	[self.slideoutController addActionToLastSection:^{
+//		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Some action"
+//                                                        message:@"Some message."
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//		[alert show];
+//	}
+//											 tagged:3
+//										  withTitle:@"Action"
+//											andIcon:@""];
+	
+    [self.window setRootViewController:self.slideoutController];
+	
     return YES;
 }
 							

@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952272761746C57200601617 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952272691746C57200601617 /* MainStoryboard.storyboard */; };
+		952272771746C57200601617 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952272691746C57200601617 /* MainStoryboard.storyboard */; };
+		952272781746C57200601617 /* AMSlideOutGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9522726B1746C57200601617 /* AMSlideOutGlobals.m */; };
+		952272791746C57200601617 /* AMSlideOutGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9522726B1746C57200601617 /* AMSlideOutGlobals.m */; };
+		9522727A1746C57200601617 /* AMSlideOutNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9522726D1746C57200601617 /* AMSlideOutNavigationController.m */; };
+		9522727B1746C57200601617 /* AMSlideOutNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9522726D1746C57200601617 /* AMSlideOutNavigationController.m */; };
+		9522727C1746C57200601617 /* AMSlideTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9522726F1746C57200601617 /* AMSlideTableCell.m */; };
+		9522727D1746C57200601617 /* AMSlideTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9522726F1746C57200601617 /* AMSlideTableCell.m */; };
+		9522727E1746C57200601617 /* AMSlideTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 952272711746C57200601617 /* AMSlideTableHeader.m */; };
+		9522727F1746C57200601617 /* AMSlideTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 952272711746C57200601617 /* AMSlideTableHeader.m */; };
+		952272801746C57200601617 /* AMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 952272731746C57200601617 /* AMTableView.m */; };
+		952272811746C57200601617 /* AMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 952272731746C57200601617 /* AMTableView.m */; };
+		952272821746C57200601617 /* iconSlide.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272741746C57200601617 /* iconSlide.png */; };
+		952272831746C57200601617 /* iconSlide.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272741746C57200601617 /* iconSlide.png */; };
+		952272841746C57200601617 /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272751746C57200601617 /* iconSlide@2x.png */; };
+		952272851746C57200601617 /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272751746C57200601617 /* iconSlide@2x.png */; };
 		95497F1716BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
 		95497F1916BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
 		95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1A16BB637000952D2A /* CoreGraphics.framework */; };
@@ -16,8 +32,6 @@
 		95497F2916BB637000952D2A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2816BB637000952D2A /* Default.png */; };
 		95497F2B16BB637000952D2A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2A16BB637000952D2A /* Default@2x.png */; };
 		95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2C16BB637000952D2A /* Default-568h@2x.png */; };
-		95497F3016BB637000952D2A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */; };
-		95497F3316BB637000952D2A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */; };
 		95497F3616BB637000952D2A /* PAYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F3516BB637000952D2A /* PAYViewController.m */; };
 		95497F3E16BB637000952D2A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F3D16BB637000952D2A /* SenTestingKit.framework */; };
 		95497F3F16BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
@@ -30,6 +44,11 @@
 		95497F6316BB789C00952D2A /* calculate.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6216BB789C00952D2A /* calculate.png */; };
 		95497F6A16BC149B00952D2A /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6816BC149B00952D2A /* settings.png */; };
 		95497F6B16BC149B00952D2A /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6916BC149B00952D2A /* settings@2x.png */; };
+		9584D6481748901000081312 /* PayCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6461748901000081312 /* PayCalc.png */; };
+		9584D6491748901000081312 /* PayCalc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6471748901000081312 /* PayCalc@2x.png */; };
+		9584D650174897A300081312 /* InterestRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584D64F174897A300081312 /* InterestRates.m */; };
+		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
+		95C8D44316E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,26 +62,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		95497F1216BB637000952D2A /* EZ Payment Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Payment Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		952272691746C57200601617 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9522726A1746C57200601617 /* AMSlideOutGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideOutGlobals.h; sourceTree = "<group>"; };
+		9522726B1746C57200601617 /* AMSlideOutGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideOutGlobals.m; sourceTree = "<group>"; };
+		9522726C1746C57200601617 /* AMSlideOutNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideOutNavigationController.h; sourceTree = "<group>"; };
+		9522726D1746C57200601617 /* AMSlideOutNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideOutNavigationController.m; sourceTree = "<group>"; };
+		9522726E1746C57200601617 /* AMSlideTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideTableCell.h; sourceTree = "<group>"; };
+		9522726F1746C57200601617 /* AMSlideTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideTableCell.m; sourceTree = "<group>"; };
+		952272701746C57200601617 /* AMSlideTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideTableHeader.h; sourceTree = "<group>"; };
+		952272711746C57200601617 /* AMSlideTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideTableHeader.m; sourceTree = "<group>"; };
+		952272721746C57200601617 /* AMTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMTableView.h; sourceTree = "<group>"; };
+		952272731746C57200601617 /* AMTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTableView.m; sourceTree = "<group>"; };
+		952272741746C57200601617 /* iconSlide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSlide.png; sourceTree = "<group>"; };
+		952272751746C57200601617 /* iconSlide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconSlide@2x.png"; sourceTree = "<group>"; };
+		95497F1216BB637000952D2A /* Pay Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		95497F1A16BB637000952D2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		95497F1E16BB637000952D2A /* EZ Payment Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZ Payment Calculator-Info.plist"; sourceTree = "<group>"; };
+		95497F1E16BB637000952D2A /* Pay Calc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pay Calc-Info.plist"; sourceTree = "<group>"; };
 		95497F2016BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95497F2216BB637000952D2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		95497F2416BB637000952D2A /* EZ Payment Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZ Payment Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		95497F2416BB637000952D2A /* Pay Calc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pay Calc-Prefix.pch"; sourceTree = "<group>"; };
 		95497F2516BB637000952D2A /* PAYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAYAppDelegate.h; sourceTree = "<group>"; };
 		95497F2616BB637000952D2A /* PAYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAYAppDelegate.m; sourceTree = "<group>"; };
 		95497F2816BB637000952D2A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		95497F2A16BB637000952D2A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		95497F2C16BB637000952D2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		95497F2F16BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		95497F3216BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		95497F3416BB637000952D2A /* PAYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAYViewController.h; sourceTree = "<group>"; };
 		95497F3516BB637000952D2A /* PAYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAYViewController.m; sourceTree = "<group>"; };
-		95497F3C16BB637000952D2A /* EZ Payment CalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EZ Payment CalculatorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95497F3C16BB637000952D2A /* Pay CalcTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pay CalcTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F3D16BB637000952D2A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		95497F4516BB637000952D2A /* EZ Payment CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZ Payment CalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		95497F4516BB637000952D2A /* Pay CalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pay CalcTests-Info.plist"; sourceTree = "<group>"; };
 		95497F4716BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95497F4916BB637000952D2A /* EZ_Payment_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZ_Payment_CalculatorTests.h; sourceTree = "<group>"; };
 		95497F4A16BB637000952D2A /* EZ_Payment_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZ_Payment_CalculatorTests.m; sourceTree = "<group>"; };
@@ -72,6 +102,11 @@
 		95497F6216BB789C00952D2A /* calculate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculate.png; sourceTree = "<group>"; };
 		95497F6816BC149B00952D2A /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		95497F6916BC149B00952D2A /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		9584D6461748901000081312 /* PayCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc.png; sourceTree = "<group>"; };
+		9584D6471748901000081312 /* PayCalc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PayCalc@2x.png"; sourceTree = "<group>"; };
+		9584D64E174897A300081312 /* InterestRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestRates.h; sourceTree = "<group>"; };
+		9584D64F174897A300081312 /* InterestRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestRates.m; sourceTree = "<group>"; };
+		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +133,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9522725F1746C0BF00601617 /* SlideOutFramework */ = {
+			isa = PBXGroup;
+			children = (
+				952272681746C53E00601617 /* AMSlideOut */,
+			);
+			name = SlideOutFramework;
+			sourceTree = "<group>";
+		};
+		952272681746C53E00601617 /* AMSlideOut */ = {
+			isa = PBXGroup;
+			children = (
+				9522726A1746C57200601617 /* AMSlideOutGlobals.h */,
+				9522726B1746C57200601617 /* AMSlideOutGlobals.m */,
+				9522726C1746C57200601617 /* AMSlideOutNavigationController.h */,
+				9522726D1746C57200601617 /* AMSlideOutNavigationController.m */,
+				9522726E1746C57200601617 /* AMSlideTableCell.h */,
+				9522726F1746C57200601617 /* AMSlideTableCell.m */,
+				952272701746C57200601617 /* AMSlideTableHeader.h */,
+				952272711746C57200601617 /* AMSlideTableHeader.m */,
+				952272721746C57200601617 /* AMTableView.h */,
+				952272731746C57200601617 /* AMTableView.m */,
+				952272741746C57200601617 /* iconSlide.png */,
+				952272751746C57200601617 /* iconSlide@2x.png */,
+			);
+			name = AMSlideOut;
+			sourceTree = "<group>";
+		};
 		95497F0716BB637000952D2A = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +173,8 @@
 		95497F1316BB637000952D2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95497F1216BB637000952D2A /* EZ Payment Calculator.app */,
-				95497F3C16BB637000952D2A /* EZ Payment CalculatorTests.octest */,
+				95497F1216BB637000952D2A /* Pay Calc.app */,
+				95497F3C16BB637000952D2A /* Pay CalcTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,7 +193,8 @@
 		95497F1C16BB637000952D2A /* EZ Payment Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				95497F5516BB654200952D2A /* Models */,
+				9522725F1746C0BF00601617 /* SlideOutFramework */,
+				95497F5516BB654200952D2A /* Classes */,
 				95497F5416BB653C00952D2A /* Views */,
 				95497F5616BB656300952D2A /* Controllers */,
 				95497F2516BB637000952D2A /* PAYAppDelegate.h */,
@@ -145,10 +208,10 @@
 		95497F1D16BB637000952D2A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				95497F1E16BB637000952D2A /* EZ Payment Calculator-Info.plist */,
+				95497F1E16BB637000952D2A /* Pay Calc-Info.plist */,
 				95497F1F16BB637000952D2A /* InfoPlist.strings */,
 				95497F2216BB637000952D2A /* main.m */,
-				95497F2416BB637000952D2A /* EZ Payment Calculator-Prefix.pch */,
+				95497F2416BB637000952D2A /* Pay Calc-Prefix.pch */,
 				95497F2816BB637000952D2A /* Default.png */,
 				95497F2A16BB637000952D2A /* Default@2x.png */,
 				95497F2C16BB637000952D2A /* Default-568h@2x.png */,
@@ -169,7 +232,7 @@
 		95497F4416BB637000952D2A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				95497F4516BB637000952D2A /* EZ Payment CalculatorTests-Info.plist */,
+				95497F4516BB637000952D2A /* Pay CalcTests-Info.plist */,
 				95497F4616BB637000952D2A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -178,17 +241,18 @@
 		95497F5416BB653C00952D2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */,
-				95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */,
+				952272691746C57200601617 /* MainStoryboard.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		95497F5516BB654200952D2A /* Models */ = {
+		95497F5516BB654200952D2A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9584D64E174897A300081312 /* InterestRates.h */,
+				9584D64F174897A300081312 /* InterestRates.m */,
 			);
-			name = Models;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		95497F5616BB656300952D2A /* Controllers */ = {
@@ -203,6 +267,9 @@
 		95497F5716BB656A00952D2A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9584D6461748901000081312 /* PayCalc.png */,
+				9584D6471748901000081312 /* PayCalc@2x.png */,
+				95C8D44116E288E3003CDF73 /* arrow.png */,
 				95497F6816BC149B00952D2A /* settings.png */,
 				95497F6916BC149B00952D2A /* settings@2x.png */,
 				95497F6016BB786800952D2A /* refresh.png */,
@@ -216,9 +283,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95497F1116BB637000952D2A /* EZ Payment Calculator */ = {
+		95497F1116BB637000952D2A /* Pay Calc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment Calculator" */;
+			buildConfigurationList = 95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Pay Calc" */;
 			buildPhases = (
 				95497F0E16BB637000952D2A /* Sources */,
 				95497F0F16BB637000952D2A /* Frameworks */,
@@ -228,14 +295,14 @@
 			);
 			dependencies = (
 			);
-			name = "EZ Payment Calculator";
+			name = "Pay Calc";
 			productName = "EZ Payment Calculator";
-			productReference = 95497F1216BB637000952D2A /* EZ Payment Calculator.app */;
+			productReference = 95497F1216BB637000952D2A /* Pay Calc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		95497F3B16BB637000952D2A /* EZ Payment CalculatorTests */ = {
+		95497F3B16BB637000952D2A /* Pay CalcTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95497F5116BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment CalculatorTests" */;
+			buildConfigurationList = 95497F5116BB637000952D2A /* Build configuration list for PBXNativeTarget "Pay CalcTests" */;
 			buildPhases = (
 				95497F3716BB637000952D2A /* Sources */,
 				95497F3816BB637000952D2A /* Frameworks */,
@@ -247,9 +314,9 @@
 			dependencies = (
 				95497F4216BB637000952D2A /* PBXTargetDependency */,
 			);
-			name = "EZ Payment CalculatorTests";
+			name = "Pay CalcTests";
 			productName = "EZ Payment CalculatorTests";
-			productReference = 95497F3C16BB637000952D2A /* EZ Payment CalculatorTests.octest */;
+			productReference = 95497F3C16BB637000952D2A /* Pay CalcTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -262,7 +329,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = GroundSpeed;
 			};
-			buildConfigurationList = 95497F0C16BB637000952D2A /* Build configuration list for PBXProject "EZ Payment Calculator" */;
+			buildConfigurationList = 95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Pay Calc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -274,8 +341,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95497F1116BB637000952D2A /* EZ Payment Calculator */,
-				95497F3B16BB637000952D2A /* EZ Payment CalculatorTests */,
+				95497F1116BB637000952D2A /* Pay Calc */,
+				95497F3B16BB637000952D2A /* Pay CalcTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,14 +356,18 @@
 				95497F2916BB637000952D2A /* Default.png in Resources */,
 				95497F2B16BB637000952D2A /* Default@2x.png in Resources */,
 				95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */,
-				95497F3016BB637000952D2A /* MainStoryboard_iPhone.storyboard in Resources */,
-				95497F3316BB637000952D2A /* MainStoryboard_iPad.storyboard in Resources */,
 				95497F5916BB6FC200952D2A /* house.png in Resources */,
 				95497F5D16BB725200952D2A /* other.png in Resources */,
 				95497F6116BB786800952D2A /* refresh.png in Resources */,
 				95497F6316BB789C00952D2A /* calculate.png in Resources */,
 				95497F6A16BC149B00952D2A /* settings.png in Resources */,
 				95497F6B16BC149B00952D2A /* settings@2x.png in Resources */,
+				95C8D44216E288E3003CDF73 /* arrow.png in Resources */,
+				952272761746C57200601617 /* MainStoryboard.storyboard in Resources */,
+				952272821746C57200601617 /* iconSlide.png in Resources */,
+				952272841746C57200601617 /* iconSlide@2x.png in Resources */,
+				9584D6481748901000081312 /* PayCalc.png in Resources */,
+				9584D6491748901000081312 /* PayCalc@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +376,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				95497F4816BB637000952D2A /* InfoPlist.strings in Resources */,
+				95C8D44316E288E3003CDF73 /* arrow.png in Resources */,
+				952272771746C57200601617 /* MainStoryboard.storyboard in Resources */,
+				952272831746C57200601617 /* iconSlide.png in Resources */,
+				952272851746C57200601617 /* iconSlide@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +409,12 @@
 				95497F2316BB637000952D2A /* main.m in Sources */,
 				95497F2716BB637000952D2A /* PAYAppDelegate.m in Sources */,
 				95497F3616BB637000952D2A /* PAYViewController.m in Sources */,
+				952272781746C57200601617 /* AMSlideOutGlobals.m in Sources */,
+				9522727A1746C57200601617 /* AMSlideOutNavigationController.m in Sources */,
+				9522727C1746C57200601617 /* AMSlideTableCell.m in Sources */,
+				9522727E1746C57200601617 /* AMSlideTableHeader.m in Sources */,
+				952272801746C57200601617 /* AMTableView.m in Sources */,
+				9584D650174897A300081312 /* InterestRates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +423,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				95497F4B16BB637000952D2A /* EZ_Payment_CalculatorTests.m in Sources */,
+				952272791746C57200601617 /* AMSlideOutGlobals.m in Sources */,
+				9522727B1746C57200601617 /* AMSlideOutNavigationController.m in Sources */,
+				9522727D1746C57200601617 /* AMSlideTableCell.m in Sources */,
+				9522727F1746C57200601617 /* AMSlideTableHeader.m in Sources */,
+				952272811746C57200601617 /* AMTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +436,7 @@
 /* Begin PBXTargetDependency section */
 		95497F4216BB637000952D2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95497F1116BB637000952D2A /* EZ Payment Calculator */;
+			target = 95497F1116BB637000952D2A /* Pay Calc */;
 			targetProxy = 95497F4116BB637000952D2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -362,22 +448,6 @@
 				95497F2016BB637000952D2A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		95497F2E16BB637000952D2A /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95497F2F16BB637000952D2A /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		95497F3116BB637000952D2A /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95497F3216BB637000952D2A /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		95497F4616BB637000952D2A /* InfoPlist.strings */ = {
@@ -447,9 +517,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment Calculator/EZ Payment Calculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
+				PRODUCT_NAME = "Pay Calc";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -458,9 +529,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment Calculator/EZ Payment Calculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
+				PRODUCT_NAME = "Pay Calc";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -475,8 +547,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment CalculatorTests/EZ Payment CalculatorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "EZ Payment CalculatorTests/Pay CalcTests-Info.plist";
+				PRODUCT_NAME = "Pay CalcTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -492,8 +564,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/EZ Payment Calculator-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment CalculatorTests/EZ Payment CalculatorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "EZ Payment CalculatorTests/Pay CalcTests-Info.plist";
+				PRODUCT_NAME = "Pay CalcTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -502,7 +574,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95497F0C16BB637000952D2A /* Build configuration list for PBXProject "EZ Payment Calculator" */ = {
+		95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Pay Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95497F4C16BB637000952D2A /* Debug */,
@@ -511,21 +583,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment Calculator" */ = {
+		95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Pay Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95497F4F16BB637000952D2A /* Debug */,
 				95497F5016BB637000952D2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		95497F5116BB637000952D2A /* Build configuration list for PBXNativeTarget "EZ Payment CalculatorTests" */ = {
+		95497F5116BB637000952D2A /* Build configuration list for PBXNativeTarget "Pay CalcTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95497F5216BB637000952D2A /* Debug */,
 				95497F5316BB637000952D2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
