@@ -13,6 +13,6 @@
 @property (nonatomic, strong) NSMutableArray *arrayInterestRates;
 @property (nonatomic, strong) NSMutableArray *arrayInterestLabels;
 
--(void)getInterestRates;
+-(NSDictionary *)getInterestRates;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation InterestRates
 
--(void)getInterestRates
+-(NSDictionary *)getInterestRates
 {
     // Variable to store our API Key
     NSString* const API_KEY = @"X1-ZWz1bim5o6gxsb_5i268";
@@ -34,12 +34,13 @@
             NSLog(@"error is %@", [error localizedDescription]);
             
             // Handle Error and return
-            return;
+            return nil;
         }
         
         NSDictionary *dictInterest = [jsonObjects objectForKey:@"response"];
         NSLog(@"%@", dictInterest);
         
+        return dictInterest;
         NSDictionary *today = [dictInterest objectForKey:@"today"];
         NSLog(@"%@", today);
         
@@ -57,10 +58,14 @@
         NSLog(@"%@", fiveOneARM);
         [_arrayInterestRates addObject:fiveOneARM];
         [_arrayInterestLabels addObject:@"5/1 Year ARM"];
+        
+        NSDictionary *dictReturn = [[NSDictionary alloc] initWithObjects:_arrayInterestRates forKeys:_arrayInterestLabels];
+        return dictReturn;
     }
     else
     {
         // Handle Error
+        return nil;
     }
 }
 

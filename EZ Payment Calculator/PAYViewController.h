@@ -19,10 +19,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtTerm;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickTerms;
 
-@property (strong, nonatomic) NSMutableArray *arrayInterestRates;
-@property (strong, nonatomic) NSMutableArray *arrayInterestLabels;
-@property (strong, nonatomic) NSMutableArray *arrayTerms;
-
 - (IBAction)scHomeOther:(id)sender;
 - (IBAction)btnCalculate:(id)sender;
 

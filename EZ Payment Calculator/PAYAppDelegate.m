@@ -16,6 +16,7 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
 	UIViewController* controller;
+    UITableViewController *tableController;
 	
 	self.slideoutController = [AMSlideOutNavigationController slideOutNavigation];
 	
@@ -24,24 +25,12 @@
 	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYCalcAmortController"];
 	[self.slideoutController addViewControllerToLastSection:controller tagged:1 withTitle:@"Calculate Amortization" andIcon:@""];
 	
-	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYShowRatesController"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Show Rates by Zillow" andIcon:@""];
+	tableController = [storyboard instantiateViewControllerWithIdentifier:@"PAYShowRatesController"];
+	[self.slideoutController addViewControllerToLastSection:tableController tagged:2 withTitle:@"Current Rates" andIcon:@""];
 
     controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYSettingsController"];
 	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Settings" andIcon:@""];
 
-//	[self.slideoutController addActionToLastSection:^{
-//		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Some action"
-//                                                        message:@"Some message."
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//		[alert show];
-//	}
-//											 tagged:3
-//										  withTitle:@"Action"
-//											andIcon:@""];
-	
     [self.window setRootViewController:self.slideoutController];
 	
     return YES;

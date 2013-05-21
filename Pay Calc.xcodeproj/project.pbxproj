@@ -47,6 +47,7 @@
 		9584D6481748901000081312 /* PayCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6461748901000081312 /* PayCalc.png */; };
 		9584D6491748901000081312 /* PayCalc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6471748901000081312 /* PayCalc@2x.png */; };
 		9584D650174897A300081312 /* InterestRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584D64F174897A300081312 /* InterestRates.m */; };
+		958533E1174B2ABD00BABFF5 /* PAYRateTabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958533E0174B2ABD00BABFF5 /* PAYRateTabelViewController.m */; };
 		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 		95C8D44316E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,8 @@
 		9584D6471748901000081312 /* PayCalc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PayCalc@2x.png"; sourceTree = "<group>"; };
 		9584D64E174897A300081312 /* InterestRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestRates.h; sourceTree = "<group>"; };
 		9584D64F174897A300081312 /* InterestRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestRates.m; sourceTree = "<group>"; };
+		958533DF174B2ABD00BABFF5 /* PAYRateTabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYRateTabelViewController.h; sourceTree = "<group>"; };
+		958533E0174B2ABD00BABFF5 /* PAYRateTabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYRateTabelViewController.m; sourceTree = "<group>"; };
 		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +263,8 @@
 			children = (
 				95497F3416BB637000952D2A /* PAYViewController.h */,
 				95497F3516BB637000952D2A /* PAYViewController.m */,
+				958533DF174B2ABD00BABFF5 /* PAYRateTabelViewController.h */,
+				958533E0174B2ABD00BABFF5 /* PAYRateTabelViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				9522727E1746C57200601617 /* AMSlideTableHeader.m in Sources */,
 				952272801746C57200601617 /* AMTableView.m in Sources */,
 				9584D650174897A300081312 /* InterestRates.m in Sources */,
+				958533E1174B2ABD00BABFF5 /* PAYRateTabelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

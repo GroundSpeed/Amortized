@@ -17,7 +17,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self getInterestRates];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,40 +48,6 @@
 }
 
 #pragma mark PickerViewCode
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 2;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView
-numberOfRowsInComponent:(NSInteger)component
-{
-    return _arrayInterestRates.count;
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
-    if(component == 0)
-	{
-        return [_arrayInterestLabels objectAtIndex:row];
-	}
-	else if(component == 1)
-	{
-        return [_arrayInterestRates objectAtIndex:row];
-	}
-
-    return nil;
-}
-
-- (void)pickerView:(UIPickerView *)pickerView
-      didSelectRow:(NSInteger)row
-       inComponent:(NSInteger)component
-{
-
-}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
