@@ -17,6 +17,8 @@
 		952272841746C57200601617 /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272751746C57200601617 /* iconSlide@2x.png */; };
 		952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D0972176382240039F05E /* PAYSettingsViewController.m */; };
 		952D09791763B1D10039F05E /* PAYInputsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D09781763B1D10039F05E /* PAYInputsTableViewController.m */; };
+		952D097F1763EC680039F05E /* DollarSign.png in Resources */ = {isa = PBXBuildFile; fileRef = 952D097E1763EC680039F05E /* DollarSign.png */; };
+		952D09811763EC780039F05E /* DollarSign@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952D09801763EC780039F05E /* DollarSign@2x.png */; };
 		95497F1716BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
 		95497F1916BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
 		95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1A16BB637000952D2A /* CoreGraphics.framework */; };
@@ -58,6 +60,8 @@
 		952D0972176382240039F05E /* PAYSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYSettingsViewController.m; sourceTree = "<group>"; };
 		952D09771763B1D00039F05E /* PAYInputsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYInputsTableViewController.h; sourceTree = "<group>"; };
 		952D09781763B1D10039F05E /* PAYInputsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYInputsTableViewController.m; sourceTree = "<group>"; };
+		952D097E1763EC680039F05E /* DollarSign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DollarSign.png; path = ../DollarSign.png; sourceTree = "<group>"; };
+		952D09801763EC780039F05E /* DollarSign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DollarSign@2x.png"; path = "../DollarSign@2x.png"; sourceTree = "<group>"; };
 		95497F1216BB637000952D2A /* Pay Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -223,6 +227,8 @@
 		95497F5716BB656A00952D2A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				952D097E1763EC680039F05E /* DollarSign.png */,
+				952D09801763EC780039F05E /* DollarSign@2x.png */,
 				9584D6461748901000081312 /* PayCalc.png */,
 				9584D6471748901000081312 /* PayCalc@2x.png */,
 				95C8D44116E288E3003CDF73 /* arrow.png */,
@@ -304,6 +310,8 @@
 				952272841746C57200601617 /* iconSlide@2x.png in Resources */,
 				9584D6481748901000081312 /* PayCalc.png in Resources */,
 				9584D6491748901000081312 /* PayCalc@2x.png in Resources */,
+				952D097F1763EC680039F05E /* DollarSign.png in Resources */,
+				952D09811763EC780039F05E /* DollarSign@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

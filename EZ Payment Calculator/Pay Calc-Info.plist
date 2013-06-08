@@ -14,8 +14,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>PayCalc.png</string>
-				<string>PayCalc@2x.png</string>
+				<string>DollarSign.png</string>
+				<string>DollarSign@2x.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -28,7 +28,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.3</string>
+	<string>0.31</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
