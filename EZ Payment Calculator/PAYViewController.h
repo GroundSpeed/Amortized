@@ -19,6 +19,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtTerm;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickTerms;
 
+-(float)calculatPMTWithRatePerPeriod:(double)ratePerPeriod
+                    numberOfPayments:(NSInteger)numberOfPayments
+                          loanAmount:(double)loanAmount
+                         futureValue:(double)futureValue
+                                type:(NSInteger)type;
+
 - (IBAction)scHomeOther:(id)sender;
 - (IBAction)btnCalculate:(id)sender;
 
