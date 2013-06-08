@@ -24,6 +24,7 @@
 		952272841746C57200601617 /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272751746C57200601617 /* iconSlide@2x.png */; };
 		952272851746C57200601617 /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272751746C57200601617 /* iconSlide@2x.png */; };
 		952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D0972176382240039F05E /* PAYSettingsViewController.m */; };
+		952D09791763B1D10039F05E /* PAYInputsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D09781763B1D10039F05E /* PAYInputsTableViewController.m */; };
 		95497F1716BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
 		95497F1916BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
 		95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1A16BB637000952D2A /* CoreGraphics.framework */; };
@@ -79,6 +80,8 @@
 		952272751746C57200601617 /* iconSlide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconSlide@2x.png"; sourceTree = "<group>"; };
 		952D0971176382240039F05E /* PAYSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYSettingsViewController.h; sourceTree = "<group>"; };
 		952D0972176382240039F05E /* PAYSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYSettingsViewController.m; sourceTree = "<group>"; };
+		952D09771763B1D00039F05E /* PAYInputsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYInputsTableViewController.h; sourceTree = "<group>"; };
+		952D09781763B1D10039F05E /* PAYInputsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYInputsTableViewController.m; sourceTree = "<group>"; };
 		95497F1216BB637000952D2A /* Pay Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,12 +142,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9522725F1746C0BF00601617 /* SlideOutFramework */ = {
+		9522725F1746C0BF00601617 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
 				952272681746C53E00601617 /* AMSlideOut */,
 			);
-			name = SlideOutFramework;
+			name = vendor;
 			sourceTree = "<group>";
 		};
 		952272681746C53E00601617 /* AMSlideOut */ = {
@@ -199,7 +202,7 @@
 		95497F1C16BB637000952D2A /* EZ Payment Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				9522725F1746C0BF00601617 /* SlideOutFramework */,
+				9522725F1746C0BF00601617 /* vendor */,
 				95497F5516BB654200952D2A /* Classes */,
 				95497F5416BB653C00952D2A /* Views */,
 				95497F5616BB656300952D2A /* Controllers */,
@@ -266,6 +269,8 @@
 			children = (
 				95497F3416BB637000952D2A /* PAYViewController.h */,
 				95497F3516BB637000952D2A /* PAYViewController.m */,
+				952D09771763B1D00039F05E /* PAYInputsTableViewController.h */,
+				952D09781763B1D10039F05E /* PAYInputsTableViewController.m */,
 				958533DF174B2ABD00BABFF5 /* PAYRateTableViewController.h */,
 				958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */,
 				952D0971176382240039F05E /* PAYSettingsViewController.h */,
@@ -427,6 +432,7 @@
 				9584D650174897A300081312 /* InterestRates.m in Sources */,
 				958533E1174B2ABD00BABFF5 /* PAYRateTableViewController.m in Sources */,
 				952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */,
+				952D09791763B1D10039F05E /* PAYInputsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

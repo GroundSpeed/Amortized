@@ -27,12 +27,6 @@
 {
     [super viewDidLoad];
     [self loadTextFields];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)loadTextFields
@@ -53,6 +47,46 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *tempView=[[UIView alloc]initWithFrame:CGRectMake(0,200,300,244)];
+    tempView.backgroundColor=[UIColor clearColor];
+    
+    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(15,0,300,44)];
+    tempLabel.backgroundColor=[UIColor clearColor];
+    tempLabel.textColor = [UIColor blackColor]; //here you can change the text color of header.
+    tempLabel.font = [UIFont boldSystemFontOfSize:20];
+
+    if (section ==0)
+        tempLabel.text=@"Today";
+    else if (section == 1)
+        tempLabel.text=@"Last Week";
+    
+    [tempView addSubview:tempLabel];
+    
+    return tempView;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *tempView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
+    tempView.backgroundColor=[UIColor clearColor];
+    
+    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(60, 0, tableView.bounds.size.width, 30)];
+    tempLabel.backgroundColor=[UIColor clearColor];
+    tempLabel.textColor = [UIColor darkGrayColor]; //here you can change the text color of header.
+    tempLabel.font = [UIFont italicSystemFontOfSize:16];
+    
+    if (section ==0)
+        tempLabel.text=@"";
+    else if (section == 1)
+        tempLabel.text=@"Rates Updated from Zillow";
+    
+    [tempView addSubview:tempLabel];
+    
+    return tempView;
 }
 
 @end

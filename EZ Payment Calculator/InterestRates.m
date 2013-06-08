@@ -41,51 +41,51 @@
         arrayInterestLabels = [[NSMutableArray alloc] init];
         
         NSDictionary *dictInterest = [jsonObjects objectForKey:@"response"];
-        NSLog(@"dictInterest %@", dictInterest);
+        //NSLog(@"dictInterest %@", dictInterest);
         
         // TODAY
         NSDictionary *today = [dictInterest objectForKey:@"today"];
-        NSLog(@"today %@", today);
+        //NSLog(@"today %@", today);
         
         NSString *thirtyYearFixedToday = [today objectForKey:@"thirtyYearFixed"];
-        NSLog(@"thirtyYearFixed %@", thirtyYearFixedToday);
+        //NSLog(@"thirtyYearFixed %@", thirtyYearFixedToday);
         [arrayInterestRates addObject:thirtyYearFixedToday];
         [arrayInterestLabels addObject:@"thirtyYearFixedToday"];
         
         NSString *fifteenYearFixedToday = [today objectForKey:@"fifteenYearFixed"];
-        NSLog(@"fifteenYearFixed %@", fifteenYearFixedToday);
+        //NSLog(@"fifteenYearFixed %@", fifteenYearFixedToday);
         [arrayInterestRates addObject:fifteenYearFixedToday];
         [arrayInterestLabels addObject:@"fifteenYearFixedToday"];
         
         NSString *fiveOneARMToday = [today objectForKey:@"fiveOneARM"];
-        NSLog(@"fiveOneARM %@", fiveOneARMToday);
+        //NSLog(@"fiveOneARM %@", fiveOneARMToday);
         [arrayInterestRates addObject:fiveOneARMToday];
         [arrayInterestLabels addObject:@"fiveOneARMToday"];
         
         // LAST WEEK
         NSDictionary *lastWeek = [dictInterest objectForKey:@"lastWeek"];
-        NSLog(@"today %@", lastWeek);
+        //NSLog(@"today %@", lastWeek);
         
         NSString *thirtyYearFixedLastWeek = [lastWeek objectForKey:@"thirtyYearFixed"];
-        NSLog(@"thirtyYearFixedLastWeek %@", thirtyYearFixedLastWeek);
+        //NSLog(@"thirtyYearFixedLastWeek %@", thirtyYearFixedLastWeek);
         [arrayInterestRates addObject:thirtyYearFixedLastWeek];
         [arrayInterestLabels addObject:@"thirtyYearFixedLastWeek"];
         
         NSString *fifteenYearFixedLastWeek = [lastWeek objectForKey:@"fifteenYearFixed"];
-        NSLog(@"fifteenYearFixedLastWeek %@", fifteenYearFixedLastWeek);
+        //NSLog(@"fifteenYearFixedLastWeek %@", fifteenYearFixedLastWeek);
         [arrayInterestRates addObject:fifteenYearFixedLastWeek];
         [arrayInterestLabels addObject:@"fifteenYearFixedLastWeek"];
         
         NSString *fiveOneARMLastWeek = [lastWeek objectForKey:@"fiveOneARM"];
-        NSLog(@"fiveOneARMLastWeek %@", fiveOneARMLastWeek);
+        //NSLog(@"fiveOneARMLastWeek %@", fiveOneARMLastWeek);
         [arrayInterestRates addObject:fiveOneARMLastWeek];
         [arrayInterestLabels addObject:@"fiveOneARMLastWeek"];
         
         NSDictionary *dictReturn = [[NSDictionary alloc] initWithObjects:arrayInterestRates forKeys:arrayInterestLabels];
         
-        NSLog(@"arrayInterestRates %@", arrayInterestRates);
-        NSLog(@"arrayInterestLabels %@", arrayInterestLabels);
-        NSLog(@"dictReturn %@", dictReturn);
+        //NSLog(@"arrayInterestRates %@", arrayInterestRates);
+        //NSLog(@"arrayInterestLabels %@", arrayInterestLabels);
+        //NSLog(@"dictReturn %@", dictReturn);
         return dictReturn;
     }
     else
