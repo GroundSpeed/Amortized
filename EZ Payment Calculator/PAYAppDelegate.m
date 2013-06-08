@@ -16,20 +16,19 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
 	UIViewController* controller;
-    UITableViewController *tableController;
 	
 	self.slideoutController = [AMSlideOutNavigationController slideOutNavigation];
 	
-	[self.slideoutController addSectionWithTitle:@""];
+	[self.slideoutController addSectionWithTitle:@"Menu"];
 	
 	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYCalcAmortController"];
 	[self.slideoutController addViewControllerToLastSection:controller tagged:1 withTitle:@"Calculate Amortization" andIcon:@""];
 	
-	tableController = [storyboard instantiateViewControllerWithIdentifier:@"PAYShowRatesController"];
-	[self.slideoutController addViewControllerToLastSection:tableController tagged:2 withTitle:@"Current Rates" andIcon:@""];
+	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYShowRateController"];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Current Rates" andIcon:@""];
 
     controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYSettingsController"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Settings" andIcon:@""];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:3 withTitle:@"Settings" andIcon:@""];
 
     [self.window setRootViewController:self.slideoutController];
 	

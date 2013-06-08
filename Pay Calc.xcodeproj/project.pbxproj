@@ -23,6 +23,7 @@
 		952272831746C57200601617 /* iconSlide.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272741746C57200601617 /* iconSlide.png */; };
 		952272841746C57200601617 /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272751746C57200601617 /* iconSlide@2x.png */; };
 		952272851746C57200601617 /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952272751746C57200601617 /* iconSlide@2x.png */; };
+		952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D0972176382240039F05E /* PAYSettingsViewController.m */; };
 		95497F1716BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
 		95497F1916BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
 		95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1A16BB637000952D2A /* CoreGraphics.framework */; };
@@ -47,7 +48,7 @@
 		9584D6481748901000081312 /* PayCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6461748901000081312 /* PayCalc.png */; };
 		9584D6491748901000081312 /* PayCalc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6471748901000081312 /* PayCalc@2x.png */; };
 		9584D650174897A300081312 /* InterestRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584D64F174897A300081312 /* InterestRates.m */; };
-		958533E1174B2ABD00BABFF5 /* PAYRateTabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958533E0174B2ABD00BABFF5 /* PAYRateTabelViewController.m */; };
+		958533E1174B2ABD00BABFF5 /* PAYRateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */; };
 		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 		95C8D44316E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,8 @@
 		952272731746C57200601617 /* AMTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTableView.m; sourceTree = "<group>"; };
 		952272741746C57200601617 /* iconSlide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSlide.png; sourceTree = "<group>"; };
 		952272751746C57200601617 /* iconSlide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconSlide@2x.png"; sourceTree = "<group>"; };
+		952D0971176382240039F05E /* PAYSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYSettingsViewController.h; sourceTree = "<group>"; };
+		952D0972176382240039F05E /* PAYSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYSettingsViewController.m; sourceTree = "<group>"; };
 		95497F1216BB637000952D2A /* Pay Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,8 +110,8 @@
 		9584D6471748901000081312 /* PayCalc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PayCalc@2x.png"; sourceTree = "<group>"; };
 		9584D64E174897A300081312 /* InterestRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestRates.h; sourceTree = "<group>"; };
 		9584D64F174897A300081312 /* InterestRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestRates.m; sourceTree = "<group>"; };
-		958533DF174B2ABD00BABFF5 /* PAYRateTabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYRateTabelViewController.h; sourceTree = "<group>"; };
-		958533E0174B2ABD00BABFF5 /* PAYRateTabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYRateTabelViewController.m; sourceTree = "<group>"; };
+		958533DF174B2ABD00BABFF5 /* PAYRateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYRateTableViewController.h; sourceTree = "<group>"; };
+		958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYRateTableViewController.m; sourceTree = "<group>"; };
 		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,8 +266,10 @@
 			children = (
 				95497F3416BB637000952D2A /* PAYViewController.h */,
 				95497F3516BB637000952D2A /* PAYViewController.m */,
-				958533DF174B2ABD00BABFF5 /* PAYRateTabelViewController.h */,
-				958533E0174B2ABD00BABFF5 /* PAYRateTabelViewController.m */,
+				958533DF174B2ABD00BABFF5 /* PAYRateTableViewController.h */,
+				958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */,
+				952D0971176382240039F05E /* PAYSettingsViewController.h */,
+				952D0972176382240039F05E /* PAYSettingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -420,7 +425,8 @@
 				9522727E1746C57200601617 /* AMSlideTableHeader.m in Sources */,
 				952272801746C57200601617 /* AMTableView.m in Sources */,
 				9584D650174897A300081312 /* InterestRates.m in Sources */,
-				958533E1174B2ABD00BABFF5 /* PAYRateTabelViewController.m in Sources */,
+				958533E1174B2ABD00BABFF5 /* PAYRateTableViewController.m in Sources */,
+				952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

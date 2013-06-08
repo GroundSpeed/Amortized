@@ -18,15 +18,51 @@
             </objects>
             <point key="canvasLocation" x="743" y="-150"/>
         </scene>
-        <!--Rates Table View Controller - Rates-->
-        <scene sceneID="r0j-mP-vK8">
+        <!--View Controller-->
+        <scene sceneID="uBd-HV-Y72">
             <objects>
-                <tableViewController storyboardIdentifier="PAYShowRatesController" title="Rates" id="BQq-7K-tse" customClass="PAYRatesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2J3-Bl-zHw">
+                <viewController storyboardIdentifier="PAYShowRateController" id="dhf-7g-72k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hdR-Xw-Zc3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-Au-enY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="3uG-vj-KCY" kind="embed" id="SZW-wn-SdB"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5KK-Au-enY" firstAttribute="leading" secondItem="hdR-Xw-Zc3" secondAttribute="leading" type="default" id="5T6-mp-y0K"/>
+                            <constraint firstItem="5KK-Au-enY" firstAttribute="bottom" secondItem="hdR-Xw-Zc3" secondAttribute="bottom" type="default" id="844-8O-hdY"/>
+                            <constraint firstItem="5KK-Au-enY" firstAttribute="top" secondItem="hdR-Xw-Zc3" secondAttribute="top" type="default" id="Uwr-19-Emf"/>
+                            <constraint firstItem="5KK-Au-enY" firstAttribute="trailing" secondItem="hdR-Xw-Zc3" secondAttribute="trailing" type="default" id="fAs-tt-4UF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8s-DZ-07w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="-155"/>
+        </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="6UG-WZ-tsZ">
+            <objects>
+                <viewController storyboardIdentifier="PAYSettingsController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E6N-6J-AOu" customClass="PAYSettingsViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8X6-pe-ag4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="450"/>
+        </scene>
+        <!--Rate Table View Controller-->
+        <scene sceneID="Ehy-TQ-q8J">
+            <objects>
+                <tableViewController id="3uG-vj-KCY" customClass="PAYRateTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2J3-Bl-zHw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection headerTitle="Today" id="2Se-TR-V9X">
                                 <cells>
@@ -57,10 +93,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="8Li-SG-d2n" firstAttribute="leading" secondItem="Fc9-11-7VI" secondAttribute="leading" constant="30" id="0hj-e0-M2d"/>
                                             <constraint firstItem="8Li-SG-d2n" firstAttribute="centerY" secondItem="Fc9-11-7VI" secondAttribute="centerY" type="default" id="Ccx-BN-6IV"/>
-                                            <constraint firstAttribute="trailing" secondItem="iGD-Kc-pyf" secondAttribute="trailing" constant="30" id="Nsc-49-z3H"/>
+                                            <constraint firstAttribute="trailing" secondItem="iGD-Kc-pyf" secondAttribute="trailing" constant="30" id="Jnt-FX-bAu"/>
                                             <constraint firstItem="iGD-Kc-pyf" firstAttribute="baseline" secondItem="8Li-SG-d2n" secondAttribute="baseline" type="default" id="Vt5-yP-ab1"/>
+                                            <constraint firstItem="8Li-SG-d2n" firstAttribute="leading" secondItem="Fc9-11-7VI" secondAttribute="leading" constant="30" id="XLD-0V-9Mf"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2gx-HB-fno">
@@ -91,9 +127,9 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="fIv-NY-Xh8" firstAttribute="baseline" secondItem="F5Y-Al-vBr" secondAttribute="baseline" type="default" id="Khi-HP-Wuq"/>
-                                            <constraint firstAttribute="trailing" secondItem="F5Y-Al-vBr" secondAttribute="trailing" constant="30" id="SBO-1j-fxX"/>
+                                            <constraint firstAttribute="trailing" secondItem="F5Y-Al-vBr" secondAttribute="trailing" constant="30" id="YnV-0r-dXn"/>
                                             <constraint firstItem="fIv-NY-Xh8" firstAttribute="top" secondItem="2gx-HB-fno" secondAttribute="top" constant="11" id="kMD-dW-iSp"/>
-                                            <constraint firstItem="fIv-NY-Xh8" firstAttribute="leading" secondItem="2gx-HB-fno" secondAttribute="leading" constant="30" id="rZc-tU-bcw"/>
+                                            <constraint firstItem="fIv-NY-Xh8" firstAttribute="leading" secondItem="2gx-HB-fno" secondAttribute="leading" constant="30" id="tXV-lt-XOf"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="elV-vq-IZv">
@@ -124,9 +160,9 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="iMY-ye-kvH" firstAttribute="top" secondItem="elV-vq-IZv" secondAttribute="top" constant="11" id="3yg-uS-my2"/>
-                                            <constraint firstItem="iMY-ye-kvH" firstAttribute="leading" secondItem="elV-vq-IZv" secondAttribute="leading" constant="30" id="AdW-Lz-gIw"/>
+                                            <constraint firstAttribute="trailing" secondItem="aIT-ai-FzW" secondAttribute="trailing" constant="30" id="Ewc-1g-umQ"/>
                                             <constraint firstItem="aIT-ai-FzW" firstAttribute="baseline" secondItem="iMY-ye-kvH" secondAttribute="baseline" type="default" id="TDI-QD-P2R"/>
-                                            <constraint firstAttribute="trailing" secondItem="aIT-ai-FzW" secondAttribute="trailing" constant="30" id="gbZ-yB-KSZ"/>
+                                            <constraint firstItem="iMY-ye-kvH" firstAttribute="leading" secondItem="elV-vq-IZv" secondAttribute="leading" constant="30" id="i3r-WH-kI6"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -160,10 +196,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KEW-Rq-N32" secondAttribute="trailing" constant="30" id="AgK-U0-uii"/>
                                             <constraint firstItem="nJe-f3-cOr" firstAttribute="baseline" secondItem="KEW-Rq-N32" secondAttribute="baseline" type="default" id="F0U-go-Lkd"/>
-                                            <constraint firstItem="KEW-Rq-N32" firstAttribute="centerY" secondItem="GZR-lb-BLo" secondAttribute="centerY" type="default" id="IQN-RW-j9A"/>
-                                            <constraint firstItem="nJe-f3-cOr" firstAttribute="leading" secondItem="GZR-lb-BLo" secondAttribute="leading" constant="30" id="k35-lH-X3c"/>
-                                            <constraint firstAttribute="trailing" secondItem="KEW-Rq-N32" secondAttribute="trailing" constant="30" id="vBK-wE-TIn"/>
+                                            <constraint firstItem="nJe-f3-cOr" firstAttribute="leading" secondItem="GZR-lb-BLo" secondAttribute="leading" constant="30" id="kbA-OX-908"/>
+                                            <constraint firstItem="nJe-f3-cOr" firstAttribute="centerY" secondItem="GZR-lb-BLo" secondAttribute="centerY" type="default" id="py4-q4-RMf"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="b37-9E-R3d">
@@ -194,8 +230,8 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="ob1-hu-J57" firstAttribute="baseline" secondItem="dMn-B0-EbG" secondAttribute="baseline" type="default" id="K3D-8f-ubJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="dMn-B0-EbG" secondAttribute="trailing" constant="30" id="ZtD-N3-leN"/>
-                                            <constraint firstItem="ob1-hu-J57" firstAttribute="leading" secondItem="b37-9E-R3d" secondAttribute="leading" constant="30" id="aUW-Mb-QN8"/>
+                                            <constraint firstItem="ob1-hu-J57" firstAttribute="leading" secondItem="b37-9E-R3d" secondAttribute="leading" constant="30" id="RNK-vV-gIg"/>
+                                            <constraint firstAttribute="trailing" secondItem="dMn-B0-EbG" secondAttribute="trailing" constant="30" id="c4i-Gc-Asc"/>
                                             <constraint firstItem="ob1-hu-J57" firstAttribute="top" secondItem="b37-9E-R3d" secondAttribute="top" constant="11" id="ttC-AB-f7m"/>
                                         </constraints>
                                     </tableViewCell>
@@ -226,9 +262,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="Clh-T4-ERY" firstAttribute="leading" secondItem="DyT-bH-brl" secondAttribute="leading" constant="30" id="EjI-Kv-YuS"/>
+                                            <constraint firstAttribute="trailing" secondItem="h5j-ME-7dU" secondAttribute="trailing" constant="30" id="T4C-Jf-oZe"/>
                                             <constraint firstItem="Clh-T4-ERY" firstAttribute="top" secondItem="DyT-bH-brl" secondAttribute="top" constant="11" id="ga9-aV-n41"/>
-                                            <constraint firstAttribute="trailing" secondItem="h5j-ME-7dU" secondAttribute="trailing" constant="30" id="kzA-57-CT6"/>
-                                            <constraint firstItem="Clh-T4-ERY" firstAttribute="leading" secondItem="DyT-bH-brl" secondAttribute="leading" constant="30" id="r7O-Zu-vHm"/>
                                             <constraint firstItem="h5j-ME-7dU" firstAttribute="baseline" secondItem="Clh-T4-ERY" secondAttribute="baseline" type="default" id="xb6-rK-JNT"/>
                                         </constraints>
                                     </tableViewCell>
@@ -236,28 +272,22 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="BQq-7K-tse" id="bzy-zI-aKf"/>
-                            <outlet property="delegate" destination="BQq-7K-tse" id="EnR-ae-Gc2"/>
+                            <outlet property="dataSource" destination="3uG-vj-KCY" id="Xjs-Hf-cFe"/>
+                            <outlet property="delegate" destination="3uG-vj-KCY" id="bn7-Es-eL2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="fifteenYearFixedLastWeek" destination="dMn-B0-EbG" id="9hy-D5-59C"/>
+                        <outlet property="fifteenYearFixedToday" destination="F5Y-Al-vBr" id="sCa-DV-d41"/>
+                        <outlet property="fiveOneArmLastWeek" destination="h5j-ME-7dU" id="7Ty-W2-nHa"/>
+                        <outlet property="fiveOneArmToday" destination="aIT-ai-FzW" id="iFI-rs-Uqm"/>
+                        <outlet property="thirtyYearFixedLastWeek" destination="KEW-Rq-N32" id="2XV-Wf-7UT"/>
+                        <outlet property="thirtyYearFixedToday" destination="iGD-Kc-pyf" id="Sht-ci-EgW"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gmh-Qn-Vlz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVR-2r-So4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="-150"/>
-        </scene>
-        <!--View Controller - Settings-->
-        <scene sceneID="6UG-WZ-tsZ">
-            <objects>
-                <viewController storyboardIdentifier="PAYSettingsController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E6N-6J-AOu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vHD-Uz-QMX">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8X6-pe-ag4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1132" y="450"/>
+            <point key="canvasLocation" x="1557" y="-150"/>
         </scene>
         <!--View Controller - Main-->
         <scene sceneID="RTF-8J-Zhq">
@@ -416,6 +446,41 @@
         <image name="house.png" width="22" height="22"/>
         <image name="other.png" width="24" height="24"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PAYRateTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYRateTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fifteenYearFixedLastWeek" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fifteenYearFixedToday" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fiveOneArmLastWeek" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fiveOneArmToday" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableController" candidateClass="UITableViewController"/>
+                <relationship kind="outlet" name="thirtyYearFixedLastWeek" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thirtyYearFixedToday" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PAYSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYSettingsViewController.h"/>
+        </class>
+        <class className="PAYViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnCalculate:"/>
+                <relationship kind="action" name="scHomeOther:"/>
+                <relationship kind="outlet" name="lblMonthlyPayment" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblPMI" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pickTerms" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="txtAmount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtDownPayment" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtInterestRate" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtPMI" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtTerm" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

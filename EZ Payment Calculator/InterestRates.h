@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface InterestRates : NSObject
-
-@property (nonatomic, strong) NSMutableArray *arrayInterestRates;
-@property (nonatomic, strong) NSMutableArray *arrayInterestLabels;
+{
+    NSMutableArray *arrayInterestRates;
+    NSMutableArray *arrayInterestLabels;
+}
 
 -(NSDictionary *)getInterestRates;
 
