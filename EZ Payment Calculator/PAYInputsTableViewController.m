@@ -28,6 +28,14 @@
     [super viewDidLoad];
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.tableView addGestureRecognizer:gestureRecognizer];
+    
+    
+    // Set numeric keypads with decimal points
+    _txtAmount.keyboardType = UIKeyboardTypeDecimalPad;
+    _txtDownPayment.keyboardType = UIKeyboardTypeDecimalPad;
+    _txtInterestRate.keyboardType = UIKeyboardTypeDecimalPad;
+    _txtTerm.keyboardType = UIKeyboardTypeNumberPad;
+
 }
 
 -(void) hideKeyboard

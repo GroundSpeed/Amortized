@@ -18,7 +18,7 @@
                            stringWithFormat:@"http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=%@&output=json",
                            API_KEY];
     
-    NSLog(@"%@", searchURL);
+    //NSLog(@"%@", searchURL);
     
     NSError *error = nil;
     NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:searchURL]];
