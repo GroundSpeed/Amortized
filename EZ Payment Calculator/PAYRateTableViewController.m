@@ -82,7 +82,7 @@
     if (section ==0)
         tempLabel.text=@"";
     else if (section == 1)
-        tempLabel.text=@"Rates Updated from Zillow";
+        tempLabel.text=@"";
     
     [tempView addSubview:tempLabel];
     

@@ -42,9 +42,8 @@
                                 loanAmount:principal
                                futureValue:0
                                       type:0];
-    _lblMonthlyPayment.text = [NSString stringWithFormat:@"%.02f", amount];
+    _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];
     
-
 }
 
 -(float)calculatPMTWithRatePerPeriod:(double)ratePerPeriod numberOfPayments:(NSInteger)numberOfPayments loanAmount:(double)loanAmount futureValue:(double)futureValue type:(NSInteger)type
