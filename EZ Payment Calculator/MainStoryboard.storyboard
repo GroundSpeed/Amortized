@@ -409,7 +409,7 @@
         <scene sceneID="sQQ-zj-vOf">
             <objects>
                 <tableViewController title="Rates" id="PTP-Wa-sbF" customClass="PAYInputsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Hoz-OZ-khH">
+                    <tableView key="view" opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Hoz-OZ-khH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -568,6 +568,45 @@
     <resources>
         <image name="GroundSpeed Logo.png" width="523" height="192"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PAYInputsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYInputsTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="txtAmount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtDownPayment" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtInterestRate" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtTerm" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="PAYRateTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYRateTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fifteenYearFixedLastWeek" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fifteenYearFixedToday" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fiveOneArmLastWeek" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fiveOneArmToday" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableController" candidateClass="UITableViewController"/>
+                <relationship kind="outlet" name="thirtyYearFixedLastWeek" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thirtyYearFixedToday" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PAYSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="txtVersion" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PAYViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnCalculate:"/>
+                <relationship kind="outlet" name="lblMonthlyPayment" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

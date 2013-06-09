@@ -49,22 +49,21 @@
         
         _internetStatus = @"Internet connected";
 
-        [self.tableView reloadData];
-        [self.refreshControl endRefreshing];
     }
     else
     {
-        _thirtyYearFixedToday.text = @"";
-        _thirtyYearFixedLastWeek.text = @"";
-        _fifteenYearFixedToday.text = @"";
-        _fifteenYearFixedLastWeek.text = @"";
-        _fiveOneArmToday.text = @"";
-        _fiveOneArmLastWeek.text = @"";
+        _thirtyYearFixedToday.text = @"N/A";
+        _thirtyYearFixedLastWeek.text = @"N/A";
+        _fifteenYearFixedToday.text = @"N/A";
+        _fifteenYearFixedLastWeek.text = @"N/A";
+        _fiveOneArmToday.text = @"N/A";
+        _fiveOneArmLastWeek.text = @"N/A";
         
         _internetStatus = @"There is no connection to the internet";
     }
     
-    
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];    
     
 }
 
