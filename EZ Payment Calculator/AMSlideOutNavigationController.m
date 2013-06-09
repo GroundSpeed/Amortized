@@ -201,6 +201,9 @@
 	
 	// The content is displayed in a UINavigationController
 	self.contentController = [[UINavigationController alloc] init];
+    self.contentController.navigationBar.tintColor = [UIColor colorWithRed:50.0f/255.0f green:100.0f/255.0f blue:50.0f/255.0 alpha:1.0];
+    //[UIColor colorWithRed:50.0f/255.0f green:121.0f/255.0f blue:61.0f/255.0 alpha:1.0];
+    //[UIColor colorWithRed:0/255 green:129/255 blue:61/255 alpha:1];
 	
 	if ([self.options[AMOptionsEnableShadow] boolValue]) {
 		self.contentController.view.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.contentController.view.bounds].CGPath;

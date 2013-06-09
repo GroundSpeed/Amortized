@@ -19,7 +19,7 @@
 	
 	self.slideoutController = [AMSlideOutNavigationController slideOutNavigation];
 	
-	[self.slideoutController addSectionWithTitle:@"Menu"];
+	[self.slideoutController addSectionWithTitle:@"Main Menu"];
 	
 	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYCalcAmortController"];
 	[self.slideoutController addViewControllerToLastSection:controller tagged:1 withTitle:@"Monthly Payment" andIcon:@""];
