@@ -56,7 +56,7 @@
     
     UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(15,0,300,44)];
     tempLabel.backgroundColor=[UIColor clearColor];
-    tempLabel.textColor = [UIColor blackColor]; //here you can change the text color of header.
+    tempLabel.textColor = [UIColor whiteColor]; //here you can change the text color of header.
     tempLabel.font = [UIFont boldSystemFontOfSize:20];
 
     if (section ==0)

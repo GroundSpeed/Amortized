@@ -48,7 +48,20 @@
                                      loanAmount:principal
                                     futureValue:0
                                            type:0];
-    _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];    
+    
+    if (isnan(amount))
+    {
+        _lblMonthlyPayment.font = [UIFont boldSystemFontOfSize:18];
+        _lblMonthlyPayment.textColor = [UIColor redColor];
+        _lblMonthlyPayment.text = @"You must enter all required fields.";
+    }
+    else
+    {
+        // Courier New Bold 28.0
+        _lblMonthlyPayment.font = [UIFont fontWithName:@"Courier-Bold" size:28];
+        _lblMonthlyPayment.textColor = [UIColor blackColor];
+        _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];
+    }
 }
 
 -(float)calculatPMTWithRatePerPeriod:(double)ratePerPeriod

@@ -28,7 +28,7 @@
 	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Current Mortgage Rates" andIcon:@""];
 
     controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYSettingsController"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:3 withTitle:@"Settings" andIcon:@""];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:3 withTitle:@"Future Improvements" andIcon:@""];
 
     [self.window setRootViewController:self.slideoutController];
 	
