@@ -69,17 +69,39 @@
                                 </constraints>
                                 <string key="text">A future version will include some settings in the application to turn off the down payment field and possibly grab more interest data.  Please leave some feedback on what changes would be useful for you while using the app.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="GroundSpeed Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="joF-c9-R8I">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="6IK-a2-q5F"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Version Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPh-5Q-Lvx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HJT-hG-Ixz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LbW-pI-ril" firstAttribute="top" secondItem="oE8-lY-NZH" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7dZ-xB-iJe"/>
                             <constraint firstItem="LbW-pI-ril" firstAttribute="leading" secondItem="oE8-lY-NZH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CcO-Hh-qdg"/>
+                            <constraint firstAttribute="trailing" secondItem="joF-c9-R8I" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Gh6-Jb-voy"/>
+                            <constraint firstAttribute="bottom" secondItem="jPh-5Q-Lvx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="VbC-KW-Iy8"/>
+                            <constraint firstItem="joF-c9-R8I" firstAttribute="top" secondItem="oE8-lY-NZH" secondAttribute="top" constant="6" id="bES-ZZ-o67"/>
                             <constraint firstAttribute="trailing" secondItem="LbW-pI-ril" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dWB-sc-OrT"/>
+                            <constraint firstAttribute="trailing" secondItem="jPh-5Q-Lvx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dyF-7k-9vr"/>
+                            <constraint firstItem="LbW-pI-ril" firstAttribute="top" secondItem="joF-c9-R8I" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="huQ-pD-V2R"/>
+                            <constraint firstItem="joF-c9-R8I" firstAttribute="leading" secondItem="oE8-lY-NZH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iK7-HB-6pM"/>
+                            <constraint firstItem="jPh-5Q-Lvx" firstAttribute="leading" secondItem="oE8-lY-NZH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pfa-kw-JRD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtVersion" destination="jPh-5Q-Lvx" id="XIv-sf-pUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8X6-pe-ag4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -543,42 +565,9 @@
             <point key="canvasLocation" x="1619" y="-608"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PAYInputsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYInputsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="txtAmount" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtDownPayment" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtInterestRate" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtTerm" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="PAYRateTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYRateTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="fifteenYearFixedLastWeek" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fifteenYearFixedToday" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fiveOneArmLastWeek" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fiveOneArmToday" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableController" candidateClass="UITableViewController"/>
-                <relationship kind="outlet" name="thirtyYearFixedLastWeek" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thirtyYearFixedToday" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PAYSettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYSettingsViewController.h"/>
-        </class>
-        <class className="PAYViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAYViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnCalculate:"/>
-                <relationship kind="outlet" name="lblMonthlyPayment" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
+    <resources>
+        <image name="GroundSpeed Logo.png" width="523" height="192"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -27,7 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    _txtVersion.text = [NSString stringWithFormat:@"Version Number: %@", [info objectForKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)didReceiveMemoryWarning

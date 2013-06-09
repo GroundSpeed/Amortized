@@ -21,6 +21,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *fifteenYearFixedLastWeek;
 @property (strong, nonatomic) IBOutlet UILabel *fiveOneArmLastWeek;
 
+@property (strong, nonatomic) NSString *internetStatus;
+
 -(void)loadTextFields;
+- (BOOL)connected;
 
 @end

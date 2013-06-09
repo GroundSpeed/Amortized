@@ -35,18 +35,37 @@
 
 - (void)loadTextFields
 {
-    NSString *percentSign = @"%";
-    InterestRates *ir = [[InterestRates alloc] init];
-    _dictInterestRates = [ir getInterestRates];
-    _thirtyYearFixedToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"thirtyYearFixedToday"], percentSign];
-    _thirtyYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"thirtyYearFixedLastWeek"], percentSign];
-    _fifteenYearFixedToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fifteenYearFixedToday"], percentSign];
-    _fifteenYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fifteenYearFixedLastWeek"], percentSign];
-    _fiveOneArmToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fiveOneARMToday"], percentSign];
-    _fiveOneArmLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fiveOneARMLastWeek"], percentSign];
+    if ([self connected])
+    {
+        NSString *percentSign = @"%";
+        InterestRates *ir = [[InterestRates alloc] init];
+        _dictInterestRates = [ir getInterestRates];
+        _thirtyYearFixedToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"thirtyYearFixedToday"], percentSign];
+        _thirtyYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"thirtyYearFixedLastWeek"], percentSign];
+        _fifteenYearFixedToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fifteenYearFixedToday"], percentSign];
+        _fifteenYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fifteenYearFixedLastWeek"], percentSign];
+        _fiveOneArmToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fiveOneARMToday"], percentSign];
+        _fiveOneArmLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fiveOneARMLastWeek"], percentSign];
+        
+        _internetStatus = @"Internet connected";
+
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    }
+    else
+    {
+        _thirtyYearFixedToday.text = @"";
+        _thirtyYearFixedLastWeek.text = @"";
+        _fifteenYearFixedToday.text = @"";
+        _fifteenYearFixedLastWeek.text = @"";
+        _fiveOneArmToday.text = @"";
+        _fiveOneArmLastWeek.text = @"";
+        
+        _internetStatus = @"There is no connection to the internet";
+    }
     
-    [self.tableView reloadData];
-    [self.refreshControl endRefreshing];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,7 +99,7 @@
     UIView *tempView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
     tempView.backgroundColor=[UIColor clearColor];
     
-    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(60, 0, tableView.bounds.size.width, 30)];
+    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(20, 0, tableView.bounds.size.width, 30)];
     tempLabel.backgroundColor=[UIColor clearColor];
     tempLabel.textColor = [UIColor darkGrayColor]; //here you can change the text color of header.
     tempLabel.font = [UIFont italicSystemFontOfSize:16];
@@ -88,11 +107,21 @@
     if (section ==0)
         tempLabel.text=@"";
     else if (section == 1)
-        tempLabel.text=@"";
+        tempLabel.text=_internetStatus;
     
     [tempView addSubview:tempLabel];
     
     return tempView;
+}
+
+- (BOOL)connected
+{
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com"];
+    NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
+    if (data)
+        return true;
+    else
+        return false;
 }
 
 @end

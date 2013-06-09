@@ -10,4 +10,6 @@
 
 @interface PAYSettingsViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel *txtVersion;
+
 @end
