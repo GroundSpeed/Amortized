@@ -49,7 +49,7 @@
                                     futureValue:0
                                            type:0];
     
-    if (isnan(amount))
+    if (isnan(amount) || isinf(amount))
     {
         _lblMonthlyPayment.font = [UIFont boldSystemFontOfSize:18];
         _lblMonthlyPayment.textColor = [UIColor redColor];
