@@ -74,7 +74,7 @@
 
 #pragma mark Added Cancel Apply to Keyboard
 
--(void)cancelNumberPad:(NSString *)textBox
+-(void)cancelNumberPad
 {
     [self hideKeyboard];
 }
