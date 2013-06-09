@@ -10,7 +10,7 @@
 #import "PAYInputsTableViewController.h"
 #include "Math.h"
 
-@interface PAYViewController : UIViewController <UITextFieldDelegate>
+@interface PAYViewController : UIViewController <UITextFieldDelegate, ChildViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *lblMonthlyPayment;
 @property (strong,nonatomic) PAYInputsTableViewController *tVC;
@@ -22,6 +22,7 @@
                                 type:(NSInteger)type;
 
 - (IBAction)btnCalculate:(id)sender;
+- (void)getMonthlyPayment;
 
 @end
 

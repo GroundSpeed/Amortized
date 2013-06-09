@@ -349,15 +349,15 @@
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Dpj-RS-r9V" firstAttribute="leading" secondItem="aZ2-qP-t1X" secondAttribute="leading" type="default" id="0te-HT-Cud"/>
+                            <constraint firstAttribute="bottom" secondItem="MN7-II-Cdr" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="D2E-BI-MfG"/>
                             <constraint firstItem="bTE-G2-7DC" firstAttribute="trailing" secondItem="aZ2-qP-t1X" secondAttribute="trailing" type="default" id="FYO-us-x7I"/>
                             <constraint firstItem="bTE-G2-7DC" firstAttribute="top" secondItem="aZ2-qP-t1X" secondAttribute="top" type="default" id="GU7-hz-hnF"/>
                             <constraint firstItem="MN7-II-Cdr" firstAttribute="leading" secondItem="aZ2-qP-t1X" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PMn-93-OQG"/>
                             <constraint firstItem="Dpj-RS-r9V" firstAttribute="trailing" secondItem="aZ2-qP-t1X" secondAttribute="trailing" type="default" id="Sdx-6n-2gE"/>
-                            <constraint firstAttribute="bottom" secondItem="Dpj-RS-r9V" secondAttribute="bottom" constant="124" id="V2f-oa-gEA"/>
-                            <constraint firstItem="Dpj-RS-r9V" firstAttribute="top" secondItem="aZ2-qP-t1X" secondAttribute="top" constant="96" id="WyP-JV-g8V"/>
                             <constraint firstItem="bTE-G2-7DC" firstAttribute="leading" secondItem="aZ2-qP-t1X" secondAttribute="leading" type="default" id="bVL-wu-jWK"/>
-                            <constraint firstItem="MN7-II-Cdr" firstAttribute="top" secondItem="aZ2-qP-t1X" secondAttribute="top" constant="56" id="erL-k7-C5P"/>
                             <constraint firstAttribute="trailing" secondItem="MN7-II-Cdr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="l02-2i-HMn"/>
+                            <constraint firstItem="Dpj-RS-r9V" firstAttribute="top" secondItem="aZ2-qP-t1X" secondAttribute="top" constant="43" id="uHz-9J-dRh"/>
+                            <constraint firstAttribute="bottom" secondItem="Dpj-RS-r9V" secondAttribute="bottom" constant="177" id="yuA-CN-nG6"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

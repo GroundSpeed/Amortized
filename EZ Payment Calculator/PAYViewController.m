@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     self.tVC = (PAYInputsTableViewController *)self.childViewControllers.lastObject;
+    self.tVC.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,6 +27,11 @@
 }
 
 - (IBAction)btnCalculate:(id)sender
+{
+    [self getMonthlyPayment];
+}
+
+-(void)getMonthlyPayment
 {
     // A = payment Amount per period
     // P = initial Principal (loan amount)
@@ -38,15 +44,18 @@
     double rate = [self.tVC.txtInterestRate.text doubleValue]/12/100;
     
     amount = [self calculatPMTWithRatePerPeriod:rate
-                          numberOfPayments:payments
-                                loanAmount:principal
-                               futureValue:0
-                                      type:0];
-    _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];
-    
+                               numberOfPayments:payments
+                                     loanAmount:principal
+                                    futureValue:0
+                                           type:0];
+    _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];    
 }
 
--(float)calculatPMTWithRatePerPeriod:(double)ratePerPeriod numberOfPayments:(NSInteger)numberOfPayments loanAmount:(double)loanAmount futureValue:(double)futureValue type:(NSInteger)type
+-(float)calculatPMTWithRatePerPeriod:(double)ratePerPeriod
+                    numberOfPayments:(NSInteger)numberOfPayments
+                          loanAmount:(double)loanAmount
+                         futureValue:(double)futureValue
+                                type:(NSInteger)type
 {
     
     double q;
