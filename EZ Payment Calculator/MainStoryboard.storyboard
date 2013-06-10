@@ -409,7 +409,7 @@
         <scene sceneID="sQQ-zj-vOf">
             <objects>
                 <tableViewController title="Rates" id="PTP-Wa-sbF" customClass="PAYInputsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Hoz-OZ-khH">
+                    <tableView key="view" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Hoz-OZ-khH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
