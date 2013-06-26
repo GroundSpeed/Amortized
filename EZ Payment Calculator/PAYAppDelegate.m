@@ -27,8 +27,11 @@
 	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYShowRateController"];
 	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Current Mortgage Rates" andIcon:@""];
 
+	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYDaysSinceDate"];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:3 withTitle:@"Days Since Date" andIcon:@""];
+    
     controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYSettingsController"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:3 withTitle:@"Future Improvements" andIcon:@""];
+	[self.slideoutController addViewControllerToLastSection:controller tagged:4 withTitle:@"Future Improvements" andIcon:@""];
 
     [self.window setRootViewController:self.slideoutController];
 	

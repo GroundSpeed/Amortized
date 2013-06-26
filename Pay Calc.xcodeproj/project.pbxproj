@@ -36,6 +36,7 @@
 		95497F6316BB789C00952D2A /* calculate.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6216BB789C00952D2A /* calculate.png */; };
 		95497F6A16BC149B00952D2A /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6816BC149B00952D2A /* settings.png */; };
 		95497F6B16BC149B00952D2A /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6916BC149B00952D2A /* settings@2x.png */; };
+		957CB3E8177A903600D468FB /* PAYDaysSinceDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CB3E7177A903600D468FB /* PAYDaysSinceDateViewController.m */; };
 		9584D6481748901000081312 /* PayCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6461748901000081312 /* PayCalc.png */; };
 		9584D6491748901000081312 /* PayCalc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6471748901000081312 /* PayCalc@2x.png */; };
 		9584D650174897A300081312 /* InterestRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584D64F174897A300081312 /* InterestRates.m */; };
@@ -86,6 +87,8 @@
 		95497F6216BB789C00952D2A /* calculate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculate.png; sourceTree = "<group>"; };
 		95497F6816BC149B00952D2A /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		95497F6916BC149B00952D2A /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		957CB3E6177A903600D468FB /* PAYDaysSinceDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYDaysSinceDateViewController.h; sourceTree = "<group>"; };
+		957CB3E7177A903600D468FB /* PAYDaysSinceDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYDaysSinceDateViewController.m; sourceTree = "<group>"; };
 		9584D6461748901000081312 /* PayCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc.png; sourceTree = "<group>"; };
 		9584D6471748901000081312 /* PayCalc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PayCalc@2x.png"; sourceTree = "<group>"; };
 		9584D64E174897A300081312 /* InterestRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestRates.h; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */,
 				952D0971176382240039F05E /* PAYSettingsViewController.h */,
 				952D0972176382240039F05E /* PAYSettingsViewController.m */,
+				957CB3E6177A903600D468FB /* PAYDaysSinceDateViewController.h */,
+				957CB3E7177A903600D468FB /* PAYDaysSinceDateViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				958533E1174B2ABD00BABFF5 /* PAYRateTableViewController.m in Sources */,
 				952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */,
 				952D09791763B1D10039F05E /* PAYInputsTableViewController.m in Sources */,
+				957CB3E8177A903600D468FB /* PAYDaysSinceDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
