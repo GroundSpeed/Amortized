@@ -67,7 +67,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12/12/2012" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-a7-MQc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12.12.2012" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-a7-MQc">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="uCA-gE-n10"/>
@@ -459,7 +459,6 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MN7-II-Cdr" firstAttribute="top" secondItem="eEa-Lq-KLr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1z8-0k-U3b"/>
-                            <constraint firstAttribute="bottom" secondItem="Dpj-RS-r9V" secondAttribute="bottom" constant="178" id="4MS-wI-nKw"/>
                             <constraint firstItem="bTE-G2-7DC" firstAttribute="top" secondItem="aZ2-qP-t1X" secondAttribute="top" type="default" id="As6-Xi-4Fq"/>
                             <constraint firstAttribute="bottom" secondItem="MN7-II-Cdr" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="D2E-BI-MfG"/>
                             <constraint firstItem="Dpj-RS-r9V" firstAttribute="top" secondItem="aZ2-qP-t1X" secondAttribute="top" constant="42" id="EMv-8V-aON"/>
@@ -470,6 +469,7 @@
                             <constraint firstItem="Dpj-RS-r9V" firstAttribute="leading" secondItem="aZ2-qP-t1X" secondAttribute="leading" type="default" id="e8u-2S-h6X"/>
                             <constraint firstAttribute="trailing" secondItem="MN7-II-Cdr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="l02-2i-HMn"/>
                             <constraint firstItem="eEa-Lq-KLr" firstAttribute="leading" secondItem="aZ2-qP-t1X" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mIm-BA-p7n"/>
+                            <constraint firstAttribute="bottom" secondItem="Dpj-RS-r9V" secondAttribute="bottom" constant="174" id="rwD-05-Tbb"/>
                             <constraint firstAttribute="trailing" secondItem="eEa-Lq-KLr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vht-T3-VRX"/>
                         </constraints>
                     </view>
@@ -487,7 +487,7 @@
             <objects>
                 <tableViewController title="Rates" id="PTP-Wa-sbF" customClass="PAYInputsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Hoz-OZ-khH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -542,7 +542,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="$0.00" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7I9-jG-ZC2">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="$0.00" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7I9-jG-ZC2">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="123" id="byx-qd-tZ0"/>
                                                         <constraint firstAttribute="height" constant="30" id="mfH-4s-L9A"/>
@@ -575,7 +575,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="%" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1o-xD-LS7">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="%" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1o-xD-LS7">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="123" id="DpZ-RR-wWC"/>
                                                         <constraint firstAttribute="height" constant="30" id="n3a-nS-ssx"/>
@@ -608,7 +608,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Years" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dod-31-xRS">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Years" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dod-31-xRS">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="QdP-DO-vpb"/>
                                                         <constraint firstAttribute="width" constant="123" id="fOF-61-1d5"/>

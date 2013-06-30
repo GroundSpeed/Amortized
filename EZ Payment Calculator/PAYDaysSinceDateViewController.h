@@ -16,7 +16,9 @@
 -(IBAction)btnCalculate:(id)sender;
 -(UIToolbar*)keyboardHeader;
 
+-(NSString *)getDateFromDays:(int)days;
 -(void) getDaysFromDate;
+-(void) clearNumberPad;
 -(void) cancelNumberPad;
 -(void) doneWithNumberPad;
 
