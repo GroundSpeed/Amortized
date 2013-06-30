@@ -22,6 +22,7 @@
                                 type:(NSInteger)type;
 
 - (IBAction)btnCalculate:(id)sender;
+- (IBAction)btnClear:(id)sender;
 - (void)getMonthlyPayment;
 
 @end

@@ -85,5 +85,4 @@
     [self.delegate getMonthlyPayment];
 }
 
-
 @end

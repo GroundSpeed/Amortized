@@ -31,6 +31,15 @@
     [self getMonthlyPayment];
 }
 
+- (IBAction)btnClear:(id)sender
+{
+    self.tVC.txtAmount.text = nil;
+    self.tVC.txtDownPayment.text = nil;
+    self.tVC.txtInterestRate.text = nil;
+    self.tVC.txtTerm.text = nil;
+    _lblMonthlyPayment.text = @"0.00";
+}
+
 -(void)getMonthlyPayment
 {
     // A = payment Amount per period
