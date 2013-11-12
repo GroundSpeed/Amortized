@@ -68,7 +68,7 @@
     {
         // Courier New Bold 28.0
         _lblMonthlyPayment.font = [UIFont fontWithName:@"Courier-Bold" size:28];
-        _lblMonthlyPayment.textColor = [UIColor blackColor];
+        _lblMonthlyPayment.textColor = [UIColor whiteColor];
         _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];
     }
 }
