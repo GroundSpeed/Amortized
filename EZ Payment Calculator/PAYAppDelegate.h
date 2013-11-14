@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class AMSlideOutNavigationController;
-
 @interface PAYAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

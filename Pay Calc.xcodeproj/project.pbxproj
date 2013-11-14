@@ -39,6 +39,10 @@
 		958B2E531831E59C00051DD1 /* Rates.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E511831E59C00051DD1 /* Rates.png */; };
 		958B2E561831E6B700051DD1 /* BlankCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E551831E6B700051DD1 /* BlankCalendar.png */; };
 		958B2E5A1831E7EC00051DD1 /* Percent.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E591831E7EC00051DD1 /* Percent.png */; };
+		958B2E991834859100051DD1 /* PayCalc58.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E961834859100051DD1 /* PayCalc58.png */; };
+		958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E971834859100051DD1 /* PayCalc80.png */; };
+		958B2E9B1834859100051DD1 /* PayCalc120.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E981834859100051DD1 /* PayCalc120.png */; };
+		958B2E9E183485D000051DD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E9D183485D000051DD1 /* Images.xcassets */; };
 		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +90,10 @@
 		958B2E511831E59C00051DD1 /* Rates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rates.png; sourceTree = "<group>"; };
 		958B2E551831E6B700051DD1 /* BlankCalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlankCalendar.png; sourceTree = "<group>"; };
 		958B2E591831E7EC00051DD1 /* Percent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Percent.png; sourceTree = "<group>"; };
+		958B2E961834859100051DD1 /* PayCalc58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc58.png; sourceTree = "<group>"; };
+		958B2E971834859100051DD1 /* PayCalc80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc80.png; sourceTree = "<group>"; };
+		958B2E981834859100051DD1 /* PayCalc120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc120.png; sourceTree = "<group>"; };
+		958B2E9D183485D000051DD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Pay Calc/Images.xcassets"; sourceTree = "<group>"; };
 		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +114,7 @@
 		95497F0716BB637000952D2A = {
 			isa = PBXGroup;
 			children = (
+				958B2E9D183485D000051DD1 /* Images.xcassets */,
 				95497F1C16BB637000952D2A /* PayCalc */,
 				95497F1516BB637000952D2A /* Frameworks */,
 				95497F1316BB637000952D2A /* Products */,
@@ -197,6 +206,7 @@
 		95497F5716BB656A00952D2A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				958B2E9C1834859800051DD1 /* Icons */,
 				958B2E541831E5FC00051DD1 /* Tabs */,
 				958B2E4E1831E50500051DD1 /* Payment.png */,
 				952D09821765068F0039F05E /* GroundSpeed Logo.png */,
@@ -224,6 +234,16 @@
 				958B2E501831E59C00051DD1 /* CalculatePayment.png */,
 			);
 			name = Tabs;
+			sourceTree = "<group>";
+		};
+		958B2E9C1834859800051DD1 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				958B2E961834859100051DD1 /* PayCalc58.png */,
+				958B2E971834859100051DD1 /* PayCalc80.png */,
+				958B2E981834859100051DD1 /* PayCalc120.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,8 +300,11 @@
 			files = (
 				95497F2116BB637000952D2A /* InfoPlist.strings in Resources */,
 				95497F2916BB637000952D2A /* Default.png in Resources */,
+				958B2E991834859100051DD1 /* PayCalc58.png in Resources */,
+				958B2E9E183485D000051DD1 /* Images.xcassets in Resources */,
 				95497F2B16BB637000952D2A /* Default@2x.png in Resources */,
 				95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */,
+				958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */,
 				95497F5916BB6FC200952D2A /* house.png in Resources */,
 				958B2E531831E59C00051DD1 /* Rates.png in Resources */,
 				95497F5D16BB725200952D2A /* other.png in Resources */,
@@ -291,6 +314,7 @@
 				95497F6B16BC149B00952D2A /* settings@2x.png in Resources */,
 				95C8D44216E288E3003CDF73 /* arrow.png in Resources */,
 				958B2E4F1831E50500051DD1 /* Payment.png in Resources */,
+				958B2E9B1834859100051DD1 /* PayCalc120.png in Resources */,
 				952272761746C57200601617 /* MainStoryboard.storyboard in Resources */,
 				9584D6481748901000081312 /* PayCalc.png in Resources */,
 				9584D6491748901000081312 /* PayCalc@2x.png in Resources */,
@@ -390,6 +414,8 @@
 		95497F4F16BB637000952D2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
 				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
@@ -402,6 +428,8 @@
 		95497F5016BB637000952D2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
 				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
