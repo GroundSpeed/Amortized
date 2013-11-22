@@ -48,10 +48,10 @@
     numberToolbar.barStyle = UIBarStyleDefault;
     
     numberToolbar.items = [NSArray arrayWithObjects:
-                           [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
-                           [[UIBarButtonItem alloc]initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clearNumberPad)],
+                           [[UIBarButtonItem alloc]initWithTitle:@"[Cancel]" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                           [[UIBarButtonItem alloc]initWithTitle:@"[Clear]" style:UIBarButtonItemStyleBordered target:self action:@selector(clearNumberPad)],
                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-                           [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                           [[UIBarButtonItem alloc]initWithTitle:@"[Calculate]" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
                            nil];
     
     [numberToolbar sizeToFit];
@@ -77,6 +77,12 @@
 -(IBAction)btnCalculate:(id)sender
 {
     [self getDaysFromDate];
+}
+
+-(IBAction)btnClear:(id)sender
+{
+    _txtFromDate.text = @"";
+    _lblTotalDays.text = @"0 Days";
 }
 
 -(void) getDaysFromDate

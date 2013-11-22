@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtFromDate;
 
 -(IBAction)btnCalculate:(id)sender;
+-(IBAction)btnClear:(id)sender;
 -(UIToolbar*)keyboardHeader;
 
 -(NSString *)getDateFromDays:(int)days;
