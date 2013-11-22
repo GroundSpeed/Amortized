@@ -10,8 +10,6 @@
 		952272761746C57200601617 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952272691746C57200601617 /* MainStoryboard.storyboard */; };
 		952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D0972176382240039F05E /* PAYSettingsViewController.m */; };
 		952D09791763B1D10039F05E /* PAYInputsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D09781763B1D10039F05E /* PAYInputsTableViewController.m */; };
-		952D097F1763EC680039F05E /* DollarSign.png in Resources */ = {isa = PBXBuildFile; fileRef = 952D097E1763EC680039F05E /* DollarSign.png */; };
-		952D09811763EC780039F05E /* DollarSign@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952D09801763EC780039F05E /* DollarSign@2x.png */; };
 		952D09831765068F0039F05E /* GroundSpeed Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 952D09821765068F0039F05E /* GroundSpeed Logo.png */; };
 		95497F1716BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
 		95497F1916BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
@@ -319,9 +317,7 @@
 				9584D6481748901000081312 /* PayCalc.png in Resources */,
 				9584D6491748901000081312 /* PayCalc@2x.png in Resources */,
 				958B2E521831E59C00051DD1 /* CalculatePayment.png in Resources */,
-				952D097F1763EC680039F05E /* DollarSign.png in Resources */,
 				958B2E561831E6B700051DD1 /* BlankCalendar.png in Resources */,
-				952D09811763EC780039F05E /* DollarSign@2x.png in Resources */,
 				952D09831765068F0039F05E /* GroundSpeed Logo.png in Resources */,
 				958B2E5A1831E7EC00051DD1 /* Percent.png in Resources */,
 			);
@@ -384,7 +380,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -406,7 +402,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
