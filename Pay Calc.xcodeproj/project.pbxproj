@@ -32,6 +32,16 @@
 		9584D6491748901000081312 /* PayCalc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6471748901000081312 /* PayCalc@2x.png */; };
 		9584D650174897A300081312 /* InterestRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584D64F174897A300081312 /* InterestRates.m */; };
 		958533E1174B2ABD00BABFF5 /* PAYRateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */; };
+		958B1A1D18B7016C00D0F22E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A1C18B7016C00D0F22E /* AudioToolbox.framework */; };
+		958B1A1F18B7017600D0F22E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A1E18B7017600D0F22E /* CFNetwork.framework */; };
+		958B1A2118B7018C00D0F22E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2018B7018C00D0F22E /* CoreLocation.framework */; };
+		958B1A2318B7019A00D0F22E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2218B7019A00D0F22E /* libz.dylib */; };
+		958B1A2518B701A700D0F22E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2418B701A700D0F22E /* MobileCoreServices.framework */; };
+		958B1A2718B701D900D0F22E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2618B701D900D0F22E /* QuartzCore.framework */; };
+		958B1A2918B701E400D0F22E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2818B701E400D0F22E /* Security.framework */; };
+		958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2A18B701EE00D0F22E /* StoreKit.framework */; };
+		958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */; };
+		958B1A2F18B7038B00D0F22E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2E18B7038B00D0F22E /* Parse.framework */; };
 		958B2E4F1831E50500051DD1 /* Payment.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E4E1831E50500051DD1 /* Payment.png */; };
 		958B2E521831E59C00051DD1 /* CalculatePayment.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E501831E59C00051DD1 /* CalculatePayment.png */; };
 		958B2E531831E59C00051DD1 /* Rates.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E511831E59C00051DD1 /* Rates.png */; };
@@ -53,7 +63,7 @@
 		952D097E1763EC680039F05E /* DollarSign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DollarSign.png; path = ../DollarSign.png; sourceTree = "<group>"; };
 		952D09801763EC780039F05E /* DollarSign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DollarSign@2x.png"; path = "../DollarSign@2x.png"; sourceTree = "<group>"; };
 		952D09821765068F0039F05E /* GroundSpeed Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GroundSpeed Logo.png"; sourceTree = "<group>"; };
-		95497F1216BB637000952D2A /* Pay Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95497F1216BB637000952D2A /* Amortize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		95497F1A16BB637000952D2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +93,16 @@
 		9584D64F174897A300081312 /* InterestRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestRates.m; sourceTree = "<group>"; };
 		958533DF174B2ABD00BABFF5 /* PAYRateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYRateTableViewController.h; sourceTree = "<group>"; };
 		958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYRateTableViewController.m; sourceTree = "<group>"; };
+		958B1A1C18B7016C00D0F22E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		958B1A1E18B7017600D0F22E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		958B1A2018B7018C00D0F22E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		958B1A2218B7019A00D0F22E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		958B1A2418B701A700D0F22E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		958B1A2618B701D900D0F22E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		958B1A2818B701E400D0F22E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		958B1A2A18B701EE00D0F22E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		958B1A2E18B7038B00D0F22E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		958B2E4E1831E50500051DD1 /* Payment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Payment.png; sourceTree = "<group>"; };
 		958B2E501831E59C00051DD1 /* CalculatePayment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalculatePayment.png; sourceTree = "<group>"; };
 		958B2E511831E59C00051DD1 /* Rates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rates.png; sourceTree = "<group>"; };
@@ -100,9 +120,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */,
+				958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */,
+				958B1A2918B701E400D0F22E /* Security.framework in Frameworks */,
+				958B1A2718B701D900D0F22E /* QuartzCore.framework in Frameworks */,
+				958B1A2518B701A700D0F22E /* MobileCoreServices.framework in Frameworks */,
+				958B1A2318B7019A00D0F22E /* libz.dylib in Frameworks */,
+				958B1A2F18B7038B00D0F22E /* Parse.framework in Frameworks */,
+				958B1A2118B7018C00D0F22E /* CoreLocation.framework in Frameworks */,
+				95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */,
+				958B1A1F18B7017600D0F22E /* CFNetwork.framework in Frameworks */,
+				958B1A1D18B7016C00D0F22E /* AudioToolbox.framework in Frameworks */,
 				95497F1716BB637000952D2A /* UIKit.framework in Frameworks */,
 				95497F1916BB637000952D2A /* Foundation.framework in Frameworks */,
-				95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +152,7 @@
 		95497F1316BB637000952D2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95497F1216BB637000952D2A /* Pay Calc.app */,
+				95497F1216BB637000952D2A /* Amortize.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +160,16 @@
 		95497F1516BB637000952D2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				958B1A2E18B7038B00D0F22E /* Parse.framework */,
+				958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */,
+				958B1A2A18B701EE00D0F22E /* StoreKit.framework */,
+				958B1A2818B701E400D0F22E /* Security.framework */,
+				958B1A2618B701D900D0F22E /* QuartzCore.framework */,
+				958B1A2418B701A700D0F22E /* MobileCoreServices.framework */,
+				958B1A2218B7019A00D0F22E /* libz.dylib */,
+				958B1A2018B7018C00D0F22E /* CoreLocation.framework */,
+				958B1A1E18B7017600D0F22E /* CFNetwork.framework */,
+				958B1A1C18B7016C00D0F22E /* AudioToolbox.framework */,
 				95497F1616BB637000952D2A /* UIKit.framework */,
 				95497F1816BB637000952D2A /* Foundation.framework */,
 				95497F1A16BB637000952D2A /* CoreGraphics.framework */,
@@ -261,7 +301,7 @@
 			);
 			name = "Pay Calc";
 			productName = "EZ Payment Calculator";
-			productReference = 95497F1216BB637000952D2A /* Pay Calc.app */;
+			productReference = 95497F1216BB637000952D2A /* Amortize.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -412,10 +452,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/donmiller/Documents/Projects/iOS/EZ\\ Payment\\ Calculator",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
 				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
-				PRODUCT_NAME = "Pay Calc";
+				PRODUCT_NAME = Amortize;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -426,10 +470,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/donmiller/Documents/Projects/iOS/EZ\\ Payment\\ Calculator",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
 				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
-				PRODUCT_NAME = "Pay Calc";
+				PRODUCT_NAME = Amortize;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
