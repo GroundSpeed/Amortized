@@ -7,34 +7,11 @@
 //
 
 #import "PAYAppDelegate.h"
-#import "AMSlideOutNavigationController.h"
 
 @implementation PAYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    
-	UIViewController* controller;
-	
-	self.slideoutController = [AMSlideOutNavigationController slideOutNavigation];
-	
-	[self.slideoutController addSectionWithTitle:@"Pay Calc Menu"];
-	
-	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYCalcAmortController"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:1 withTitle:@"Monthly Payment" andIcon:@""];
-	
-	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYShowRateController"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:2 withTitle:@"Current Mortgage Rates" andIcon:@""];
-
-	controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYDaysSinceDate"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:3 withTitle:@"Days Since Date" andIcon:@""];
-    
-    controller = [storyboard instantiateViewControllerWithIdentifier:@"PAYSettingsController"];
-	[self.slideoutController addViewControllerToLastSection:controller tagged:4 withTitle:@"Future Improvements" andIcon:@""];
-
-    [self.window setRootViewController:self.slideoutController];
-	
+{	
     return YES;
 }
 							

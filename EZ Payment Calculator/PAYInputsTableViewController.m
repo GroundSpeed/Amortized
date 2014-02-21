@@ -48,9 +48,19 @@
     numberToolbar.barStyle = UIBarStyleBlackTranslucent;
     
     numberToolbar.items = [NSArray arrayWithObjects:
-                               [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                               [[UIBarButtonItem alloc]initWithTitle:@"[Next]"
+                                                               style:UIBarButtonItemStyleBordered
+                                                              target:self action:@selector(nextField)],
+                               [[UIBarButtonItem alloc]initWithTitle:@"[Previous]"
+                                                               style:UIBarButtonItemStyleBordered
+                                                              target:self action:@selector(previousField)],
+                               [[UIBarButtonItem alloc]initWithTitle:@"[Cancel]"
+                                                               style:UIBarButtonItemStyleBordered
+                                                              target:self action:@selector(cancelNumberPad)],
                                [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-                               [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                               [[UIBarButtonItem alloc]initWithTitle:@"[Calculate]"
+                                                               style:UIBarButtonItemStyleDone
+                                                              target:self action:@selector(doneWithNumberPad)],
                                nil];
     
     [numberToolbar sizeToFit];
@@ -84,5 +94,31 @@
     [self hideKeyboard];
     [self.delegate getMonthlyPayment];
 }
+
+-(void) previousField
+{
+    if ([_txtAmount isFirstResponder])
+        [_txtTerm becomeFirstResponder];
+    else if ([_txtDownPayment isFirstResponder])
+        [_txtAmount becomeFirstResponder];
+    else if ([_txtInterestRate isFirstResponder])
+        [_txtDownPayment becomeFirstResponder];
+    else if ([_txtTerm isFirstResponder])
+        [_txtInterestRate becomeFirstResponder];
+}
+
+
+-(void) nextField
+{
+    if ([_txtAmount isFirstResponder])
+        [_txtDownPayment becomeFirstResponder];
+    else if ([_txtDownPayment isFirstResponder])
+        [_txtInterestRate becomeFirstResponder];
+    else if ([_txtInterestRate isFirstResponder])
+        [_txtTerm becomeFirstResponder];
+    else if ([_txtTerm isFirstResponder])
+        [_txtAmount becomeFirstResponder];
+}
+
 
 @end
