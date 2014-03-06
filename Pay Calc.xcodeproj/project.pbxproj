@@ -63,7 +63,7 @@
 		952D097E1763EC680039F05E /* DollarSign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DollarSign.png; path = ../DollarSign.png; sourceTree = "<group>"; };
 		952D09801763EC780039F05E /* DollarSign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DollarSign@2x.png"; path = "../DollarSign@2x.png"; sourceTree = "<group>"; };
 		952D09821765068F0039F05E /* GroundSpeed Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GroundSpeed Logo.png"; sourceTree = "<group>"; };
-		95497F1216BB637000952D2A /* Amortize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95497F1216BB637000952D2A /* Pay Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		95497F1A16BB637000952D2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -152,7 +152,7 @@
 		95497F1316BB637000952D2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95497F1216BB637000952D2A /* Amortize.app */,
+				95497F1216BB637000952D2A /* Pay Calc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 			);
 			name = "Pay Calc";
 			productName = "EZ Payment Calculator";
-			productReference = 95497F1216BB637000952D2A /* Amortize.app */;
+			productReference = 95497F1216BB637000952D2A /* Pay Calc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -313,6 +313,11 @@
 				CLASSPREFIX = PAY;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = GroundSpeed;
+				TargetAttributes = {
+					95497F1116BB637000952D2A = {
+						DevelopmentTeam = 2NDR5C7SVU;
+					};
+				};
 			};
 			buildConfigurationList = 95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Pay Calc" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -452,6 +457,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/donmiller/Documents/Projects/iOS/EZ\\ Payment\\ Calculator",
@@ -459,7 +466,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
 				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
-				PRODUCT_NAME = Amortize;
+				PRODUCT_NAME = "Pay Calc";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -470,6 +478,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/donmiller/Documents/Projects/iOS/EZ\\ Payment\\ Calculator",
@@ -477,7 +487,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
 				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
-				PRODUCT_NAME = Amortize;
+				PRODUCT_NAME = "Pay Calc";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
