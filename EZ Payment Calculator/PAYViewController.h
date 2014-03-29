@@ -13,7 +13,9 @@
 @interface PAYViewController : UIViewController <UITextFieldDelegate, ChildViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *lblMonthlyPayment;
-@property (strong,nonatomic) PAYInputsTableViewController *tVC;
+@property (strong, nonatomic) PAYInputsTableViewController *tVC;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSound;
+@property (nonatomic) bool sound;
 
 -(float)calculatPMTWithRatePerPeriod:(double)ratePerPeriod
                     numberOfPayments:(NSInteger)numberOfPayments
@@ -21,9 +23,11 @@
                          futureValue:(double)futureValue
                                 type:(NSInteger)type;
 
-- (IBAction)btnCalculate:(id)sender;
-- (IBAction)btnClear:(id)sender;
-- (void)getMonthlyPayment;
+-(IBAction)btnCalculate:(id)sender;
+-(IBAction)btnClear:(id)sender;
+-(void)getMonthlyPayment;
+-(IBAction)setSound:(id)sender on:(bool)on;
+-(void)speak:(NSString *)words;
 
 @end
 

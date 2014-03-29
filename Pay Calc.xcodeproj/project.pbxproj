@@ -52,6 +52,9 @@
 		958B2E9B1834859100051DD1 /* PayCalc120.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E981834859100051DD1 /* PayCalc120.png */; };
 		958B2E9E183485D000051DD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E9D183485D000051DD1 /* Images.xcassets */; };
 		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
+		95D6B3A918E740B4009E22C6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D6B3A818E740B4009E22C6 /* AVFoundation.framework */; };
+		95D6B3AC18E74316009E22C6 /* SoundOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D6B3AA18E74316009E22C6 /* SoundOn.png */; };
+		95D6B3AD18E74316009E22C6 /* SoundOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D6B3AB18E74316009E22C6 /* SoundOff.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +116,9 @@
 		958B2E981834859100051DD1 /* PayCalc120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc120.png; sourceTree = "<group>"; };
 		958B2E9D183485D000051DD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Pay Calc/Images.xcassets"; sourceTree = "<group>"; };
 		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		95D6B3A818E740B4009E22C6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		95D6B3AA18E74316009E22C6 /* SoundOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOn.png; sourceTree = "<group>"; };
+		95D6B3AB18E74316009E22C6 /* SoundOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOff.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D6B3A918E740B4009E22C6 /* AVFoundation.framework in Frameworks */,
 				958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */,
 				958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */,
 				958B1A2918B701E400D0F22E /* Security.framework in Frameworks */,
@@ -160,6 +167,7 @@
 		95497F1516BB637000952D2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95D6B3A818E740B4009E22C6 /* AVFoundation.framework */,
 				958B1A2E18B7038B00D0F22E /* Parse.framework */,
 				958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */,
 				958B1A2A18B701EE00D0F22E /* StoreKit.framework */,
@@ -244,6 +252,8 @@
 		95497F5716BB656A00952D2A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				95D6B3AA18E74316009E22C6 /* SoundOn.png */,
+				95D6B3AB18E74316009E22C6 /* SoundOff.png */,
 				958B2E9C1834859800051DD1 /* Icons */,
 				958B2E541831E5FC00051DD1 /* Tabs */,
 				958B2E4E1831E50500051DD1 /* Payment.png */,
@@ -350,9 +360,11 @@
 				958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */,
 				95497F5916BB6FC200952D2A /* house.png in Resources */,
 				958B2E531831E59C00051DD1 /* Rates.png in Resources */,
+				95D6B3AD18E74316009E22C6 /* SoundOff.png in Resources */,
 				95497F5D16BB725200952D2A /* other.png in Resources */,
 				95497F6116BB786800952D2A /* refresh.png in Resources */,
 				95497F6316BB789C00952D2A /* old-calculate.png in Resources */,
+				95D6B3AC18E74316009E22C6 /* SoundOn.png in Resources */,
 				95497F6A16BC149B00952D2A /* settings.png in Resources */,
 				95497F6B16BC149B00952D2A /* settings@2x.png in Resources */,
 				95C8D44216E288E3003CDF73 /* arrow.png in Resources */,

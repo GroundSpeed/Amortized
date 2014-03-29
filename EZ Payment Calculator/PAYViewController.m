@@ -7,6 +7,7 @@
 //
 
 #import "PAYViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface PAYViewController ()
 
@@ -19,6 +20,7 @@
     [super viewDidLoad];
     self.tVC = (PAYInputsTableViewController *)self.childViewControllers.lastObject;
     self.tVC.delegate = self;
+    _sound = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,6 +73,18 @@
         _lblMonthlyPayment.textColor = [UIColor whiteColor];
         _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];
     }
+    
+    [self speak:_lblMonthlyPayment.text];
+}
+
+-(void)speak:(NSString *)words
+{
+    if (_sound) {
+        AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc] init];
+        AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:words];
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate;
+        [synthesizer speakUtterance:utterance];
+    }
 }
 
 -(float)calculatPMTWithRatePerPeriod:(double)ratePerPeriod
@@ -86,6 +100,19 @@
     
     return (ratePerPeriod * (futureValue + (q * loanAmount))) / ((-1 + q) * (1 + ratePerPeriod * (type)));
     
+}
+
+-(IBAction)setSound:(id)sender on:(bool)on
+{
+    if (on || !_sound) {
+        UIImage *image = [UIImage imageNamed:@"SoundOn.png"];
+        _sound = true;
+        [_buttonSound setImage:image forState:UIControlStateNormal];
+    } else {
+        UIImage *image = [UIImage imageNamed:@"SoundOff.png"];
+        _sound = false;
+        [_buttonSound setImage:image forState:UIControlStateNormal];
+    }
 }
 
 @end
