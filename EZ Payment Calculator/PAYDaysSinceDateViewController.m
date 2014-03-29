@@ -102,7 +102,7 @@
                                                 fromDate:date1
                                                   toDate:date2 options:0];
     
-    _lblTotalDays.text = [NSString stringWithFormat:@"%i Days", [components day]];
+    _lblTotalDays.text = [NSString stringWithFormat:@"%ld Days", [components day]];
 }
 
 #pragma mark Added Cancel Apply to Keyboard
