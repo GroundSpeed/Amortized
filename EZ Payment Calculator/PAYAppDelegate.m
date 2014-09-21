@@ -13,10 +13,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0 green:129/255 blue:61/255 alpha:1]];
     [Parse setApplicationId:@"ygmm250jgzlbJaXQNHWz2l5SokT6qHhWZ562X1mg"
                   clientKey:@"zxCjcniK8gg1ax2cwZA5cqvIZXykvGqsExKz3Rm5"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+
     return YES;
 }
 							

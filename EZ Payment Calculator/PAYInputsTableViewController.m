@@ -45,18 +45,15 @@
 -(UIToolbar*)keyboardHeader
 {
     UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
-    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.barStyle = UIBarStyleDefault;
     
     numberToolbar.items = [NSArray arrayWithObjects:
-                               [[UIBarButtonItem alloc]initWithTitle:@"[Next]"
-                                                               style:UIBarButtonItemStyleBordered
-                                                              target:self action:@selector(nextField)],
-                               [[UIBarButtonItem alloc]initWithTitle:@"[Previous]"
+                               [[UIBarButtonItem alloc]initWithTitle:@" < "
                                                                style:UIBarButtonItemStyleBordered
                                                               target:self action:@selector(previousField)],
-                               [[UIBarButtonItem alloc]initWithTitle:@"[Cancel]"
-                                                               style:UIBarButtonItemStyleBordered
-                                                              target:self action:@selector(cancelNumberPad)],
+                               [[UIBarButtonItem alloc]initWithTitle:@"   > "
+                                                           style:UIBarButtonItemStyleBordered
+                                                          target:self action:@selector(nextField)],
                                [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
                                [[UIBarButtonItem alloc]initWithTitle:@"[Calculate]"
                                                                style:UIBarButtonItemStyleDone

@@ -48,7 +48,6 @@
     numberToolbar.barStyle = UIBarStyleDefault;
     
     numberToolbar.items = [NSArray arrayWithObjects:
-                           [[UIBarButtonItem alloc]initWithTitle:@"[Cancel]" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
                            [[UIBarButtonItem alloc]initWithTitle:@"[Clear]" style:UIBarButtonItemStyleBordered target:self action:@selector(clearNumberPad)],
                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
                            [[UIBarButtonItem alloc]initWithTitle:@"[Calculate]" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
@@ -102,7 +101,7 @@
                                                 fromDate:date1
                                                   toDate:date2 options:0];
     
-    _lblTotalDays.text = [NSString stringWithFormat:@"%ld Days", [components day]];
+    _lblTotalDays.text = [NSString stringWithFormat:@"%i Days", (int)[components day]];
 }
 
 #pragma mark Added Cancel Apply to Keyboard

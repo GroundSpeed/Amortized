@@ -41,7 +41,6 @@
 		958B1A2918B701E400D0F22E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2818B701E400D0F22E /* Security.framework */; };
 		958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2A18B701EE00D0F22E /* StoreKit.framework */; };
 		958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */; };
-		958B1A2F18B7038B00D0F22E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2E18B7038B00D0F22E /* Parse.framework */; };
 		958B2E4F1831E50500051DD1 /* Payment.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E4E1831E50500051DD1 /* Payment.png */; };
 		958B2E521831E59C00051DD1 /* CalculatePayment.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E501831E59C00051DD1 /* CalculatePayment.png */; };
 		958B2E531831E59C00051DD1 /* Rates.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E511831E59C00051DD1 /* Rates.png */; };
@@ -51,6 +50,7 @@
 		958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E971834859100051DD1 /* PayCalc80.png */; };
 		958B2E9B1834859100051DD1 /* PayCalc120.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E981834859100051DD1 /* PayCalc120.png */; };
 		958B2E9E183485D000051DD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E9D183485D000051DD1 /* Images.xcassets */; };
+		95B4B526191E7252002D7F82 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B4B525191E7252002D7F82 /* Parse.framework */; };
 		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 		95D6B3A918E740B4009E22C6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D6B3A818E740B4009E22C6 /* AVFoundation.framework */; };
 		95D6B3AC18E74316009E22C6 /* SoundOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D6B3AA18E74316009E22C6 /* SoundOn.png */; };
@@ -115,6 +115,7 @@
 		958B2E971834859100051DD1 /* PayCalc80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc80.png; sourceTree = "<group>"; };
 		958B2E981834859100051DD1 /* PayCalc120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc120.png; sourceTree = "<group>"; };
 		958B2E9D183485D000051DD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Pay Calc/Images.xcassets"; sourceTree = "<group>"; };
+		95B4B525191E7252002D7F82 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Resources/Parse.framework; sourceTree = "<group>"; };
 		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		95D6B3A818E740B4009E22C6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		95D6B3AA18E74316009E22C6 /* SoundOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOn.png; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B4B526191E7252002D7F82 /* Parse.framework in Frameworks */,
 				95D6B3A918E740B4009E22C6 /* AVFoundation.framework in Frameworks */,
 				958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */,
 				958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */,
@@ -133,7 +135,6 @@
 				958B1A2718B701D900D0F22E /* QuartzCore.framework in Frameworks */,
 				958B1A2518B701A700D0F22E /* MobileCoreServices.framework in Frameworks */,
 				958B1A2318B7019A00D0F22E /* libz.dylib in Frameworks */,
-				958B1A2F18B7038B00D0F22E /* Parse.framework in Frameworks */,
 				958B1A2118B7018C00D0F22E /* CoreLocation.framework in Frameworks */,
 				95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */,
 				958B1A1F18B7017600D0F22E /* CFNetwork.framework in Frameworks */,
@@ -167,6 +168,7 @@
 		95497F1516BB637000952D2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95B4B525191E7252002D7F82 /* Parse.framework */,
 				95D6B3A818E740B4009E22C6 /* AVFoundation.framework */,
 				958B1A2E18B7038B00D0F22E /* Parse.framework */,
 				958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */,
@@ -473,7 +475,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/donmiller/Documents/Projects/iOS/EZ\\ Payment\\ Calculator",
+					/Users/donmiller/Documents/Projects/iOS/Amortize,
+					/Users/donmiller/Documents/Projects/iOS/Resources,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
@@ -494,7 +497,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/donmiller/Documents/Projects/iOS/EZ\\ Payment\\ Calculator",
+					/Users/donmiller/Documents/Projects/iOS/Amortize,
+					/Users/donmiller/Documents/Projects/iOS/Resources,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
