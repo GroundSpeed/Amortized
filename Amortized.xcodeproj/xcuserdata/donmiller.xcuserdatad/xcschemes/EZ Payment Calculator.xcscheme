@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95497F1116BB637000952D2A"
-               BuildableName = "Pay Calc.app"
-               BlueprintName = "Pay Calc"
-               ReferencedContainer = "container:Pay Calc.xcodeproj">
+               BuildableName = "Amortized.app"
+               BlueprintName = "Amortized"
+               ReferencedContainer = "container:Amortized.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "95497F3B16BB637000952D2A"
                BuildableName = "Pay CalcTests.octest"
                BlueprintName = "Pay CalcTests"
-               ReferencedContainer = "container:Pay Calc.xcodeproj">
+               ReferencedContainer = "container:Amortized.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95497F1116BB637000952D2A"
-            BuildableName = "Pay Calc.app"
-            BlueprintName = "Pay Calc"
-            ReferencedContainer = "container:Pay Calc.xcodeproj">
+            BuildableName = "Amortized.app"
+            BlueprintName = "Amortized"
+            ReferencedContainer = "container:Amortized.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95497F1116BB637000952D2A"
-            BuildableName = "Pay Calc.app"
-            BlueprintName = "Pay Calc"
-            ReferencedContainer = "container:Pay Calc.xcodeproj">
+            BuildableName = "Amortized.app"
+            BlueprintName = "Amortized"
+            ReferencedContainer = "container:Amortized.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95497F1116BB637000952D2A"
-            BuildableName = "Pay Calc.app"
-            BlueprintName = "Pay Calc"
-            ReferencedContainer = "container:Pay Calc.xcodeproj">
+            BuildableName = "Amortized.app"
+            BlueprintName = "Amortized"
+            ReferencedContainer = "container:Amortized.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

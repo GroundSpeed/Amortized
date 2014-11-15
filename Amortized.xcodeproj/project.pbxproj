@@ -66,14 +66,14 @@
 		952D097E1763EC680039F05E /* DollarSign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DollarSign.png; path = ../DollarSign.png; sourceTree = "<group>"; };
 		952D09801763EC780039F05E /* DollarSign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DollarSign@2x.png"; path = "../DollarSign@2x.png"; sourceTree = "<group>"; };
 		952D09821765068F0039F05E /* GroundSpeed Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GroundSpeed Logo.png"; sourceTree = "<group>"; };
-		95497F1216BB637000952D2A /* Pay Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95497F1216BB637000952D2A /* Amortized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortized.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		95497F1A16BB637000952D2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		95497F1E16BB637000952D2A /* Pay Calc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pay Calc-Info.plist"; sourceTree = "<group>"; };
+		95497F1E16BB637000952D2A /* Amortized-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Amortized-Info.plist"; sourceTree = "<group>"; };
 		95497F2016BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95497F2216BB637000952D2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		95497F2416BB637000952D2A /* Pay Calc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pay Calc-Prefix.pch"; sourceTree = "<group>"; };
+		95497F2416BB637000952D2A /* Amortized-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Amortized-Prefix.pch"; sourceTree = "<group>"; };
 		95497F2516BB637000952D2A /* PAYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAYAppDelegate.h; sourceTree = "<group>"; };
 		95497F2616BB637000952D2A /* PAYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAYAppDelegate.m; sourceTree = "<group>"; };
 		95497F2816BB637000952D2A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		95497F1316BB637000952D2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95497F1216BB637000952D2A /* Pay Calc.app */,
+				95497F1216BB637000952D2A /* Amortized.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,10 +206,10 @@
 			children = (
 				95497F2516BB637000952D2A /* PAYAppDelegate.h */,
 				95497F2616BB637000952D2A /* PAYAppDelegate.m */,
-				95497F1E16BB637000952D2A /* Pay Calc-Info.plist */,
+				95497F1E16BB637000952D2A /* Amortized-Info.plist */,
 				95497F1F16BB637000952D2A /* InfoPlist.strings */,
 				95497F2216BB637000952D2A /* main.m */,
-				95497F2416BB637000952D2A /* Pay Calc-Prefix.pch */,
+				95497F2416BB637000952D2A /* Amortized-Prefix.pch */,
 				95497F2816BB637000952D2A /* Default.png */,
 				95497F2A16BB637000952D2A /* Default@2x.png */,
 				95497F2C16BB637000952D2A /* Default-568h@2x.png */,
@@ -299,9 +299,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95497F1116BB637000952D2A /* Pay Calc */ = {
+		95497F1116BB637000952D2A /* Amortized */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Pay Calc" */;
+			buildConfigurationList = 95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Amortized" */;
 			buildPhases = (
 				95497F0E16BB637000952D2A /* Sources */,
 				95497F0F16BB637000952D2A /* Frameworks */,
@@ -311,9 +311,9 @@
 			);
 			dependencies = (
 			);
-			name = "Pay Calc";
+			name = Amortized;
 			productName = "EZ Payment Calculator";
-			productReference = 95497F1216BB637000952D2A /* Pay Calc.app */;
+			productReference = 95497F1216BB637000952D2A /* Amortized.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -331,7 +331,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Pay Calc" */;
+			buildConfigurationList = 95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Amortized" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -343,7 +343,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95497F1116BB637000952D2A /* Pay Calc */,
+				95497F1116BB637000952D2A /* Amortized */,
 			);
 		};
 /* End PBXProject section */
@@ -475,13 +475,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/donmiller/Documents/Projects/iOS/Amortize,
+					/Users/donmiller/Documents/Projects/iOS/Amortized,
 					/Users/donmiller/Documents/Projects/iOS/Resources,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
-				PRODUCT_NAME = "Pay Calc";
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/Amortized-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment Calculator/Amortized-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = Amortized;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -497,13 +498,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/donmiller/Documents/Projects/iOS/Amortize,
+					/Users/donmiller/Documents/Projects/iOS/Amortized,
 					/Users/donmiller/Documents/Projects/iOS/Resources,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EZ Payment Calculator/Pay Calc-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment Calculator/Pay Calc-Info.plist";
-				PRODUCT_NAME = "Pay Calc";
+				GCC_PREFIX_HEADER = "EZ Payment Calculator/Amortized-Prefix.pch";
+				INFOPLIST_FILE = "EZ Payment Calculator/Amortized-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = Amortized;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -513,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Pay Calc" */ = {
+		95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Amortized" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95497F4C16BB637000952D2A /* Debug */,
@@ -522,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Pay Calc" */ = {
+		95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Amortized" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95497F4F16BB637000952D2A /* Debug */,
