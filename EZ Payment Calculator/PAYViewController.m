@@ -39,6 +39,8 @@
     self.tVC.txtDownPayment.text = nil;
     self.tVC.txtInterestRate.text = nil;
     self.tVC.txtTerm.text = nil;
+    _lblMonthlyPayment.font = [UIFont fontWithName:@"Avenir Next" size:28];
+    _lblMonthlyPayment.textColor = [UIColor whiteColor];
     _lblMonthlyPayment.text = @"0.00";
 }
 
@@ -68,10 +70,9 @@
     }
     else
     {
-        // Courier New Bold 28.0
-        _lblMonthlyPayment.font = [UIFont fontWithName:@"Courier-Bold" size:28];
+        _lblMonthlyPayment.font = [UIFont fontWithName:@"Avenir Next" size:28];
         _lblMonthlyPayment.textColor = [UIColor whiteColor];
-        _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@%@", @"$",[NSString stringWithFormat:@"%.02f", amount]];
+        _lblMonthlyPayment.text = [NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"%.02f", amount]];
     }
     
     [self speak:_lblMonthlyPayment.text];
