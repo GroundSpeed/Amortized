@@ -23,7 +23,7 @@
 
 @property (strong, nonatomic) NSString *internetStatus;
 
--(void)loadTextFields;
-- (BOOL)connected;
+-(void) loadTextFields;
+-(BOOL) connected;
 
 @end

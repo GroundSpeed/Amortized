@@ -40,12 +40,12 @@
         NSString *percentSign = @"%";
         InterestRates *ir = [[InterestRates alloc] init];
         _dictInterestRates = [ir getInterestRates];
-        _thirtyYearFixedToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"thirtyYearFixedToday"], percentSign];
-        _thirtyYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"thirtyYearFixedLastWeek"], percentSign];
-        _fifteenYearFixedToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fifteenYearFixedToday"], percentSign];
-        _fifteenYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fifteenYearFixedLastWeek"], percentSign];
-        _fiveOneArmToday.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fiveOneARMToday"], percentSign];
-        _fiveOneArmLastWeek.text = [NSString stringWithFormat:@"%@%@", [_dictInterestRates objectForKey:@"fiveOneARMLastWeek"], percentSign];
+        _thirtyYearFixedToday.text = [NSString stringWithFormat:@"%@%@", _dictInterestRates[@"thirtyYearFixedToday"], percentSign];
+        _thirtyYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", _dictInterestRates[@"thirtyYearFixedLastWeek"], percentSign];
+        _fifteenYearFixedToday.text = [NSString stringWithFormat:@"%@%@", _dictInterestRates[@"fifteenYearFixedToday"], percentSign];
+        _fifteenYearFixedLastWeek.text = [NSString stringWithFormat:@"%@%@", _dictInterestRates[@"fifteenYearFixedLastWeek"], percentSign];
+        _fiveOneArmToday.text = [NSString stringWithFormat:@"%@%@", _dictInterestRates[@"fiveOneARMToday"], percentSign];
+        _fiveOneArmLastWeek.text = [NSString stringWithFormat:@"%@%@", _dictInterestRates[@"fiveOneARMLastWeek"], percentSign];
         
         _internetStatus = @"Internet connected";
 
