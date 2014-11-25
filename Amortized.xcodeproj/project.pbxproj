@@ -42,14 +42,18 @@
 		958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2A18B701EE00D0F22E /* StoreKit.framework */; };
 		958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */; };
 		958B2E4F1831E50500051DD1 /* Payment.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E4E1831E50500051DD1 /* Payment.png */; };
-		958B2E521831E59C00051DD1 /* CalculatePayment.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E501831E59C00051DD1 /* CalculatePayment.png */; };
 		958B2E531831E59C00051DD1 /* Rates.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E511831E59C00051DD1 /* Rates.png */; };
 		958B2E561831E6B700051DD1 /* BlankCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E551831E6B700051DD1 /* BlankCalendar.png */; };
-		958B2E5A1831E7EC00051DD1 /* Percent.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E591831E7EC00051DD1 /* Percent.png */; };
 		958B2E991834859100051DD1 /* PayCalc58.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E961834859100051DD1 /* PayCalc58.png */; };
 		958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E971834859100051DD1 /* PayCalc80.png */; };
 		958B2E9B1834859100051DD1 /* PayCalc120.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E981834859100051DD1 /* PayCalc120.png */; };
 		958B2E9E183485D000051DD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E9D183485D000051DD1 /* Images.xcassets */; };
+		95965EBF1A217714008D327B /* Percent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EBC1A217714008D327B /* Percent@2x.png */; };
+		95965EC11A217714008D327B /* Percent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EBE1A217714008D327B /* Percent@3x.png */; };
+		95965EC51A217878008D327B /* Percent.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC41A217878008D327B /* Percent.png */; };
+		95965EC91A217CB1008D327B /* CalculatePayment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC61A217CB1008D327B /* CalculatePayment@2x.png */; };
+		95965ECA1A217CB1008D327B /* CalculatePayment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC71A217CB1008D327B /* CalculatePayment@3x.png */; };
+		95965ECB1A217CB1008D327B /* CalculatePayment.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC81A217CB1008D327B /* CalculatePayment.png */; };
 		95B4B526191E7252002D7F82 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B4B525191E7252002D7F82 /* Parse.framework */; };
 		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
 		95D6B3A918E740B4009E22C6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D6B3A818E740B4009E22C6 /* AVFoundation.framework */; };
@@ -107,14 +111,18 @@
 		958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		958B1A2E18B7038B00D0F22E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		958B2E4E1831E50500051DD1 /* Payment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Payment.png; sourceTree = "<group>"; };
-		958B2E501831E59C00051DD1 /* CalculatePayment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalculatePayment.png; sourceTree = "<group>"; };
 		958B2E511831E59C00051DD1 /* Rates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rates.png; sourceTree = "<group>"; };
 		958B2E551831E6B700051DD1 /* BlankCalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlankCalendar.png; sourceTree = "<group>"; };
-		958B2E591831E7EC00051DD1 /* Percent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Percent.png; sourceTree = "<group>"; };
 		958B2E961834859100051DD1 /* PayCalc58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc58.png; sourceTree = "<group>"; };
 		958B2E971834859100051DD1 /* PayCalc80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc80.png; sourceTree = "<group>"; };
 		958B2E981834859100051DD1 /* PayCalc120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc120.png; sourceTree = "<group>"; };
 		958B2E9D183485D000051DD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Pay Calc/Images.xcassets"; sourceTree = "<group>"; };
+		95965EBC1A217714008D327B /* Percent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Percent@2x.png"; sourceTree = "<group>"; };
+		95965EBE1A217714008D327B /* Percent@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Percent@3x.png"; sourceTree = "<group>"; };
+		95965EC41A217878008D327B /* Percent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Percent.png; sourceTree = "<group>"; };
+		95965EC61A217CB1008D327B /* CalculatePayment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatePayment@2x.png"; sourceTree = "<group>"; };
+		95965EC71A217CB1008D327B /* CalculatePayment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatePayment@3x.png"; sourceTree = "<group>"; };
+		95965EC81A217CB1008D327B /* CalculatePayment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalculatePayment.png; sourceTree = "<group>"; };
 		95B4B525191E7252002D7F82 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Resources/Parse.framework; sourceTree = "<group>"; };
 		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		95D6B3A818E740B4009E22C6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -278,10 +286,14 @@
 		958B2E541831E5FC00051DD1 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				958B2E591831E7EC00051DD1 /* Percent.png */,
+				95965EC61A217CB1008D327B /* CalculatePayment@2x.png */,
+				95965EC71A217CB1008D327B /* CalculatePayment@3x.png */,
+				95965EC81A217CB1008D327B /* CalculatePayment.png */,
 				958B2E551831E6B700051DD1 /* BlankCalendar.png */,
 				958B2E511831E59C00051DD1 /* Rates.png */,
-				958B2E501831E59C00051DD1 /* CalculatePayment.png */,
+				95965EC41A217878008D327B /* Percent.png */,
+				95965EBC1A217714008D327B /* Percent@2x.png */,
+				95965EBE1A217714008D327B /* Percent@3x.png */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -358,14 +370,20 @@
 				958B2E991834859100051DD1 /* PayCalc58.png in Resources */,
 				958B2E9E183485D000051DD1 /* Images.xcassets in Resources */,
 				95497F2B16BB637000952D2A /* Default@2x.png in Resources */,
+				95965ECB1A217CB1008D327B /* CalculatePayment.png in Resources */,
 				95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */,
+				95965EBF1A217714008D327B /* Percent@2x.png in Resources */,
 				958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */,
+				95965ECA1A217CB1008D327B /* CalculatePayment@3x.png in Resources */,
+				95965EC91A217CB1008D327B /* CalculatePayment@2x.png in Resources */,
 				95497F5916BB6FC200952D2A /* house.png in Resources */,
 				958B2E531831E59C00051DD1 /* Rates.png in Resources */,
 				95D6B3AD18E74316009E22C6 /* SoundOff.png in Resources */,
 				95497F5D16BB725200952D2A /* other.png in Resources */,
 				95497F6116BB786800952D2A /* refresh.png in Resources */,
+				95965EC11A217714008D327B /* Percent@3x.png in Resources */,
 				95497F6316BB789C00952D2A /* old-calculate.png in Resources */,
+				95965EC51A217878008D327B /* Percent.png in Resources */,
 				95D6B3AC18E74316009E22C6 /* SoundOn.png in Resources */,
 				95497F6A16BC149B00952D2A /* settings.png in Resources */,
 				95497F6B16BC149B00952D2A /* settings@2x.png in Resources */,
@@ -375,10 +393,8 @@
 				952272761746C57200601617 /* MainStoryboard.storyboard in Resources */,
 				9584D6481748901000081312 /* PayCalc.png in Resources */,
 				9584D6491748901000081312 /* PayCalc@2x.png in Resources */,
-				958B2E521831E59C00051DD1 /* CalculatePayment.png in Resources */,
 				958B2E561831E6B700051DD1 /* BlankCalendar.png in Resources */,
 				952D09831765068F0039F05E /* GroundSpeed Logo.png in Resources */,
-				958B2E5A1831E7EC00051DD1 /* Percent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
