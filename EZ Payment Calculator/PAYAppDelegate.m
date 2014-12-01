@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 //    UIColor *green = [UIColor colorWithRed:0/255 green:102/255 blue:51/255 alpha:1];
-//    [[UITabBar appearance] setTintColor:[UIColor greenColor]];
+    [[UITabBar appearance] setTintColor:[UIColor blackColor]];
     [Parse setApplicationId:@"ygmm250jgzlbJaXQNHWz2l5SokT6qHhWZ562X1mg"
                   clientKey:@"zxCjcniK8gg1ax2cwZA5cqvIZXykvGqsExKz3Rm5"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
