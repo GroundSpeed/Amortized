@@ -35,7 +35,7 @@ class RatesTableViewController: UITableViewController {
     }
     
     func loadTextFields() {
-        let API_KEY = "X1-ZWz1bim5o6gxsb_5i268"
+        let API_KEY = "X1-ZWz1f3t3bvl4i3_1brbp"
         let postEndpoint = "http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=\(API_KEY)&output=json"
         print("URL \(postEndpoint)")
         

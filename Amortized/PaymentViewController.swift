@@ -92,9 +92,11 @@ class PaymentViewController: UIViewController {
         
         var q : Float
         
-        q = pow(1 + ratePerPeriod, numberOfPayments);
+        q = pow(1 + ratePerPeriod, numberOfPayments)
         
-        return (ratePerPeriod * (futureValue + (q * loanAmount))) / ((-1 + q) * (1 + ratePerPeriod * (type)));
+        let returnValue = (ratePerPeriod * (futureValue + (q * loanAmount))) / ((-1 + q) * (1 + ratePerPeriod * (type)))
+        
+        return returnValue
 
     }
     
