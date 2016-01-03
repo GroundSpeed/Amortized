@@ -48,7 +48,9 @@ class PaymentViewController: UIViewController {
         txtTerm.text = (txtTerm.text == "") ? "0" : txtTerm.text
         txtInterestRate.text = (txtInterestRate.text == "") ? "0" : txtInterestRate.text
         
-        getMonthlyPayment()
+        lblPayment = GlobalHelper().getMonthlyPayment(Float(txtAmount.text!)!, downPayment: Float(txtDownPayment.text!)!, term: Float(txtTerm.text!)!, interestRate: Float(txtInterestRate.text!)!, lblPayment: self.lblPayment)
+        
+        speak(lblPayment.text!)
     }
     
     
@@ -59,47 +61,7 @@ class PaymentViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func getMonthlyPayment() {
-        // A = payment Amount per period
-        // P = initial Principal (loan amount)
-        // r = interest rate per period
-        // n = total number of payments or periods
         
-        let principal : Float = Float(txtAmount.text!)! - Float(txtDownPayment.text!)!
-        let payments = Float(txtTerm.text!)!*12
-        let rate = Float(txtInterestRate.text!)!/12/100
-        let amount = calculatPMTWithRatePerPeriod(rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0, type: 0)
-        
-        if (isnan(amount) || isinf(amount))
-        {
-            lblPayment.font = UIFont.boldSystemFontOfSize(18)
-            lblPayment.textColor = UIColor.redColor()
-            lblPayment.text = "You must enter all required fields.";
-        }
-        else
-        {
-            lblPayment.font = UIFont(name: "Avenir Next", size: 28)
-            lblPayment.textColor = UIColor.whiteColor()
-            lblPayment.text = String(format: "%.02f", amount)
-        }
-        
-        speak(lblPayment.text!)
-        
-    }
-    
-    func calculatPMTWithRatePerPeriod (ratePerPeriod: Float, numberOfPayments: Float, loanAmount: Float, futureValue: Float, type: Float) -> Float {
-        
-        var q : Float
-        
-        q = pow(1 + ratePerPeriod, numberOfPayments)
-        
-        let returnValue = (ratePerPeriod * (futureValue + (q * loanAmount))) / ((-1 + q) * (1 + ratePerPeriod * (type)))
-        
-        return returnValue
-
-    }
-    
     func speak(words: String) {
         if (soundOn) {
             let speechSynthesizer = AVSpeechSynthesizer()

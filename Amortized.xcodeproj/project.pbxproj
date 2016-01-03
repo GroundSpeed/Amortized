@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95265B2D1C39CCC600987976 /* GlobalHelper.swift */; };
 		952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */; };
 		952A77E21C3762F700B2A2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E01C3762F700B2A2B6 /* Main.storyboard */; };
 		952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E31C3762F700B2A2B6 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		952A78031C37683000B2A2B6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78021C37683000B2A2B6 /* PaymentViewController.swift */; };
 		952A78051C3785A100B2A2B6 /* RatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78041C3785A100B2A2B6 /* RatesTableViewController.swift */; };
 		952A78091C37A5F100B2A2B6 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78081C37A5F100B2A2B6 /* Rates.swift */; };
+		95FC984B1C39C46D00EE10DB /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC984A1C39C46D00EE10DB /* ApiHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95265B2D1C39CCC600987976 /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
 		952A77D91C3762F700B2A2B6 /* Amortized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortized.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		952A77E11C3762F700B2A2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		952A78021C37683000B2A2B6 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		952A78041C3785A100B2A2B6 /* RatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesTableViewController.swift; sourceTree = "<group>"; };
 		952A78081C37A5F100B2A2B6 /* Rates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		95FC984A1C39C46D00EE10DB /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				952A77E31C3762F700B2A2B6 /* Assets.xcassets */,
 				952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */,
 				952A77E81C3762F700B2A2B6 /* Info.plist */,
+				95FC984A1C39C46D00EE10DB /* ApiHelper.swift */,
+				95265B2D1C39CCC600987976 /* GlobalHelper.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,10 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */,
 				952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */,
 				952A78091C37A5F100B2A2B6 /* Rates.swift in Sources */,
 				952A78031C37683000B2A2B6 /* PaymentViewController.swift in Sources */,
 				952A78051C3785A100B2A2B6 /* RatesTableViewController.swift in Sources */,
+				95FC984B1C39C46D00EE10DB /* ApiHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +437,7 @@
 				952A77F81C3762F700B2A2B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		952A77F91C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "AmortizedTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +446,7 @@
 				952A77FB1C3762F700B2A2B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
