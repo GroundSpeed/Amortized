@@ -14,10 +14,10 @@ class Rates {
     var fifteenYearFixed: String
     var fiveOneARM: String
     
-    init(pThirtyYearFixed: String, pFifteenYearFixed: String, pFiveOneARM: String) {
-        self.thirtyYearFixed = String.localizedStringWithFormat("%.2f%%", Float(pThirtyYearFixed)!)
-        self.fifteenYearFixed = String.localizedStringWithFormat("%.2f%%", Float(pFifteenYearFixed)!)
-        self.fiveOneARM = String.localizedStringWithFormat("%.2f%%", Float(pFiveOneARM)!)
+    init(thirtyYearFixed: String, fifteenYearFixed: String, fiveOneARM: String) {
+        self.thirtyYearFixed = String.localizedStringWithFormat("%.2f%%", Float(thirtyYearFixed)!)
+        self.fifteenYearFixed = String.localizedStringWithFormat("%.2f%%", Float(fifteenYearFixed)!)
+        self.fiveOneARM = String.localizedStringWithFormat("%.2f%%", Float(fiveOneARM)!)
     }
 
 }

@@ -11,10 +11,11 @@ import UIKit
 class ApiHelper {
 
     func getRatesFromZillow() -> Dictionary<String, String> {
+        var results : Dictionary<String, String> = Dictionary()
+
         let API_KEY = "X1-ZWz1f3t3bvl4i3_1brbp"
         let postEndpoint = "http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=\(API_KEY)&output=json"
         print("URL \(postEndpoint)")
-        var results : Dictionary<String, String> = Dictionary()
         
         let url = NSURL(string: postEndpoint)!
         let session = NSURLSession.sharedSession()
@@ -36,13 +37,13 @@ class ApiHelper {
                     print("output: \(postString)")
                     let response : Dictionary<String, AnyObject> = postString["response"] as! Dictionary<String, AnyObject>
                     let today : Dictionary<String, String> = response["today"] as! Dictionary<String, String>
-                    let todayRate = Rates.init(pThirtyYearFixed: today["thirtyYearFixed"]!, pFifteenYearFixed: today["fifteenYearFixed"]!, pFiveOneARM: today["fiveOneARM"]!)
+                    let todayRate = Rates.init(thirtyYearFixed: today["thirtyYearFixed"]!, fifteenYearFixed: today["fifteenYearFixed"]!, fiveOneARM: today["fiveOneARM"]!)
                     results["todayThirtyYearFixed"] = todayRate.thirtyYearFixed
                     results["todayFifteenYearFixed"] = todayRate.fifteenYearFixed
                     results["todayFiveOneARM"] = todayRate.thirtyYearFixed
                     
                     let lastWeek : Dictionary<String, String> = response["lastWeek"] as! Dictionary<String, String>
-                    let lastWeekRate = Rates.init(pThirtyYearFixed: lastWeek["thirtyYearFixed"]!, pFifteenYearFixed: lastWeek["fifteenYearFixed"]!, pFiveOneARM: lastWeek["fiveOneARM"]!)
+                    let lastWeekRate = Rates.init(thirtyYearFixed: lastWeek["thirtyYearFixed"]!, fifteenYearFixed: lastWeek["fifteenYearFixed"]!, fiveOneARM: lastWeek["fiveOneARM"]!)
                     results["lastWeekThirtyYearFixed"] = lastWeekRate.thirtyYearFixed
                     results["lastWeekFifteenYearFixed"] = lastWeekRate.fifteenYearFixed
                     results["lastWeekFiveOneARM"] = lastWeekRate.thirtyYearFixed

@@ -18,15 +18,15 @@ class RatesTableViewController: UITableViewController {
     @IBOutlet weak var fiveOneArmLastWeek: UILabel!
     @IBOutlet var tblRates: UITableView!
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadTextFields()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -47,15 +47,4 @@ class RatesTableViewController: UITableViewController {
 
     }
     
-    func connected() -> Bool {
-        let scriptUrl = NSURL.init(string: "http://www.google.com")
-        let data = NSData.init(contentsOfURL: scriptUrl!)
-        
-        if ((data) != nil) {
-            return true
-        } else {
-            return false
-        }
-    }
-
 }
