@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950862E92C88FE300011AE2C /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950862E82C88FE300011AE2C /* Rates.swift */; };
 		95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95265B2D1C39CCC600987976 /* GlobalHelper.swift */; };
 		952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */; };
 		952A77E21C3762F700B2A2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E01C3762F700B2A2B6 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		952A77F21C3762F700B2A2B6 /* AmortizedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A77F11C3762F700B2A2B6 /* AmortizedTests.swift */; };
 		952A78031C37683000B2A2B6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78021C37683000B2A2B6 /* PaymentViewController.swift */; };
 		952A78051C3785A100B2A2B6 /* RatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78041C3785A100B2A2B6 /* RatesTableViewController.swift */; };
-		952A78091C37A5F100B2A2B6 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78081C37A5F100B2A2B6 /* Rates.swift */; };
 		95FC984B1C39C46D00EE10DB /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC984A1C39C46D00EE10DB /* ApiHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		950862E82C88FE300011AE2C /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
 		95265B2D1C39CCC600987976 /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
 		952A77D91C3762F700B2A2B6 /* Amortized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortized.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +43,8 @@
 		952A77F31C3762F700B2A2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		952A78021C37683000B2A2B6 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		952A78041C3785A100B2A2B6 /* RatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesTableViewController.swift; sourceTree = "<group>"; };
-		952A78081C37A5F100B2A2B6 /* Rates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		95C9C3272C88D5EB006BDBA5 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/Main.xcstrings; sourceTree = "<group>"; };
+		95C9C3282C88D5EB006BDBA5 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LaunchScreen.xcstrings; sourceTree = "<group>"; };
 		95FC984A1C39C46D00EE10DB /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +124,7 @@
 		952A77FE1C37643300B2A2B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				952A78081C37A5F100B2A2B6 /* Rates.swift */,
+				950862E82C88FE300011AE2C /* Rates.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -190,7 +192,6 @@
 				TargetAttributes = {
 					952A77D81C3762F700B2A2B6 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2NDR5C7SVU;
 					};
 					952A77EC1C3762F700B2A2B6 = {
 						CreatedOnToolsVersion = 7.2;
@@ -199,10 +200,11 @@
 				};
 			};
 			buildConfigurationList = 952A77D41C3762F700B2A2B6 /* Build configuration list for PBXProject "Amortized" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -243,8 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */,
+				950862E92C88FE300011AE2C /* Rates.swift in Sources */,
 				952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */,
-				952A78091C37A5F100B2A2B6 /* Rates.swift in Sources */,
 				952A78031C37683000B2A2B6 /* PaymentViewController.swift in Sources */,
 				952A78051C3785A100B2A2B6 /* RatesTableViewController.swift in Sources */,
 				95FC984B1C39C46D00EE10DB /* ApiHelper.swift in Sources */,
@@ -274,6 +276,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				952A77E11C3762F700B2A2B6 /* Base */,
+				95C9C3272C88D5EB006BDBA5 /* mul */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				952A77E61C3762F700B2A2B6 /* Base */,
+				95C9C3282C88D5EB006BDBA5 /* mul */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -325,11 +329,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -363,9 +369,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -375,10 +383,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2NDR5C7SVU;
 				INFOPLIST_FILE = Amortized/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.groundspeedhq.Pay-Calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};
@@ -387,10 +401,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2NDR5C7SVU;
 				INFOPLIST_FILE = Amortized/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.groundspeedhq.Pay-Calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -399,7 +419,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AmortizedTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.groundspeedhq.AmortizedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amortized.app/Amortized";
@@ -411,7 +435,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AmortizedTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.groundspeedhq.AmortizedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amortized.app/Amortized";

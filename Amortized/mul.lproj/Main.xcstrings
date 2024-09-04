@@ -1,0 +1,354 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "3dm-tx-Pfy.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"3dm-tx-Pfy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "3yr-3r-yFZ.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"3yr-3r-yFZ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "4Lj-j8-RCV.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"4Lj-j8-RCV\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "68y-Jr-tYn.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"0.00\"; ObjectID = \"68y-Jr-tYn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "0.00"
+          }
+        }
+      }
+    },
+    "ANM-x5-SSo.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"5/1 ARM\"; ObjectID = \"ANM-x5-SSo\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "5/1 ARM"
+          }
+        }
+      }
+    },
+    "cgR-Xp-RrH.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"Years\"; ObjectID = \"cgR-Xp-RrH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Years"
+          }
+        }
+      }
+    },
+    "Cq6-JD-ahY.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Interest Rate\"; ObjectID = \"Cq6-JD-ahY\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Interest Rate"
+          }
+        }
+      }
+    },
+    "DMy-wS-DMN.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Amount\"; ObjectID = \"DMy-wS-DMN\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Amount"
+          }
+        }
+      }
+    },
+    "GSY-UP-mvv.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Clear\"; ObjectID = \"GSY-UP-mvv\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clear"
+          }
+        }
+      }
+    },
+    "J0h-TJ-KlL.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Calculate\"; ObjectID = \"J0h-TJ-KlL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Calculate"
+          }
+        }
+      }
+    },
+    "jXO-tq-MtS.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"%\"; ObjectID = \"jXO-tq-MtS\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%"
+          }
+        }
+      }
+    },
+    "KAc-Tc-0D5.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Payment\"; ObjectID = \"KAc-Tc-0D5\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Payment"
+          }
+        }
+      }
+    },
+    "KAY-0y-cTy.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Today\"; ObjectID = \"KAY-0y-cTy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Today"
+          }
+        }
+      }
+    },
+    "L6t-hi-YZM.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"30 Year Fixed\"; ObjectID = \"L6t-hi-YZM\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "30 Year Fixed"
+          }
+        }
+      }
+    },
+    "lmt-yJ-QHV.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"15 Year Fixed\"; ObjectID = \"lmt-yJ-QHV\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "15 Year Fixed"
+          }
+        }
+      }
+    },
+    "ltK-oh-ibs.title" : {
+      "comment" : "Class = \"UIViewController\"; title = \"Payment\"; ObjectID = \"ltK-oh-ibs\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Payment"
+          }
+        }
+      }
+    },
+    "M99-Co-Om1.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Term\"; ObjectID = \"M99-Co-Om1\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Term"
+          }
+        }
+      }
+    },
+    "oVT-A8-RKD.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Down Payment\"; ObjectID = \"oVT-A8-RKD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Down Payment"
+          }
+        }
+      }
+    },
+    "oWT-9f-KS7.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"5/1 ARM\"; ObjectID = \"oWT-9f-KS7\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "5/1 ARM"
+          }
+        }
+      }
+    },
+    "qWf-rj-v8P.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"qWf-rj-v8P\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "rQt-xC-bln.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"rQt-xC-bln\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "SIT-Fu-9Bp.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"SIT-Fu-9Bp\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "sNO-16-kuA.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"$0.00\"; ObjectID = \"sNO-16-kuA\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "$0.00"
+          }
+        }
+      }
+    },
+    "Sog-MS-ZhX.placeholder" : {
+      "comment" : "Class = \"UITextField\"; placeholder = \"$0.00\"; ObjectID = \"Sog-MS-ZhX\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "$0.00"
+          }
+        }
+      }
+    },
+    "UeH-6N-jLl.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"30 Year Fixed\"; ObjectID = \"UeH-6N-jLl\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "30 Year Fixed"
+          }
+        }
+      }
+    },
+    "Xoy-a5-EU3.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"15 Year Fixed\"; ObjectID = \"Xoy-a5-EU3\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "15 Year Fixed"
+          }
+        }
+      }
+    },
+    "ys4-A4-Teb.footerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; footerTitle = \"Rates Updated from Zillow.com\"; ObjectID = \"ys4-A4-Teb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Rates Updated from Zillow.com"
+          }
+        }
+      }
+    },
+    "ys4-A4-Teb.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"Last Week\"; ObjectID = \"ys4-A4-Teb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Last Week"
+          }
+        }
+      }
+    },
+    "Zzs-Kf-ftX.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Rates\"; ObjectID = \"Zzs-Kf-ftX\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Rates"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

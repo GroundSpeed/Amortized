@@ -19,18 +19,18 @@ class GlobalHelper: NSObject {
         let principal : Float = amount - downPayment
         let payments = term*12
         let rate = interestRate/12/100
-        let amount = calculatPMTWithRatePerPeriod(rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0, type: 0)
+        let amount = calculatPMTWithRatePerPeriod(ratePerPeriod: rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0, type: 0)
         
-        if (isnan(amount) || isinf(amount))
+        if (amount.isNaN || amount.isInfinite)
         {
-            lblPayment.font = UIFont.boldSystemFontOfSize(18)
-            lblPayment.textColor = UIColor.redColor()
+            lblPayment.font = UIFont.boldSystemFont(ofSize: 18)
+            lblPayment.textColor = UIColor.red
             lblPayment.text = "You must enter all required fields.";
         }
         else
         {
             lblPayment.font = UIFont(name: "Avenir Next", size: 28)
-            lblPayment.textColor = UIColor.whiteColor()
+            lblPayment.textColor = UIColor.white
             lblPayment.text = String(format: "%.02f", amount)
         }
         

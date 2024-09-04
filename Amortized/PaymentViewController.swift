@@ -23,11 +23,11 @@ class PaymentViewController: UIViewController {
         if (!soundOn) {
             let image : UIImage = UIImage.init(named: "SoundOn.png")!
             soundOn = true
-            btnSound.setImage(image, forState: UIControlState.Normal)
+            btnSound.setImage(image, for: UIControl.State.normal)
         } else {
             let image : UIImage = UIImage.init(named: "SoundOff.png")!
             soundOn = false
-            btnSound.setImage(image, forState: UIControlState.Normal)
+            btnSound.setImage(image, for: UIControl.State.normal)
         }
     }
     
@@ -37,7 +37,7 @@ class PaymentViewController: UIViewController {
         txtInterestRate.text = nil;
         txtTerm.text = nil;
         lblPayment.font = UIFont(name: "Avenir Next", size: 28)
-        lblPayment.textColor = UIColor.whiteColor()
+        lblPayment.textColor = UIColor.white
         lblPayment.text = "0.00"
     }
     
@@ -48,9 +48,9 @@ class PaymentViewController: UIViewController {
         txtTerm.text = (txtTerm.text == "") ? "0" : txtTerm.text
         txtInterestRate.text = (txtInterestRate.text == "") ? "0" : txtInterestRate.text
         
-        lblPayment = GlobalHelper().getMonthlyPayment(Float(txtAmount.text!)!, downPayment: Float(txtDownPayment.text!)!, term: Float(txtTerm.text!)!, interestRate: Float(txtInterestRate.text!)!, lblPayment: self.lblPayment)
+        lblPayment = GlobalHelper().getMonthlyPayment(amount: Float(txtAmount.text!)!, downPayment: Float(txtDownPayment.text!)!, term: Float(txtTerm.text!)!, interestRate: Float(txtInterestRate.text!)!, lblPayment: self.lblPayment)
         
-        speak(lblPayment.text!)
+        speak(words: lblPayment.text!)
     }
     
     
@@ -66,7 +66,7 @@ class PaymentViewController: UIViewController {
         if (soundOn) {
             let speechSynthesizer = AVSpeechSynthesizer()
             let synthesizer = AVSpeechUtterance(string: words)
-            speechSynthesizer.speakUtterance(synthesizer)
+            speechSynthesizer.speak(synthesizer)
         }
     }
     

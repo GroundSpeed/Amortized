@@ -18,51 +18,59 @@ class ApiHelper {
         print("URL \(postEndpoint)")
         
         let url = NSURL(string: postEndpoint)!
-        let session = NSURLSession.sharedSession()
+        let session = URLSession.shared
         
         // Create the request
-        let request = NSMutableURLRequest(URL: url)
+        let request = NSMutableURLRequest(url: url as URL)
         
-        request.HTTPMethod = "GET"
+        request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         // Make the POST call and handle it in a completion handler
-        session.dataTaskWithRequest(request, completionHandler: { ( data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-            
-            do
-            {
-                if let postString = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary
-                {
-                    print("output: \(postString)")
-                    let response : Dictionary<String, AnyObject> = postString["response"] as! Dictionary<String, AnyObject>
-                    let today : Dictionary<String, String> = response["today"] as! Dictionary<String, String>
-                    let todayRate = Rates.init(thirtyYearFixed: today["thirtyYearFixed"]!, fifteenYearFixed: today["fifteenYearFixed"]!, fiveOneARM: today["fiveOneARM"]!)
-                    results["todayThirtyYearFixed"] = todayRate.thirtyYearFixed
-                    results["todayFifteenYearFixed"] = todayRate.fifteenYearFixed
-                    results["todayFiveOneARM"] = todayRate.thirtyYearFixed
+        session.dataTask(with: request as URLRequest) { (data, response, error) in
+            do {
+                if let data = data,
+                   let postString = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] {
                     
-                    let lastWeek : Dictionary<String, String> = response["lastWeek"] as! Dictionary<String, String>
-                    let lastWeekRate = Rates.init(thirtyYearFixed: lastWeek["thirtyYearFixed"]!, fifteenYearFixed: lastWeek["fifteenYearFixed"]!, fiveOneARM: lastWeek["fiveOneARM"]!)
-                    results["lastWeekThirtyYearFixed"] = lastWeekRate.thirtyYearFixed
-                    results["lastWeekFifteenYearFixed"] = lastWeekRate.fifteenYearFixed
-                    results["lastWeekFiveOneARM"] = lastWeekRate.thirtyYearFixed
-                }
-                else
-                {
-                    let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                    // No error thrown, but not NSDictionary
-                    print("NODICT: Error could not parse JSON: \(jsonStr)")
+                    print("output: \(postString)")
+                    
+                    if let response = postString["response"] as? [String: AnyObject],
+                       let today = response["today"] as? [String: String],
+                       let lastWeek = response["lastWeek"] as? [String: String] {
+                        
+                        let todayRate = Rates(thirtyYearFixed: today["thirtyYearFixed"] ?? "",
+                                              fifteenYearFixed: today["fifteenYearFixed"] ?? "",
+                                              fiveOneARM: today["fiveOneARM"] ?? "")
+                        
+                        results["todayThirtyYearFixed"] = todayRate.thirtyYearFixed
+                        results["todayFifteenYearFixed"] = todayRate.fifteenYearFixed
+                        results["todayFiveOneARM"] = todayRate.fiveOneARM
+                        
+                        let lastWeekRate = Rates(thirtyYearFixed: lastWeek["thirtyYearFixed"] ?? "",
+                                                 fifteenYearFixed: lastWeek["fifteenYearFixed"] ?? "",
+                                                 fiveOneARM: lastWeek["fiveOneARM"] ?? "")
+                        
+                        results["lastWeekThirtyYearFixed"] = lastWeekRate.thirtyYearFixed
+                        results["lastWeekFifteenYearFixed"] = lastWeekRate.fifteenYearFixed
+                        results["lastWeekFiveOneARM"] = lastWeekRate.fiveOneARM
+                    }
+                } else {
+                    if let error = error {
+                        print("Error occurred: \(error.localizedDescription)")
+                    } else if let data = data, let jsonStr = String(data: data, encoding: .utf8) {
+                        print("Error: Could not parse JSON: \(jsonStr)")
+                    }
                 }
             }
             catch let parseError
             {
                 print(parseError)
                 // Log the error thrown by `JSONObjectWithData`
-                let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print("CATCH: Error could not parse JSON: '\(jsonStr)'")
+                let jsonStr = NSString(data: data! as Data, encoding: NSUTF8StringEncoding)
+                print("CATCH: Error could not parse JSON: '\(String(describing: jsonStr))'")
             }
-        }).resume()
+        }.resume()
         sleep(1)
         
         return results

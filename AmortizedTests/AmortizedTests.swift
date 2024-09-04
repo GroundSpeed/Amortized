@@ -34,7 +34,7 @@ class AmortizedTests: XCTestCase {
         let term: Float = 30
         let label : UILabel = UILabel()
         
-        let result = GlobalHelper().getMonthlyPayment(amount, downPayment: downPayment, term: term, interestRate: interestRate, lblPayment: label)
+        let result = GlobalHelper().getMonthlyPayment(amount: amount, downPayment: downPayment, term: term, interestRate: interestRate, lblPayment: label)
         
         XCTAssert(result.text == "531.45")
     }
@@ -50,7 +50,7 @@ class AmortizedTests: XCTestCase {
         let payments = term*12
         let rate = interestRate/12/100
         
-        var result = GlobalHelper().calculatPMTWithRatePerPeriod(rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0.0, type: 0.0)
+        var result = GlobalHelper().calculatPMTWithRatePerPeriod(ratePerPeriod: rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0.0, type: 0.0)
         result = round(100*result)/100  //Round to two decimal places
         XCTAssert(result == 531.45)
 
