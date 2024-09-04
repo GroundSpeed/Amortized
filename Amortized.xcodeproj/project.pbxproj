@@ -7,549 +7,448 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		952272761746C57200601617 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952272691746C57200601617 /* MainStoryboard.storyboard */; };
-		952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D0972176382240039F05E /* PAYSettingsViewController.m */; };
-		952D09791763B1D10039F05E /* PAYInputsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952D09781763B1D10039F05E /* PAYInputsTableViewController.m */; };
-		952D09831765068F0039F05E /* GroundSpeed Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 952D09821765068F0039F05E /* GroundSpeed Logo.png */; };
-		95497F1716BB637000952D2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1616BB637000952D2A /* UIKit.framework */; };
-		95497F1916BB637000952D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1816BB637000952D2A /* Foundation.framework */; };
-		95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95497F1A16BB637000952D2A /* CoreGraphics.framework */; };
-		95497F2116BB637000952D2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95497F1F16BB637000952D2A /* InfoPlist.strings */; };
-		95497F2316BB637000952D2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F2216BB637000952D2A /* main.m */; };
-		95497F2716BB637000952D2A /* PAYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F2616BB637000952D2A /* PAYAppDelegate.m */; };
-		95497F2916BB637000952D2A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2816BB637000952D2A /* Default.png */; };
-		95497F2B16BB637000952D2A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2A16BB637000952D2A /* Default@2x.png */; };
-		95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F2C16BB637000952D2A /* Default-568h@2x.png */; };
-		95497F3616BB637000952D2A /* PAYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95497F3516BB637000952D2A /* PAYViewController.m */; };
-		95497F5916BB6FC200952D2A /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F5816BB6FC200952D2A /* house.png */; };
-		95497F5D16BB725200952D2A /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F5C16BB725200952D2A /* other.png */; };
-		95497F6116BB786800952D2A /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6016BB786800952D2A /* refresh.png */; };
-		95497F6316BB789C00952D2A /* old-calculate.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6216BB789C00952D2A /* old-calculate.png */; };
-		95497F6A16BC149B00952D2A /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6816BC149B00952D2A /* settings.png */; };
-		95497F6B16BC149B00952D2A /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95497F6916BC149B00952D2A /* settings@2x.png */; };
-		957CB3E8177A903600D468FB /* PAYDaysSinceDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CB3E7177A903600D468FB /* PAYDaysSinceDateViewController.m */; };
-		9584D6481748901000081312 /* PayCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6461748901000081312 /* PayCalc.png */; };
-		9584D6491748901000081312 /* PayCalc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9584D6471748901000081312 /* PayCalc@2x.png */; };
-		9584D650174897A300081312 /* InterestRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584D64F174897A300081312 /* InterestRates.m */; };
-		958533E1174B2ABD00BABFF5 /* PAYRateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */; };
-		958B1A1D18B7016C00D0F22E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A1C18B7016C00D0F22E /* AudioToolbox.framework */; };
-		958B1A1F18B7017600D0F22E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A1E18B7017600D0F22E /* CFNetwork.framework */; };
-		958B1A2118B7018C00D0F22E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2018B7018C00D0F22E /* CoreLocation.framework */; };
-		958B1A2318B7019A00D0F22E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2218B7019A00D0F22E /* libz.dylib */; };
-		958B1A2518B701A700D0F22E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2418B701A700D0F22E /* MobileCoreServices.framework */; };
-		958B1A2718B701D900D0F22E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2618B701D900D0F22E /* QuartzCore.framework */; };
-		958B1A2918B701E400D0F22E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2818B701E400D0F22E /* Security.framework */; };
-		958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2A18B701EE00D0F22E /* StoreKit.framework */; };
-		958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */; };
-		958B2E4F1831E50500051DD1 /* Payment.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E4E1831E50500051DD1 /* Payment.png */; };
-		958B2E531831E59C00051DD1 /* Rates.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E511831E59C00051DD1 /* Rates.png */; };
-		958B2E561831E6B700051DD1 /* BlankCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E551831E6B700051DD1 /* BlankCalendar.png */; };
-		958B2E991834859100051DD1 /* PayCalc58.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E961834859100051DD1 /* PayCalc58.png */; };
-		958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E971834859100051DD1 /* PayCalc80.png */; };
-		958B2E9B1834859100051DD1 /* PayCalc120.png in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E981834859100051DD1 /* PayCalc120.png */; };
-		958B2E9E183485D000051DD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958B2E9D183485D000051DD1 /* Images.xcassets */; };
-		95965EBF1A217714008D327B /* Percent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EBC1A217714008D327B /* Percent@2x.png */; };
-		95965EC11A217714008D327B /* Percent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EBE1A217714008D327B /* Percent@3x.png */; };
-		95965EC51A217878008D327B /* Percent.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC41A217878008D327B /* Percent.png */; };
-		95965EC91A217CB1008D327B /* CalculatePayment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC61A217CB1008D327B /* CalculatePayment@2x.png */; };
-		95965ECA1A217CB1008D327B /* CalculatePayment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC71A217CB1008D327B /* CalculatePayment@3x.png */; };
-		95965ECB1A217CB1008D327B /* CalculatePayment.png in Resources */ = {isa = PBXBuildFile; fileRef = 95965EC81A217CB1008D327B /* CalculatePayment.png */; };
-		95B4B526191E7252002D7F82 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B4B525191E7252002D7F82 /* Parse.framework */; };
-		95C8D44216E288E3003CDF73 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8D44116E288E3003CDF73 /* arrow.png */; };
-		95D6B3A918E740B4009E22C6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D6B3A818E740B4009E22C6 /* AVFoundation.framework */; };
-		95D6B3AC18E74316009E22C6 /* SoundOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D6B3AA18E74316009E22C6 /* SoundOn.png */; };
-		95D6B3AD18E74316009E22C6 /* SoundOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D6B3AB18E74316009E22C6 /* SoundOff.png */; };
+		95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95265B2D1C39CCC600987976 /* GlobalHelper.swift */; };
+		952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */; };
+		952A77E21C3762F700B2A2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E01C3762F700B2A2B6 /* Main.storyboard */; };
+		952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E31C3762F700B2A2B6 /* Assets.xcassets */; };
+		952A77E71C3762F700B2A2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */; };
+		952A77F21C3762F700B2A2B6 /* AmortizedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A77F11C3762F700B2A2B6 /* AmortizedTests.swift */; };
+		952A78031C37683000B2A2B6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78021C37683000B2A2B6 /* PaymentViewController.swift */; };
+		952A78051C3785A100B2A2B6 /* RatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78041C3785A100B2A2B6 /* RatesTableViewController.swift */; };
+		952A78091C37A5F100B2A2B6 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A78081C37A5F100B2A2B6 /* Rates.swift */; };
+		95FC984B1C39C46D00EE10DB /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC984A1C39C46D00EE10DB /* ApiHelper.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		952A77EE1C3762F700B2A2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 952A77D11C3762F700B2A2B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 952A77D81C3762F700B2A2B6;
+			remoteInfo = Amortized;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		952272691746C57200601617 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		952D0971176382240039F05E /* PAYSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYSettingsViewController.h; sourceTree = "<group>"; };
-		952D0972176382240039F05E /* PAYSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYSettingsViewController.m; sourceTree = "<group>"; };
-		952D09771763B1D00039F05E /* PAYInputsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYInputsTableViewController.h; sourceTree = "<group>"; };
-		952D09781763B1D10039F05E /* PAYInputsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYInputsTableViewController.m; sourceTree = "<group>"; };
-		952D097E1763EC680039F05E /* DollarSign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DollarSign.png; path = ../DollarSign.png; sourceTree = "<group>"; };
-		952D09801763EC780039F05E /* DollarSign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DollarSign@2x.png"; path = "../DollarSign@2x.png"; sourceTree = "<group>"; };
-		952D09821765068F0039F05E /* GroundSpeed Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GroundSpeed Logo.png"; sourceTree = "<group>"; };
-		95497F1216BB637000952D2A /* Amortized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortized.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		95497F1616BB637000952D2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		95497F1816BB637000952D2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		95497F1A16BB637000952D2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		95497F1E16BB637000952D2A /* Amortized-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Amortized-Info.plist"; sourceTree = "<group>"; };
-		95497F2016BB637000952D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		95497F2216BB637000952D2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		95497F2416BB637000952D2A /* Amortized-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Amortized-Prefix.pch"; sourceTree = "<group>"; };
-		95497F2516BB637000952D2A /* PAYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAYAppDelegate.h; sourceTree = "<group>"; };
-		95497F2616BB637000952D2A /* PAYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAYAppDelegate.m; sourceTree = "<group>"; };
-		95497F2816BB637000952D2A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		95497F2A16BB637000952D2A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		95497F2C16BB637000952D2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		95497F3416BB637000952D2A /* PAYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAYViewController.h; sourceTree = "<group>"; };
-		95497F3516BB637000952D2A /* PAYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAYViewController.m; sourceTree = "<group>"; };
-		95497F3D16BB637000952D2A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		95497F5816BB6FC200952D2A /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
-		95497F5C16BB725200952D2A /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
-		95497F6016BB786800952D2A /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
-		95497F6216BB789C00952D2A /* old-calculate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "old-calculate.png"; sourceTree = "<group>"; };
-		95497F6816BC149B00952D2A /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		95497F6916BC149B00952D2A /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
-		957CB3E6177A903600D468FB /* PAYDaysSinceDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYDaysSinceDateViewController.h; sourceTree = "<group>"; };
-		957CB3E7177A903600D468FB /* PAYDaysSinceDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYDaysSinceDateViewController.m; sourceTree = "<group>"; };
-		9584D6461748901000081312 /* PayCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc.png; sourceTree = "<group>"; };
-		9584D6471748901000081312 /* PayCalc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PayCalc@2x.png"; sourceTree = "<group>"; };
-		9584D64E174897A300081312 /* InterestRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestRates.h; sourceTree = "<group>"; };
-		9584D64F174897A300081312 /* InterestRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestRates.m; sourceTree = "<group>"; };
-		958533DF174B2ABD00BABFF5 /* PAYRateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAYRateTableViewController.h; sourceTree = "<group>"; };
-		958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAYRateTableViewController.m; sourceTree = "<group>"; };
-		958B1A1C18B7016C00D0F22E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		958B1A1E18B7017600D0F22E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		958B1A2018B7018C00D0F22E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		958B1A2218B7019A00D0F22E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		958B1A2418B701A700D0F22E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		958B1A2618B701D900D0F22E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		958B1A2818B701E400D0F22E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		958B1A2A18B701EE00D0F22E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		958B1A2E18B7038B00D0F22E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		958B2E4E1831E50500051DD1 /* Payment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Payment.png; sourceTree = "<group>"; };
-		958B2E511831E59C00051DD1 /* Rates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rates.png; sourceTree = "<group>"; };
-		958B2E551831E6B700051DD1 /* BlankCalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlankCalendar.png; sourceTree = "<group>"; };
-		958B2E961834859100051DD1 /* PayCalc58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc58.png; sourceTree = "<group>"; };
-		958B2E971834859100051DD1 /* PayCalc80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc80.png; sourceTree = "<group>"; };
-		958B2E981834859100051DD1 /* PayCalc120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PayCalc120.png; sourceTree = "<group>"; };
-		958B2E9D183485D000051DD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Pay Calc/Images.xcassets"; sourceTree = "<group>"; };
-		95965EBC1A217714008D327B /* Percent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Percent@2x.png"; sourceTree = "<group>"; };
-		95965EBE1A217714008D327B /* Percent@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Percent@3x.png"; sourceTree = "<group>"; };
-		95965EC41A217878008D327B /* Percent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Percent.png; sourceTree = "<group>"; };
-		95965EC61A217CB1008D327B /* CalculatePayment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatePayment@2x.png"; sourceTree = "<group>"; };
-		95965EC71A217CB1008D327B /* CalculatePayment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatePayment@3x.png"; sourceTree = "<group>"; };
-		95965EC81A217CB1008D327B /* CalculatePayment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalculatePayment.png; sourceTree = "<group>"; };
-		95B4B525191E7252002D7F82 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Resources/Parse.framework; sourceTree = "<group>"; };
-		95C8D44116E288E3003CDF73 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		95D6B3A818E740B4009E22C6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		95D6B3AA18E74316009E22C6 /* SoundOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOn.png; sourceTree = "<group>"; };
-		95D6B3AB18E74316009E22C6 /* SoundOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOff.png; sourceTree = "<group>"; };
+		95265B2D1C39CCC600987976 /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
+		952A77D91C3762F700B2A2B6 /* Amortized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortized.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		952A77E11C3762F700B2A2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		952A77E31C3762F700B2A2B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		952A77E61C3762F700B2A2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		952A77E81C3762F700B2A2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952A77ED1C3762F700B2A2B6 /* AmortizedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmortizedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		952A77F11C3762F700B2A2B6 /* AmortizedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedTests.swift; sourceTree = "<group>"; };
+		952A77F31C3762F700B2A2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952A78021C37683000B2A2B6 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		952A78041C3785A100B2A2B6 /* RatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesTableViewController.swift; sourceTree = "<group>"; };
+		952A78081C37A5F100B2A2B6 /* Rates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		95FC984A1C39C46D00EE10DB /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		95497F0F16BB637000952D2A /* Frameworks */ = {
+		952A77D61C3762F700B2A2B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B4B526191E7252002D7F82 /* Parse.framework in Frameworks */,
-				95D6B3A918E740B4009E22C6 /* AVFoundation.framework in Frameworks */,
-				958B1A2D18B701FD00D0F22E /* SystemConfiguration.framework in Frameworks */,
-				958B1A2B18B701EE00D0F22E /* StoreKit.framework in Frameworks */,
-				958B1A2918B701E400D0F22E /* Security.framework in Frameworks */,
-				958B1A2718B701D900D0F22E /* QuartzCore.framework in Frameworks */,
-				958B1A2518B701A700D0F22E /* MobileCoreServices.framework in Frameworks */,
-				958B1A2318B7019A00D0F22E /* libz.dylib in Frameworks */,
-				958B1A2118B7018C00D0F22E /* CoreLocation.framework in Frameworks */,
-				95497F1B16BB637000952D2A /* CoreGraphics.framework in Frameworks */,
-				958B1A1F18B7017600D0F22E /* CFNetwork.framework in Frameworks */,
-				958B1A1D18B7016C00D0F22E /* AudioToolbox.framework in Frameworks */,
-				95497F1716BB637000952D2A /* UIKit.framework in Frameworks */,
-				95497F1916BB637000952D2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952A77EA1C3762F700B2A2B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95497F0716BB637000952D2A = {
+		952A77D01C3762F700B2A2B6 = {
 			isa = PBXGroup;
 			children = (
-				958B2E9D183485D000051DD1 /* Images.xcassets */,
-				95497F1C16BB637000952D2A /* PayCalc */,
-				95497F1516BB637000952D2A /* Frameworks */,
-				95497F1316BB637000952D2A /* Products */,
+				952A77DB1C3762F700B2A2B6 /* Amortized */,
+				952A77F01C3762F700B2A2B6 /* AmortizedTests */,
+				952A77DA1C3762F700B2A2B6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		95497F1316BB637000952D2A /* Products */ = {
+		952A77DA1C3762F700B2A2B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95497F1216BB637000952D2A /* Amortized.app */,
+				952A77D91C3762F700B2A2B6 /* Amortized.app */,
+				952A77ED1C3762F700B2A2B6 /* AmortizedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95497F1516BB637000952D2A /* Frameworks */ = {
+		952A77DB1C3762F700B2A2B6 /* Amortized */ = {
 			isa = PBXGroup;
 			children = (
-				95B4B525191E7252002D7F82 /* Parse.framework */,
-				95D6B3A818E740B4009E22C6 /* AVFoundation.framework */,
-				958B1A2E18B7038B00D0F22E /* Parse.framework */,
-				958B1A2C18B701FD00D0F22E /* SystemConfiguration.framework */,
-				958B1A2A18B701EE00D0F22E /* StoreKit.framework */,
-				958B1A2818B701E400D0F22E /* Security.framework */,
-				958B1A2618B701D900D0F22E /* QuartzCore.framework */,
-				958B1A2418B701A700D0F22E /* MobileCoreServices.framework */,
-				958B1A2218B7019A00D0F22E /* libz.dylib */,
-				958B1A2018B7018C00D0F22E /* CoreLocation.framework */,
-				958B1A1E18B7017600D0F22E /* CFNetwork.framework */,
-				958B1A1C18B7016C00D0F22E /* AudioToolbox.framework */,
-				95497F1616BB637000952D2A /* UIKit.framework */,
-				95497F1816BB637000952D2A /* Foundation.framework */,
-				95497F1A16BB637000952D2A /* CoreGraphics.framework */,
-				95497F3D16BB637000952D2A /* SenTestingKit.framework */,
+				952A77FE1C37643300B2A2B6 /* Models */,
+				952A77FD1C37642800B2A2B6 /* Views */,
+				952A77FC1C37642000B2A2B6 /* Controllers */,
+				952A77FF1C37644800B2A2B6 /* Supporting Files */,
 			);
-			name = Frameworks;
+			path = Amortized;
 			sourceTree = "<group>";
 		};
-		95497F1C16BB637000952D2A /* PayCalc */ = {
+		952A77F01C3762F700B2A2B6 /* AmortizedTests */ = {
 			isa = PBXGroup;
 			children = (
-				95497F5516BB654200952D2A /* Classes */,
-				95497F5416BB653C00952D2A /* Views */,
-				95497F5616BB656300952D2A /* Controllers */,
-				95497F5716BB656A00952D2A /* Images */,
-				95497F1D16BB637000952D2A /* Supporting Files */,
+				952A77F11C3762F700B2A2B6 /* AmortizedTests.swift */,
+				952A77F31C3762F700B2A2B6 /* Info.plist */,
 			);
-			name = PayCalc;
-			path = "EZ Payment Calculator";
+			path = AmortizedTests;
 			sourceTree = "<group>";
 		};
-		95497F1D16BB637000952D2A /* Supporting Files */ = {
+		952A77FC1C37642000B2A2B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				95497F2516BB637000952D2A /* PAYAppDelegate.h */,
-				95497F2616BB637000952D2A /* PAYAppDelegate.m */,
-				95497F1E16BB637000952D2A /* Amortized-Info.plist */,
-				95497F1F16BB637000952D2A /* InfoPlist.strings */,
-				95497F2216BB637000952D2A /* main.m */,
-				95497F2416BB637000952D2A /* Amortized-Prefix.pch */,
-				95497F2816BB637000952D2A /* Default.png */,
-				95497F2A16BB637000952D2A /* Default@2x.png */,
-				95497F2C16BB637000952D2A /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		95497F5416BB653C00952D2A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				952272691746C57200601617 /* MainStoryboard.storyboard */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		95497F5516BB654200952D2A /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9584D64E174897A300081312 /* InterestRates.h */,
-				9584D64F174897A300081312 /* InterestRates.m */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		95497F5616BB656300952D2A /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				95497F3416BB637000952D2A /* PAYViewController.h */,
-				95497F3516BB637000952D2A /* PAYViewController.m */,
-				952D09771763B1D00039F05E /* PAYInputsTableViewController.h */,
-				952D09781763B1D10039F05E /* PAYInputsTableViewController.m */,
-				958533DF174B2ABD00BABFF5 /* PAYRateTableViewController.h */,
-				958533E0174B2ABD00BABFF5 /* PAYRateTableViewController.m */,
-				952D0971176382240039F05E /* PAYSettingsViewController.h */,
-				952D0972176382240039F05E /* PAYSettingsViewController.m */,
-				957CB3E6177A903600D468FB /* PAYDaysSinceDateViewController.h */,
-				957CB3E7177A903600D468FB /* PAYDaysSinceDateViewController.m */,
+				952A78021C37683000B2A2B6 /* PaymentViewController.swift */,
+				952A78041C3785A100B2A2B6 /* RatesTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		95497F5716BB656A00952D2A /* Images */ = {
+		952A77FD1C37642800B2A2B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95D6B3AA18E74316009E22C6 /* SoundOn.png */,
-				95D6B3AB18E74316009E22C6 /* SoundOff.png */,
-				958B2E9C1834859800051DD1 /* Icons */,
-				958B2E541831E5FC00051DD1 /* Tabs */,
-				958B2E4E1831E50500051DD1 /* Payment.png */,
-				952D09821765068F0039F05E /* GroundSpeed Logo.png */,
-				952D097E1763EC680039F05E /* DollarSign.png */,
-				952D09801763EC780039F05E /* DollarSign@2x.png */,
-				9584D6461748901000081312 /* PayCalc.png */,
-				9584D6471748901000081312 /* PayCalc@2x.png */,
-				95C8D44116E288E3003CDF73 /* arrow.png */,
-				95497F6816BC149B00952D2A /* settings.png */,
-				95497F6916BC149B00952D2A /* settings@2x.png */,
-				95497F6016BB786800952D2A /* refresh.png */,
-				95497F6216BB789C00952D2A /* old-calculate.png */,
-				95497F5C16BB725200952D2A /* other.png */,
-				95497F5816BB6FC200952D2A /* house.png */,
+				952A77E01C3762F700B2A2B6 /* Main.storyboard */,
 			);
-			name = Images;
+			name = Views;
 			sourceTree = "<group>";
 		};
-		958B2E541831E5FC00051DD1 /* Tabs */ = {
+		952A77FE1C37643300B2A2B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				95965EC61A217CB1008D327B /* CalculatePayment@2x.png */,
-				95965EC71A217CB1008D327B /* CalculatePayment@3x.png */,
-				95965EC81A217CB1008D327B /* CalculatePayment.png */,
-				958B2E551831E6B700051DD1 /* BlankCalendar.png */,
-				958B2E511831E59C00051DD1 /* Rates.png */,
-				95965EC41A217878008D327B /* Percent.png */,
-				95965EBC1A217714008D327B /* Percent@2x.png */,
-				95965EBE1A217714008D327B /* Percent@3x.png */,
+				952A78081C37A5F100B2A2B6 /* Rates.swift */,
 			);
-			name = Tabs;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		958B2E9C1834859800051DD1 /* Icons */ = {
+		952A77FF1C37644800B2A2B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				958B2E961834859100051DD1 /* PayCalc58.png */,
-				958B2E971834859100051DD1 /* PayCalc80.png */,
-				958B2E981834859100051DD1 /* PayCalc120.png */,
+				952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */,
+				952A77E31C3762F700B2A2B6 /* Assets.xcassets */,
+				952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */,
+				952A77E81C3762F700B2A2B6 /* Info.plist */,
+				95FC984A1C39C46D00EE10DB /* ApiHelper.swift */,
+				95265B2D1C39CCC600987976 /* GlobalHelper.swift */,
 			);
-			name = Icons;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95497F1116BB637000952D2A /* Amortized */ = {
+		952A77D81C3762F700B2A2B6 /* Amortized */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Amortized" */;
+			buildConfigurationList = 952A77F61C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "Amortized" */;
 			buildPhases = (
-				95497F0E16BB637000952D2A /* Sources */,
-				95497F0F16BB637000952D2A /* Frameworks */,
-				95497F1016BB637000952D2A /* Resources */,
+				952A77D51C3762F700B2A2B6 /* Sources */,
+				952A77D61C3762F700B2A2B6 /* Frameworks */,
+				952A77D71C3762F700B2A2B6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Amortized;
-			productName = "EZ Payment Calculator";
-			productReference = 95497F1216BB637000952D2A /* Amortized.app */;
+			productName = Amortized;
+			productReference = 952A77D91C3762F700B2A2B6 /* Amortized.app */;
 			productType = "com.apple.product-type.application";
+		};
+		952A77EC1C3762F700B2A2B6 /* AmortizedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952A77F91C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "AmortizedTests" */;
+			buildPhases = (
+				952A77E91C3762F700B2A2B6 /* Sources */,
+				952A77EA1C3762F700B2A2B6 /* Frameworks */,
+				952A77EB1C3762F700B2A2B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				952A77EF1C3762F700B2A2B6 /* PBXTargetDependency */,
+			);
+			name = AmortizedTests;
+			productName = AmortizedTests;
+			productReference = 952A77ED1C3762F700B2A2B6 /* AmortizedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		95497F0916BB637000952D2A /* Project object */ = {
+		952A77D11C3762F700B2A2B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PAY;
-				LastUpgradeCheck = 0450;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = GroundSpeed;
 				TargetAttributes = {
-					95497F1116BB637000952D2A = {
+					952A77D81C3762F700B2A2B6 = {
+						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 2NDR5C7SVU;
+					};
+					952A77EC1C3762F700B2A2B6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 952A77D81C3762F700B2A2B6;
 					};
 				};
 			};
-			buildConfigurationList = 95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Amortized" */;
+			buildConfigurationList = 952A77D41C3762F700B2A2B6 /* Build configuration list for PBXProject "Amortized" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 95497F0716BB637000952D2A;
-			productRefGroup = 95497F1316BB637000952D2A /* Products */;
+			mainGroup = 952A77D01C3762F700B2A2B6;
+			productRefGroup = 952A77DA1C3762F700B2A2B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95497F1116BB637000952D2A /* Amortized */,
+				952A77D81C3762F700B2A2B6 /* Amortized */,
+				952A77EC1C3762F700B2A2B6 /* AmortizedTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		95497F1016BB637000952D2A /* Resources */ = {
+		952A77D71C3762F700B2A2B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95497F2116BB637000952D2A /* InfoPlist.strings in Resources */,
-				95497F2916BB637000952D2A /* Default.png in Resources */,
-				958B2E991834859100051DD1 /* PayCalc58.png in Resources */,
-				958B2E9E183485D000051DD1 /* Images.xcassets in Resources */,
-				95497F2B16BB637000952D2A /* Default@2x.png in Resources */,
-				95965ECB1A217CB1008D327B /* CalculatePayment.png in Resources */,
-				95497F2D16BB637000952D2A /* Default-568h@2x.png in Resources */,
-				95965EBF1A217714008D327B /* Percent@2x.png in Resources */,
-				958B2E9A1834859100051DD1 /* PayCalc80.png in Resources */,
-				95965ECA1A217CB1008D327B /* CalculatePayment@3x.png in Resources */,
-				95965EC91A217CB1008D327B /* CalculatePayment@2x.png in Resources */,
-				95497F5916BB6FC200952D2A /* house.png in Resources */,
-				958B2E531831E59C00051DD1 /* Rates.png in Resources */,
-				95D6B3AD18E74316009E22C6 /* SoundOff.png in Resources */,
-				95497F5D16BB725200952D2A /* other.png in Resources */,
-				95497F6116BB786800952D2A /* refresh.png in Resources */,
-				95965EC11A217714008D327B /* Percent@3x.png in Resources */,
-				95497F6316BB789C00952D2A /* old-calculate.png in Resources */,
-				95965EC51A217878008D327B /* Percent.png in Resources */,
-				95D6B3AC18E74316009E22C6 /* SoundOn.png in Resources */,
-				95497F6A16BC149B00952D2A /* settings.png in Resources */,
-				95497F6B16BC149B00952D2A /* settings@2x.png in Resources */,
-				95C8D44216E288E3003CDF73 /* arrow.png in Resources */,
-				958B2E4F1831E50500051DD1 /* Payment.png in Resources */,
-				958B2E9B1834859100051DD1 /* PayCalc120.png in Resources */,
-				952272761746C57200601617 /* MainStoryboard.storyboard in Resources */,
-				9584D6481748901000081312 /* PayCalc.png in Resources */,
-				9584D6491748901000081312 /* PayCalc@2x.png in Resources */,
-				958B2E561831E6B700051DD1 /* BlankCalendar.png in Resources */,
-				952D09831765068F0039F05E /* GroundSpeed Logo.png in Resources */,
+				952A77E71C3762F700B2A2B6 /* LaunchScreen.storyboard in Resources */,
+				952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */,
+				952A77E21C3762F700B2A2B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952A77EB1C3762F700B2A2B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95497F0E16BB637000952D2A /* Sources */ = {
+		952A77D51C3762F700B2A2B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95497F2316BB637000952D2A /* main.m in Sources */,
-				95497F2716BB637000952D2A /* PAYAppDelegate.m in Sources */,
-				95497F3616BB637000952D2A /* PAYViewController.m in Sources */,
-				9584D650174897A300081312 /* InterestRates.m in Sources */,
-				958533E1174B2ABD00BABFF5 /* PAYRateTableViewController.m in Sources */,
-				952D0973176382240039F05E /* PAYSettingsViewController.m in Sources */,
-				952D09791763B1D10039F05E /* PAYInputsTableViewController.m in Sources */,
-				957CB3E8177A903600D468FB /* PAYDaysSinceDateViewController.m in Sources */,
+				95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */,
+				952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */,
+				952A78091C37A5F100B2A2B6 /* Rates.swift in Sources */,
+				952A78031C37683000B2A2B6 /* PaymentViewController.swift in Sources */,
+				952A78051C3785A100B2A2B6 /* RatesTableViewController.swift in Sources */,
+				95FC984B1C39C46D00EE10DB /* ApiHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952A77E91C3762F700B2A2B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952A77F21C3762F700B2A2B6 /* AmortizedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		952A77EF1C3762F700B2A2B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 952A77D81C3762F700B2A2B6 /* Amortized */;
+			targetProxy = 952A77EE1C3762F700B2A2B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		95497F1F16BB637000952D2A /* InfoPlist.strings */ = {
+		952A77E01C3762F700B2A2B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				95497F2016BB637000952D2A /* en */,
+				952A77E11C3762F700B2A2B6 /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				952A77E61C3762F700B2A2B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		95497F4C16BB637000952D2A /* Debug */ = {
+		952A77F41C3762F700B2A2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		95497F4D16BB637000952D2A /* Release */ = {
+		952A77F51C3762F700B2A2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		95497F4F16BB637000952D2A /* Debug */ = {
+		952A77F71C3762F700B2A2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/donmiller/Documents/Projects/iOS/Amortized,
-					/Users/donmiller/Documents/Projects/iOS/Resources,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EZ Payment Calculator/Amortized-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment Calculator/Amortized-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = Amortized;
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
+				INFOPLIST_FILE = Amortized/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.groundspeedhq.Pay-Calc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		95497F5016BB637000952D2A /* Release */ = {
+		952A77F81C3762F700B2A2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/donmiller/Documents/Projects/iOS/Amortized,
-					/Users/donmiller/Documents/Projects/iOS/Resources,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EZ Payment Calculator/Amortized-Prefix.pch";
-				INFOPLIST_FILE = "EZ Payment Calculator/Amortized-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = Amortized;
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
+				INFOPLIST_FILE = Amortized/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.groundspeedhq.Pay-Calc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		952A77FA1C3762F700B2A2B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AmortizedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.groundspeedhq.AmortizedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amortized.app/Amortized";
+			};
+			name = Debug;
+		};
+		952A77FB1C3762F700B2A2B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AmortizedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.groundspeedhq.AmortizedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amortized.app/Amortized";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95497F0C16BB637000952D2A /* Build configuration list for PBXProject "Amortized" */ = {
+		952A77D41C3762F700B2A2B6 /* Build configuration list for PBXProject "Amortized" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95497F4C16BB637000952D2A /* Debug */,
-				95497F4D16BB637000952D2A /* Release */,
+				952A77F41C3762F700B2A2B6 /* Debug */,
+				952A77F51C3762F700B2A2B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95497F4E16BB637000952D2A /* Build configuration list for PBXNativeTarget "Amortized" */ = {
+		952A77F61C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "Amortized" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95497F4F16BB637000952D2A /* Debug */,
-				95497F5016BB637000952D2A /* Release */,
+				952A77F71C3762F700B2A2B6 /* Debug */,
+				952A77F81C3762F700B2A2B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952A77F91C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "AmortizedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952A77FA1C3762F700B2A2B6 /* Debug */,
+				952A77FB1C3762F700B2A2B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 95497F0916BB637000952D2A /* Project object */;
+	rootObject = 952A77D11C3762F700B2A2B6 /* Project object */;
 }
