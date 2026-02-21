@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95265B2D1C39CCC600987976 /* GlobalHelper.swift */; };
-		952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */; };
 		952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E31C3762F700B2A2B6 /* Assets.xcassets */; };
 		952A77E71C3762F700B2A2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */; };
 		95C4EA802E21F2FC0096A6AA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */; };
@@ -16,7 +15,7 @@
 		95C4EA832E21F3190096A6AA /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA822E21F3190096A6AA /* Rates.swift */; };
 		95C4EA852E2201F20096A6AA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA842E2201F20096A6AA /* ApiService.swift */; };
 		95C4EA862E2201F20096A6AB /* AmortizedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA842E2201F20096A6AB /* AmortizedApp.swift */; };
-		95C4EA872E2201F20096A6AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA842E2201F20096A6AC /* SceneDelegate.swift */; };
+		95CAFE000000000000CAF003 /* AmortizedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAFE000000000000CAF002 /* AmortizedTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		95265B2D1C39CCC600987976 /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
 		952A77D91C3762F700B2A2B6 /* Amortized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amortized.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		952A77E31C3762F700B2A2B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		952A77E61C3762F700B2A2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		952A77E81C3762F700B2A2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,8 +40,9 @@
 		95C4EA822E21F3190096A6AA /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
 		95C4EA842E2201F20096A6AA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		95C4EA842E2201F20096A6AB /* AmortizedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedApp.swift; sourceTree = "<group>"; };
-		95C4EA842E2201F20096A6AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		95C9C3282C88D5EB006BDBA5 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LaunchScreen.xcstrings; sourceTree = "<group>"; };
+		95CAFE000000000000CAF002 /* AmortizedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedTests.swift; sourceTree = "<group>"; };
+		95CAFE000000000000CAF004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95CAFE000000000000CAF001 /* AmortizedTests */ = {
+			isa = PBXGroup;
+			children = (
+				95CAFE000000000000CAF002 /* AmortizedTests.swift */,
+				95CAFE000000000000CAF004 /* Info.plist */,
+			);
+			path = AmortizedTests;
+			sourceTree = "<group>";
+		};
 		952A77D01C3762F700B2A2B6 = {
 			isa = PBXGroup;
 			children = (
 				952A77DB1C3762F700B2A2B6 /* Amortized */,
+				95CAFE000000000000CAF001 /* AmortizedTests */,
 				952A77DA1C3762F700B2A2B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,9 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				95C4EA842E2201F20096A6AA /* ApiService.swift */,
-				952A77DC1C3762F700B2A2B6 /* AppDelegate.swift */,
 				95C4EA842E2201F20096A6AB /* AmortizedApp.swift */,
-				95C4EA842E2201F20096A6AC /* SceneDelegate.swift */,
 				952A77E31C3762F700B2A2B6 /* Assets.xcassets */,
 				952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */,
 				952A77E81C3762F700B2A2B6 /* Info.plist */,
@@ -229,9 +236,7 @@
 				95C4EA852E2201F20096A6AA /* ApiService.swift in Sources */,
 				95C4EA812E21F2FC0096A6AA /* RatesView.swift in Sources */,
 				95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */,
-				952A77DD1C3762F700B2A2B6 /* AppDelegate.swift in Sources */,
 				95C4EA862E2201F20096A6AB /* AmortizedApp.swift in Sources */,
-				95C4EA872E2201F20096A6AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CAFE000000000000CAF003 /* AmortizedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +430,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AmortizedTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,7 +447,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AmortizedTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
