@@ -6,47 +6,28 @@
 //  Copyright © 2016 GroundSpeed. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class GlobalHelper: NSObject {
-
-    func getMonthlyPayment(amount: Float, downPayment: Float, term: Float, interestRate: Float, lblPayment: UILabel) -> UILabel {
+struct PaymentService {
+    static let shared = PaymentService()
+    
+    private init() {}
+    
+    func calculateMonthlyPayment(amount: Float, downPayment: Float, term: Float, interestRate: Float) -> Float {
         // A = payment Amount per period
         // P = initial Principal (loan amount)
         // r = interest rate per period
         // n = total number of payments or periods
         
-        let principal : Float = amount - downPayment
-        let payments = term*12
-        let rate = interestRate/12/100
-        let amount = calculatPMTWithRatePerPeriod(ratePerPeriod: rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0, type: 0)
+        let principal = amount - downPayment
+        let payments = term * 12
+        let rate = interestRate / 12 / 100
         
-        if (amount.isNaN || amount.isInfinite)
-        {
-            lblPayment.font = UIFont.boldSystemFont(ofSize: 18)
-            lblPayment.textColor = UIColor.red
-            lblPayment.text = "You must enter all required fields.";
-        }
-        else
-        {
-            lblPayment.font = UIFont(name: "Avenir Next", size: 28)
-            lblPayment.textColor = UIColor.white
-            lblPayment.text = String(format: "%.02f", amount)
-        }
-        
-        return lblPayment
+        return calculatePMT(ratePerPeriod: rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0, type: 0)
     }
     
-    func calculatPMTWithRatePerPeriod (ratePerPeriod: Float, numberOfPayments: Float, loanAmount: Float, futureValue: Float, type: Float) -> Float {
-        
-        var q : Float
-        
-        q = pow(1 + ratePerPeriod, numberOfPayments)
-        
-        let returnValue = (ratePerPeriod * (futureValue + (q * loanAmount))) / ((-1 + q) * (1 + ratePerPeriod * (type)))
-        
-        return returnValue
-        
+    private func calculatePMT(ratePerPeriod: Float, numberOfPayments: Float, loanAmount: Float, futureValue: Float, type: Float) -> Float {
+        let q = pow(1 + ratePerPeriod, numberOfPayments)
+        return (ratePerPeriod * (futureValue + (q * loanAmount))) / ((-1 + q) * (1 + ratePerPeriod * type))
     }
-
 }
