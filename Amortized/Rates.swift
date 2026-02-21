@@ -1,23 +1,23 @@
-//
-//  Rates.swift
-//  Amortized
-//
-//  Created by Don Miller on 1/2/16.
-//  Copyright © 2016 GroundSpeed. All rights reserved.
-//
+import Foundation
 
-import UIKit
-
-class Rates {
-    
-    var thirtyYearFixed: String
-    var fifteenYearFixed: String
-    var fiveOneARM: String
+struct Rates: Codable {
+    let thirtyYearFixed: String
+    let fifteenYearFixed: String
+    let fiveOneARM: String
     
     init(thirtyYearFixed: String, fifteenYearFixed: String, fiveOneARM: String) {
-        self.thirtyYearFixed = String.localizedStringWithFormat("%.2f%%", Float(thirtyYearFixed)!)
-        self.fifteenYearFixed = String.localizedStringWithFormat("%.2f%%", Float(fifteenYearFixed)!)
-        self.fiveOneARM = String.localizedStringWithFormat("%.2f%%", Float(fiveOneARM)!)
+        self.thirtyYearFixed = String(format: "%.2f%%", Float(thirtyYearFixed) ?? 0)
+        self.fifteenYearFixed = String(format: "%.2f%%", Float(fifteenYearFixed) ?? 0)
+        self.fiveOneARM = String(format: "%.2f%%", Float(fiveOneARM) ?? 0)
     }
-
 }
+
+// MARK: - API Response Types
+struct FREDResponse: Codable {
+    let observations: [FREDObservation]
+}
+
+struct FREDObservation: Codable {
+    let date: String
+    let value: String
+} 
