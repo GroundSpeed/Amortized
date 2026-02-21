@@ -1,5 +1,4 @@
 import SwiftUI
-import Foundation
 
 struct RatesView: View {
     @StateObject private var viewModel = RatesViewModel()

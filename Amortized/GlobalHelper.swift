@@ -23,10 +23,10 @@ struct PaymentService {
         let payments = term * 12
         let rate = interestRate / 12 / 100
         
-        return calculatePMT(ratePerPeriod: rate, numberOfPayments: payments, loanAmount: principal, futureValue: 0, type: 0)
+        return calculatePMT(ratePerPeriod: rate, numberOfPayments: payments, loanAmount: principal)
     }
-    
-    private func calculatePMT(ratePerPeriod: Float, numberOfPayments: Float, loanAmount: Float, futureValue: Float, type: Float) -> Float {
+
+    private func calculatePMT(ratePerPeriod: Float, numberOfPayments: Float, loanAmount: Float, futureValue: Float = 0, type: Float = 0) -> Float {
         let q = pow(1 + ratePerPeriod, numberOfPayments)
         return (ratePerPeriod * (futureValue + (q * loanAmount))) / ((-1 + q) * (1 + ratePerPeriod * type))
     }

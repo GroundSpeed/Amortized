@@ -9,12 +9,12 @@ enum APIError: Error {
 @MainActor
 final class ApiService {
     static let shared = ApiService()
-    private let API_KEY = "X1-ZWz1f3t3bvl4i3_1brbp"
+    private let apiKey = "X1-ZWz1f3t3bvl4i3_1brbp"
     
     private init() {}
     
     func getRatesFromZillow() async throws -> (today: Rates, lastWeek: Rates) {
-        let endpoint = "http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=\(API_KEY)&output=json"
+        let endpoint = "https://www.zillow.com/webservice/GetRateSummary.htm?zws-id=\(apiKey)&output=json"
         
         guard let url = URL(string: endpoint) else {
             throw APIError.invalidURL
@@ -22,7 +22,6 @@ final class ApiService {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         do {
