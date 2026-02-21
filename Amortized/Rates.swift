@@ -13,17 +13,11 @@ struct Rates: Codable {
 }
 
 // MARK: - API Response Types
-struct RatesResponse: Codable {
-    let response: RatesData
+struct FREDResponse: Codable {
+    let observations: [FREDObservation]
 }
 
-struct RatesData: Codable {
-    let today: RatesValues
-    let lastWeek: RatesValues
-}
-
-struct RatesValues: Codable {
-    let thirtyYearFixed: String
-    let fifteenYearFixed: String
-    let fiveOneARM: String
+struct FREDObservation: Codable {
+    let date: String
+    let value: String
 } 

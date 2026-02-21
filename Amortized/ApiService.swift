@@ -9,42 +9,51 @@ enum APIError: Error {
 @MainActor
 final class ApiService {
     static let shared = ApiService()
-    private let apiKey = "X1-ZWz1f3t3bvl4i3_1brbp"
-    
+    private let apiKey = "8f699c2305cfba8e7459c8abd1986373"
+
     private init() {}
-    
-    func getRatesFromZillow() async throws -> (today: Rates, lastWeek: Rates) {
-        let endpoint = "https://www.zillow.com/webservice/GetRateSummary.htm?zws-id=\(apiKey)&output=json"
-        
+
+    private func fetchSeries(_ seriesId: String) async throws -> FREDResponse {
+        let endpoint = "https://api.stlouisfed.org/fred/series/observations?series_id=\(seriesId)&api_key=\(apiKey)&file_type=json&sort_order=desc&limit=2"
+
         guard let url = URL(string: endpoint) else {
             throw APIError.invalidURL
         }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        
+
         do {
-            let (data, _) = try await URLSession.shared.data(for: request)
-            let response = try JSONDecoder().decode(RatesResponse.self, from: data)
-            
-            let todayRates = Rates(
-                thirtyYearFixed: response.response.today.thirtyYearFixed,
-                fifteenYearFixed: response.response.today.fifteenYearFixed,
-                fiveOneARM: response.response.today.fiveOneARM
-            )
-            
-            let lastWeekRates = Rates(
-                thirtyYearFixed: response.response.lastWeek.thirtyYearFixed,
-                fifteenYearFixed: response.response.lastWeek.fifteenYearFixed,
-                fiveOneARM: response.response.lastWeek.fiveOneARM
-            )
-            
-            return (todayRates, lastWeekRates)
+            let (data, _) = try await URLSession.shared.data(from: url)
+            return try JSONDecoder().decode(FREDResponse.self, from: data)
         } catch let decodingError as DecodingError {
             throw APIError.decodingError(decodingError)
         } catch {
             throw APIError.networkError(error)
         }
     }
-} 
+
+    func getRates() async throws -> (today: Rates, lastWeek: Rates) {
+        do {
+            async let r30 = fetchSeries("MORTGAGE30US")
+            async let r15 = fetchSeries("MORTGAGE15US")
+            async let r5  = fetchSeries("MORTGAGE5US")
+            let (obs30, obs15, obs5) = try await (r30, r15, r5)
+
+            let todayRates = Rates(
+                thirtyYearFixed: obs30.observations[0].value,
+                fifteenYearFixed: obs15.observations[0].value,
+                fiveOneARM: obs5.observations[0].value
+            )
+
+            let lastWeekRates = Rates(
+                thirtyYearFixed: obs30.observations[1].value,
+                fifteenYearFixed: obs15.observations[1].value,
+                fiveOneARM: obs5.observations[1].value
+            )
+
+            return (todayRates, lastWeekRates)
+        } catch let decodingError as DecodingError {
+            throw APIError.decodingError(decodingError)
+        } catch {
+            throw error
+        }
+    }
+}

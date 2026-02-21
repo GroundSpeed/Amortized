@@ -11,7 +11,7 @@ struct RatesView: View {
                 RateRow(title: "5/1 ARM", rate: viewModel.todayRates?.fiveOneARM ?? "-")
             }
             
-            Section(header: Text("Last Week"), footer: Text("Rates Updated from Zillow.com")) {
+            Section(header: Text("Last Week"), footer: Text("Rates provided by St. Louis Fed (FRED)")) {
                 RateRow(title: "30 Year Fixed", rate: viewModel.lastWeekRates?.thirtyYearFixed ?? "-")
                 RateRow(title: "15 Year Fixed", rate: viewModel.lastWeekRates?.fifteenYearFixed ?? "-")
                 RateRow(title: "5/1 ARM", rate: viewModel.lastWeekRates?.fiveOneARM ?? "-")
@@ -47,7 +47,7 @@ class RatesViewModel: ObservableObject {
     
     func loadRates() async {
         do {
-            let rates = try await ApiService.shared.getRatesFromZillow()
+            let rates = try await ApiService.shared.getRates()
             todayRates = rates.today
             lastWeekRates = rates.lastWeek
         } catch {
