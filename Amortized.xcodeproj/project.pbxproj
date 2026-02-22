@@ -63,15 +63,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95CAFE000000000000CAF001 /* AmortizedTests */ = {
-			isa = PBXGroup;
-			children = (
-				95CAFE000000000000CAF002 /* AmortizedTests.swift */,
-				95CAFE000000000000CAF004 /* Info.plist */,
-			);
-			path = AmortizedTests;
-			sourceTree = "<group>";
-		};
 		952A77D01C3762F700B2A2B6 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +119,15 @@
 				95265B2D1C39CCC600987976 /* GlobalHelper.swift */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95CAFE000000000000CAF001 /* AmortizedTests */ = {
+			isa = PBXGroup;
+			children = (
+				95CAFE000000000000CAF002 /* AmortizedTests.swift */,
+				95CAFE000000000000CAF004 /* Info.plist */,
+			);
+			path = AmortizedTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,12 +393,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NDR5C7SVU;
 				INFOPLIST_FILE = Amortized/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Amortized;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.groundspeedhq.Pay-Calc";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GroundSpeedHQ.Pay-Calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -413,12 +415,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NDR5C7SVU;
 				INFOPLIST_FILE = Amortized/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Amortized;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.groundspeedhq.Pay-Calc";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GroundSpeedHQ.Pay-Calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

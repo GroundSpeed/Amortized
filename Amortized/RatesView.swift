@@ -31,10 +31,10 @@ struct RateRow: View {
     var body: some View {
         HStack {
             Text(title)
-                .font(.custom("AvenirNext-Medium", size: 17))
+                .font(.custom("AvenirNext-Medium", size: 17, relativeTo: .body))
             Spacer()
             Text(rate)
-                .font(.custom("AvenirNext-Regular", size: 17))
+                .font(.custom("AvenirNext-Regular", size: 17, relativeTo: .body))
                 .foregroundColor(.secondary)
         }
     }
