@@ -6,7 +6,12 @@ struct PaymentView: View {
     @StateObject private var viewModel = PaymentViewModel()
 
     var body: some View {
-        VStack(spacing: 40) {
+        ZStack {
+            Color.clear
+                .contentShape(Rectangle())
+                .onTapGesture { dismissKeyboard() }
+
+            VStack(spacing: 40) {
             // Payment Display
             Text(viewModel.paymentAmount)
                 .font(.custom("AvenirNext-Medium", size: 28, relativeTo: .title))
@@ -49,23 +54,37 @@ struct PaymentView: View {
 
             // Action Buttons
             VStack(spacing: 12) {
-                Button("Clear") {
+                Button {
+                    dismissKeyboard()
                     viewModel.clear()
+                } label: {
+                    Text("Clear")
+                        .frame(maxWidth: .infinity)
                 }
                 .font(.custom("AvenirNext-Medium", size: 22, relativeTo: .title2))
                 .buttonStyle(.bordered)
                 .tint(Color(red: 0.058, green: 0.439, blue: 0.192))
 
-                Button("Calculate") {
+                Button {
+                    dismissKeyboard()
                     viewModel.calculate()
+                } label: {
+                    Text("Calculate")
+                        .frame(maxWidth: .infinity)
                 }
                 .font(.custom("AvenirNext-Medium", size: 22, relativeTo: .title2))
                 .buttonStyle(.borderedProminent)
                 .tint(Color(red: 0.058, green: 0.439, blue: 0.192))
             }
+            .padding(.horizontal)
 
             Spacer()
-        }
+        } // VStack
+        } // ZStack
+    }
+
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
