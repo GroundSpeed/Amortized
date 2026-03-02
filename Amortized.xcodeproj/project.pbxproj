@@ -140,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 952A77F61C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "Amortized" */;
 			buildPhases = (
+				953FA3A42F55E0A8009A8589 /* ShellScript */,
 				952A77D51C3762F700B2A2B6 /* Sources */,
 				952A77D61C3762F700B2A2B6 /* Frameworks */,
 				952A77D71C3762F700B2A2B6 /* Resources */,
@@ -228,6 +229,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		953FA3A42F55E0A8009A8589 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Path to your Info.plist file (update if your path is different)\nPLIST=\"${PROJECT_DIR}/${INFOPLIST_PATH}\"\n\n# Get the current build number\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PLIST\")\n\n# Increment the build number by 1\nif [[ \"$buildNumber\" =~ ^[0-9]+$ ]]; then\n    nextBuildNumber=$((buildNumber + 1))\nelse\n    # If not a plain number, start from 1\n    nextBuildNumber=1\nfi\n\n# Set the new build number\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $nextBuildNumber\" \"$PLIST\"\n\necho \"Incremented build number to $nextBuildNumber\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		952A77D51C3762F700B2A2B6 /* Sources */ = {
