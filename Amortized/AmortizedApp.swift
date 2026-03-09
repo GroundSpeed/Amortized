@@ -22,12 +22,12 @@ struct AmortizedApp: App {
                     TabView {
                         PaymentView()
                             .tabItem {
-                                Label("Payment", image: "CalculatePayment")
+                                Label("Payment", systemImage: "calendar.badge.clock")
                             }
 
                         RatesView()
                             .tabItem {
-                                Label("Rates", image: "Percent")
+                                Label("Rates", systemImage: "percent")
                             }
                     }
                     .tint(Color(red: 0.058, green: 0.439, blue: 0.192))
