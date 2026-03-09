@@ -6,106 +6,118 @@ struct PaymentView: View {
     @StateObject private var viewModel = PaymentViewModel()
 
     var body: some View {
-        ZStack {
-            Color.clear
-                .contentShape(Rectangle())
-                .onTapGesture { dismissKeyboard() }
+        NavigationStack {
+            ZStack {
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture { dismissKeyboard() }
 
-            VStack(spacing: 40) {
-            // Payment Display
-            Text(viewModel.paymentAmount)
-                .font(.custom("AvenirNext-Medium", size: 28, relativeTo: .title))
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .frame(height: 99)
-                .background(Color(red: 0, green: 0.502, blue: 0.251))
-                .onChange(of: viewModel.paymentAmount) { _, newValue in
-                    UIAccessibility.post(notification: .announcement, argument: newValue)
-                }
-
-            // Input Fields
-            VStack(spacing: 15) {
-                InputField(title: "Amount", text: $viewModel.amount, placeholder: "$0.00")
-                    .keyboardType(.decimalPad)
-
-                InputField(title: "Down Payment", text: $viewModel.downPayment, placeholder: "$0.00")
-                    .keyboardType(.decimalPad)
-
-                InputField(title: "Interest Rate", text: $viewModel.interestRate, placeholder: "%")
-                    .keyboardType(.decimalPad)
-
-                InputField(title: "Term", text: $viewModel.term, placeholder: "Years")
-                    .keyboardType(.numberPad)
-            }
-            .padding(.horizontal)
-
-            // Sound Toggle
-            Button(action: { viewModel.toggleSound() }) {
-                Image(viewModel.soundOn ? "SoundOn" : "SoundOff")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 36)
-                    .accessibilityHidden(true)
-            }
-            .frame(width: 44, height: 44)
-            .contentShape(Rectangle())
-            .accessibilityLabel(viewModel.soundOn ? "Sound on" : "Sound off")
-            .padding(.top)
-
-            // Action Buttons
-            VStack(spacing: 12) {
-                Button {
-                    dismissKeyboard()
-                    viewModel.clear()
-                } label: {
-                    Text("Clear")
+                VStack(spacing: 40) {
+                    // Payment Display Header
+                    Text(viewModel.paymentAmount)
+                        .font(.largeTitle).bold()
+                        .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                }
-                .font(.custom("AvenirNext-Medium", size: 22, relativeTo: .title2))
-                .buttonStyle(.bordered)
-                .tint(Color(red: 0.058, green: 0.439, blue: 0.192))
+                        .frame(minHeight: 99)
+                        .background(Color(red: 0, green: 0.502, blue: 0.251))
+                        .onChange(of: viewModel.paymentAmount) { _, newValue in
+                            UIAccessibility.post(notification: .announcement, argument: newValue)
+                        }
 
-                Button {
-                    dismissKeyboard()
-                    viewModel.calculate()
-                } label: {
-                    Text("Calculate")
-                        .frame(maxWidth: .infinity)
+                    // Input Form
+                    Form {
+                        HStack {
+                            Text("Amount")
+                            Spacer()
+                            TextField("$0.00", text: $viewModel.amount)
+                                .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.trailing)
+                                .foregroundColor(viewModel.amount.isEmpty ? .secondary : .primary)
+                                .font(.body)
+                                .accessibilityLabel("Amount")
+                        }
+                        HStack {
+                            Text("Down Payment")
+                            Spacer()
+                            TextField("$0.00", text: $viewModel.downPayment)
+                                .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.trailing)
+                                .foregroundColor(viewModel.downPayment.isEmpty ? .secondary : .primary)
+                                .font(.body)
+                                .accessibilityLabel("Down Payment")
+                        }
+                        HStack {
+                            Text("Interest Rate")
+                            Spacer()
+                            TextField("%", text: $viewModel.interestRate)
+                                .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.trailing)
+                                .foregroundColor(viewModel.interestRate.isEmpty ? .secondary : .primary)
+                                .font(.body)
+                                .accessibilityLabel("Interest Rate")
+                        }
+                        HStack {
+                            Text("Term")
+                            Spacer()
+                            TextField("Years", text: $viewModel.term)
+                                .keyboardType(.numberPad)
+                                .multilineTextAlignment(.trailing)
+                                .foregroundColor(viewModel.term.isEmpty ? .secondary : .primary)
+                                .font(.body)
+                                .accessibilityLabel("Term")
+                        }
+                    }
+                    .scrollContentBackground(.hidden)
+                    .padding(.horizontal, 16)
+
+                    // Action Buttons
+                    VStack(spacing: 12) {
+                        Button {
+                            dismissKeyboard()
+                            viewModel.clear()
+                        } label: {
+                            Text("Clear")
+                                .frame(maxWidth: .infinity)
+                                .frame(minHeight: 44)
+                                .background(Color.clear)
+                                .cornerRadius(12)
+                        }
+                        .foregroundColor(Color(red: 0.058, green: 0.439, blue: 0.192))
+                        .font(.body)
+                        .padding(.horizontal, 16)
+
+                        Button {
+                            dismissKeyboard()
+                            viewModel.calculate()
+                        } label: {
+                            Text("Calculate")
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .frame(minHeight: 44)
+                                .background(Color(red: 0.058, green: 0.439, blue: 0.192))
+                                .cornerRadius(12)
+                        }
+                        .padding(.horizontal, 16)
+                    }
+
+                    Spacer()
+                } // VStack
+            } // ZStack
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        viewModel.toggleSound()
+                    } label: {
+                        Image(systemName: viewModel.soundOn ? "speaker.wave.2.fill" : "speaker.slash.fill")
+                    }
+                    .accessibilityLabel(viewModel.soundOn ? "Sound on" : "Sound off")
                 }
-                .font(.custom("AvenirNext-Medium", size: 22, relativeTo: .title2))
-                .buttonStyle(.borderedProminent)
-                .tint(Color(red: 0.058, green: 0.439, blue: 0.192))
             }
-            .padding(.horizontal)
-
-            Spacer()
-        } // VStack
-        } // ZStack
+        } // NavigationStack
     }
 
     private func dismissKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-
-struct InputField: View {
-    let title: String
-    @Binding var text: String
-    let placeholder: String
-
-    var body: some View {
-        HStack {
-            Text(title)
-                .font(.custom("AvenirNext-Medium", size: 17, relativeTo: .body))
-                .frame(width: 153, alignment: .leading)
-
-            TextField(placeholder, text: $text)
-                .font(.custom("AvenirNext-Regular", size: 14, relativeTo: .subheadline))
-                .multilineTextAlignment(.trailing)
-                .textFieldStyle(.roundedBorder)
-                .frame(width: 154)
-                .accessibilityLabel(title)
-        }
     }
 }
 
