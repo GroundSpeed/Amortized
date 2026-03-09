@@ -10,6 +10,7 @@
 		95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95265B2D1C39CCC600987976 /* GlobalHelper.swift */; };
 		952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E31C3762F700B2A2B6 /* Assets.xcassets */; };
 		952A77E71C3762F700B2A2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */; };
+		9552FCED2F55CE0200D39736 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552FCEC2F55CE0200D39736 /* SplashScreen.swift */; };
 		95C4EA802E21F2FC0096A6AA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */; };
 		95C4EA812E21F2FC0096A6AA /* RatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */; };
 		95C4EA832E21F3190096A6AA /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA822E21F3190096A6AA /* Rates.swift */; };
@@ -35,6 +36,7 @@
 		952A77E61C3762F700B2A2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		952A77E81C3762F700B2A2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		952A77ED1C3762F700B2A2B6 /* AmortizedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmortizedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9552FCEC2F55CE0200D39736 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesView.swift; sourceTree = "<group>"; };
 		95C4EA822E21F3190096A6AA /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				952A77FE1C37643300B2A2B6 /* Models */,
 				952A77FD1C37642800B2A2B6 /* Views */,
 				952A77FF1C37644800B2A2B6 /* Supporting Files */,
+				9552FCEC2F55CE0200D39736 /* SplashScreen.swift */,
 			);
 			path = Amortized;
 			sourceTree = "<group>";
@@ -137,6 +140,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 952A77F61C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "Amortized" */;
 			buildPhases = (
+				953FA3B42F55E0A8009A8589 /* Increment Build Number */,
+				953FA3A42F55E0A8009A8589 /* Version for Archive */,
 				952A77D51C3762F700B2A2B6 /* Sources */,
 				952A77D61C3762F700B2A2B6 /* Frameworks */,
 				952A77D71C3762F700B2A2B6 /* Resources */,
@@ -176,7 +181,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 2620;
+				LastUpgradeCheck = 2630;
 				ORGANIZATIONNAME = GroundSpeed;
 				TargetAttributes = {
 					952A77D81C3762F700B2A2B6 = {
@@ -226,6 +231,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		953FA3B42F55E0A8009A8589 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nPLIST=\"${SRCROOT}/Amortized/Info.plist\"\nif [ ! -f \"$PLIST\" ]; then echo \"error: Info.plist not at $PLIST\"; exit 1; fi\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PLIST\" 2>/dev/null || echo \"0\")\nif [[ \"$buildNumber\" =~ ^[0-9]+$ ]]; then next=$((buildNumber + 1)); else next=1; fi\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $next\" \"$PLIST\"\necho \"Build number: $next\"\n";
+		};
+		953FA3A42F55E0A8009A8589 /* Version for Archive */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nPLIST=\"${SRCROOT}/Amortized/Info.plist\"\nif [ ! -f \"$PLIST\" ]; then echo \"error: Info.plist not at $PLIST\"; exit 1; fi\nshortVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$PLIST\" 2>/dev/null || echo \"1.0\")\nnewShort=$(echo \"$shortVersion\" | awk '{printf \"%.2f\", $1+0.01}')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $newShort\" \"$PLIST\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion 1\" \"$PLIST\"\necho \"Archive version: $newShort (1)\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		952A77D51C3762F700B2A2B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,6 +277,7 @@
 			files = (
 				95C4EA832E21F3190096A6AA /* Rates.swift in Sources */,
 				95C4EA802E21F2FC0096A6AA /* PaymentView.swift in Sources */,
+				9552FCED2F55CE0200D39736 /* SplashScreen.swift in Sources */,
 				95C4EA852E2201F20096A6AA /* ApiService.swift in Sources */,
 				95C4EA812E21F2FC0096A6AA /* RatesView.swift in Sources */,
 				95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */,
@@ -275,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -335,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -392,6 +439,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NDR5C7SVU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Amortized/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Amortized;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
@@ -414,6 +462,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NDR5C7SVU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Amortized/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Amortized;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
