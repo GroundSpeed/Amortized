@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95265B2D1C39CCC600987976 /* GlobalHelper.swift */; };
+		95C4EA8A2E21F3190096A6AA /* AmortizationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA872E21F3190096A6AA /* AmortizationModels.swift */; };
+		95C4EA8B2E21F3190096A6AA /* ReportFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA882E21F3190096A6AA /* ReportFormatters.swift */; };
+		95C4EA8C2E21F2FC0096A6AA /* AmortizationReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA892E21F2FC0096A6AA /* AmortizationReportView.swift */; };
 		952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E31C3762F700B2A2B6 /* Assets.xcassets */; };
 		952A77E71C3762F700B2A2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */; };
 		9552FCED2F55CE0200D39736 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552FCEC2F55CE0200D39736 /* SplashScreen.swift */; };
@@ -40,6 +43,9 @@
 		95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesView.swift; sourceTree = "<group>"; };
 		95C4EA822E21F3190096A6AA /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		95C4EA872E21F3190096A6AA /* AmortizationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizationModels.swift; sourceTree = "<group>"; };
+		95C4EA882E21F3190096A6AA /* ReportFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFormatters.swift; sourceTree = "<group>"; };
+		95C4EA892E21F2FC0096A6AA /* AmortizationReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizationReportView.swift; sourceTree = "<group>"; };
 		95C4EA842E2201F20096A6AA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		95C4EA842E2201F20096A6AB /* AmortizedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedApp.swift; sourceTree = "<group>"; };
 		95C9C3282C88D5EB006BDBA5 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LaunchScreen.xcstrings; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		952A77FD1C37642800B2A2B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				95C4EA892E21F2FC0096A6AA /* AmortizationReportView.swift */,
 				95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */,
 				95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */,
 			);
@@ -106,6 +113,7 @@
 		952A77FE1C37643300B2A2B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				95C4EA872E21F3190096A6AA /* AmortizationModels.swift */,
 				95C4EA822E21F3190096A6AA /* Rates.swift */,
 			);
 			name = Models;
@@ -119,6 +127,7 @@
 				952A77E31C3762F700B2A2B6 /* Assets.xcassets */,
 				952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */,
 				952A77E81C3762F700B2A2B6 /* Info.plist */,
+				95C4EA882E21F3190096A6AA /* ReportFormatters.swift */,
 				95265B2D1C39CCC600987976 /* GlobalHelper.swift */,
 			);
 			name = "Supporting Files";
@@ -275,6 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C4EA8A2E21F3190096A6AA /* AmortizationModels.swift in Sources */,
+				95C4EA8C2E21F2FC0096A6AA /* AmortizationReportView.swift in Sources */,
+				95C4EA8B2E21F3190096A6AA /* ReportFormatters.swift in Sources */,
 				95C4EA832E21F3190096A6AA /* Rates.swift in Sources */,
 				95C4EA802E21F2FC0096A6AA /* PaymentView.swift in Sources */,
 				9552FCED2F55CE0200D39736 /* SplashScreen.swift in Sources */,
