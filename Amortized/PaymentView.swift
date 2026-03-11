@@ -82,15 +82,6 @@ struct PaymentView: View {
                                     .font(.body)
                                     .accessibilityLabel("Optional extra payment per period")
                             }
-                            HStack {
-                                Text("Lender name")
-                                Spacer()
-                                TextField("Lender", text: $viewModel.lenderName)
-                                    .multilineTextAlignment(.trailing)
-                                    .foregroundColor(viewModel.lenderName.isEmpty ? .secondary : .primary)
-                                    .font(.body)
-                                    .accessibilityLabel("Lender name")
-                            }
                         }
                     }
                     .scrollContentBackground(.hidden)
@@ -125,17 +116,18 @@ struct PaymentView: View {
                         }
                         .padding(.horizontal, 16)
 
-                        Button {
-                            dismissKeyboard()
-                            showAmortizationReport = true
-                        } label: {
-                            Text("View Schedule")
-                                .foregroundColor(Color(red: 0.058, green: 0.439, blue: 0.192))
-                                .frame(maxWidth: .infinity)
-                                .frame(minHeight: 44)
+                        if viewModel.canShowReport {
+                            Button {
+                                dismissKeyboard()
+                                showAmortizationReport = true
+                            } label: {
+                                Text("View Schedule")
+                                    .foregroundColor(Color(red: 0.058, green: 0.439, blue: 0.192))
+                                    .frame(maxWidth: .infinity)
+                                    .frame(minHeight: 44)
+                            }
+                            .padding(.horizontal, 16)
                         }
-                        .disabled(!viewModel.canShowReport)
-                        .padding(.horizontal, 16)
                     }
 
                     Spacer()
@@ -172,7 +164,15 @@ class PaymentViewModel: ObservableObject {
     @Published var soundOn = false
 
     // Schedule / report inputs
-    @Published var startDate = Date()
+    @Published var startDate = PaymentViewModel.firstDayOfNextMonth
+
+    private static var firstDayOfNextMonth: Date {
+        let cal = Calendar.current
+        let now = Date()
+        guard let nextMonth = cal.date(byAdding: .month, value: 1, to: now),
+              let first = cal.date(from: cal.dateComponents([.year, .month], from: nextMonth)) else { return now }
+        return first
+    }
     @Published var extraPayment = ""
     @Published var lenderName = ""
     @Published var paymentsPerYear: Int = 12
@@ -243,6 +243,7 @@ class PaymentViewModel: ObservableObject {
         interestRate = ""
         term = ""
         paymentAmount = "0.00"
+        startDate = PaymentViewModel.firstDayOfNextMonth
         paymentSchedule = []
         amortizationSummary = nil
     }

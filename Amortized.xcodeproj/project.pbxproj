@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95265B2D1C39CCC600987976 /* GlobalHelper.swift */; };
-		95C4EA8A2E21F3190096A6AA /* AmortizationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA872E21F3190096A6AA /* AmortizationModels.swift */; };
-		95C4EA8B2E21F3190096A6AA /* ReportFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA882E21F3190096A6AA /* ReportFormatters.swift */; };
-		95C4EA8C2E21F2FC0096A6AA /* AmortizationReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA892E21F2FC0096A6AA /* AmortizationReportView.swift */; };
 		952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E31C3762F700B2A2B6 /* Assets.xcassets */; };
 		952A77E71C3762F700B2A2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */; };
 		9552FCED2F55CE0200D39736 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552FCEC2F55CE0200D39736 /* SplashScreen.swift */; };
@@ -19,6 +16,9 @@
 		95C4EA832E21F3190096A6AA /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA822E21F3190096A6AA /* Rates.swift */; };
 		95C4EA852E2201F20096A6AA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA842E2201F20096A6AA /* ApiService.swift */; };
 		95C4EA862E2201F20096A6AB /* AmortizedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA842E2201F20096A6AB /* AmortizedApp.swift */; };
+		95C4EA8A2E21F3190096A6AA /* AmortizationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA872E21F3190096A6AA /* AmortizationModels.swift */; };
+		95C4EA8B2E21F3190096A6AA /* ReportFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA882E21F3190096A6AA /* ReportFormatters.swift */; };
+		95C4EA8C2E21F2FC0096A6AA /* AmortizationReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA892E21F2FC0096A6AA /* AmortizationReportView.swift */; };
 		95CAFE000000000000CAF003 /* AmortizedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAFE000000000000CAF002 /* AmortizedTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +43,11 @@
 		95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesView.swift; sourceTree = "<group>"; };
 		95C4EA822E21F3190096A6AA /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		95C4EA842E2201F20096A6AA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		95C4EA842E2201F20096A6AB /* AmortizedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedApp.swift; sourceTree = "<group>"; };
 		95C4EA872E21F3190096A6AA /* AmortizationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizationModels.swift; sourceTree = "<group>"; };
 		95C4EA882E21F3190096A6AA /* ReportFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFormatters.swift; sourceTree = "<group>"; };
 		95C4EA892E21F2FC0096A6AA /* AmortizationReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizationReportView.swift; sourceTree = "<group>"; };
-		95C4EA842E2201F20096A6AA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		95C4EA842E2201F20096A6AB /* AmortizedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedApp.swift; sourceTree = "<group>"; };
 		95C9C3282C88D5EB006BDBA5 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LaunchScreen.xcstrings; sourceTree = "<group>"; };
 		95CAFE000000000000CAF002 /* AmortizedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedTests.swift; sourceTree = "<group>"; };
 		95CAFE000000000000CAF004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 952A77F61C3762F700B2A2B6 /* Build configuration list for PBXNativeTarget "Amortized" */;
 			buildPhases = (
-				953FA3B42F55E0A8009A8589 /* Increment Build Number */,
-				953FA3A42F55E0A8009A8589 /* Version for Archive */,
+				953FA3B42F55E0A8009A8589 /* ShellScript */,
+				953FA3A42F55E0A8009A8589 /* ShellScript */,
 				952A77D51C3762F700B2A2B6 /* Sources */,
 				952A77D61C3762F700B2A2B6 /* Frameworks */,
 				952A77D71C3762F700B2A2B6 /* Resources */,
@@ -241,25 +241,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		953FA3B42F55E0A8009A8589 /* Increment Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nPLIST=\"${SRCROOT}/Amortized/Info.plist\"\nif [ ! -f \"$PLIST\" ]; then echo \"error: Info.plist not at $PLIST\"; exit 1; fi\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PLIST\" 2>/dev/null || echo \"0\")\nif [[ \"$buildNumber\" =~ ^[0-9]+$ ]]; then next=$((buildNumber + 1)); else next=1; fi\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $next\" \"$PLIST\"\necho \"Build number: $next\"\n";
-		};
-		953FA3A42F55E0A8009A8589 /* Version for Archive */ = {
+		953FA3A42F55E0A8009A8589 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 8;
@@ -276,6 +258,24 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nPLIST=\"${SRCROOT}/Amortized/Info.plist\"\nif [ ! -f \"$PLIST\" ]; then echo \"error: Info.plist not at $PLIST\"; exit 1; fi\nshortVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$PLIST\" 2>/dev/null || echo \"1.0\")\nnewShort=$(echo \"$shortVersion\" | awk '{printf \"%.2f\", $1+0.01}')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $newShort\" \"$PLIST\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion 1\" \"$PLIST\"\necho \"Archive version: $newShort (1)\"\n";
+		};
+		953FA3B42F55E0A8009A8589 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nPLIST=\"${SRCROOT}/Amortized/Info.plist\"\nif [ ! -f \"$PLIST\" ]; then echo \"error: Info.plist not at $PLIST\"; exit 1; fi\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PLIST\" 2>/dev/null || echo \"0\")\nif [[ \"$buildNumber\" =~ ^[0-9]+$ ]]; then next=$((buildNumber + 1)); else next=1; fi\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $next\" \"$PLIST\"\necho \"Build number: $next\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
