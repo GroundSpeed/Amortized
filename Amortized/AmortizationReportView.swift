@@ -27,8 +27,8 @@ struct AmortizationReportView: View {
             .padding(.bottom, 32)
         }
         .background(Color(.systemGroupedBackground))
-        .navigationTitle("Loan Amortization Schedule")
-        .navigationBarTitleDisplayMode(.large)
+        .navigationTitle("Amortization Schedule")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
@@ -83,9 +83,6 @@ struct AmortizationReportView: View {
             divider
             DetailRow(label: "Optional extra payments", value: extraPaymentFormatted)
                 .accessibilityLabel("Optional extra payment per period")
-            divider
-            DetailRow(label: "Lender name", value: viewModel.lenderName.isEmpty ? "—" : viewModel.lenderName)
-                .accessibilityLabel("Lender name")
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
