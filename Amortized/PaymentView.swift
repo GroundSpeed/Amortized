@@ -4,6 +4,7 @@ import AVFoundation
 
 struct PaymentView: View {
     @StateObject private var viewModel = PaymentViewModel()
+    @State private var showAmortizationReport = false
 
     var body: some View {
         NavigationStack {
@@ -26,45 +27,61 @@ struct PaymentView: View {
 
                     // Input Form
                     Form {
-                        HStack {
-                            Text("Amount")
-                            Spacer()
-                            TextField("$0.00", text: $viewModel.amount)
-                                .keyboardType(.decimalPad)
-                                .multilineTextAlignment(.trailing)
-                                .foregroundColor(viewModel.amount.isEmpty ? .secondary : .primary)
-                                .font(.body)
-                                .accessibilityLabel("Amount")
+                        Section {
+                            HStack {
+                                Text("Amount")
+                                Spacer()
+                                TextField("$0.00", text: $viewModel.amount)
+                                    .keyboardType(.decimalPad)
+                                    .multilineTextAlignment(.trailing)
+                                    .foregroundColor(viewModel.amount.isEmpty ? .secondary : .primary)
+                                    .font(.body)
+                                    .accessibilityLabel("Amount")
+                            }
+                            HStack {
+                                Text("Down Payment")
+                                Spacer()
+                                TextField("$0.00", text: $viewModel.downPayment)
+                                    .keyboardType(.decimalPad)
+                                    .multilineTextAlignment(.trailing)
+                                    .foregroundColor(viewModel.downPayment.isEmpty ? .secondary : .primary)
+                                    .font(.body)
+                                    .accessibilityLabel("Down Payment")
+                            }
+                            HStack {
+                                Text("Interest Rate")
+                                Spacer()
+                                TextField("%", text: $viewModel.interestRate)
+                                    .keyboardType(.decimalPad)
+                                    .multilineTextAlignment(.trailing)
+                                    .foregroundColor(viewModel.interestRate.isEmpty ? .secondary : .primary)
+                                    .font(.body)
+                                    .accessibilityLabel("Interest Rate")
+                            }
+                            HStack {
+                                Text("Term")
+                                Spacer()
+                                TextField("Years", text: $viewModel.term)
+                                    .keyboardType(.numberPad)
+                                    .multilineTextAlignment(.trailing)
+                                    .foregroundColor(viewModel.term.isEmpty ? .secondary : .primary)
+                                    .font(.body)
+                                    .accessibilityLabel("Term")
+                            }
                         }
-                        HStack {
-                            Text("Down Payment")
-                            Spacer()
-                            TextField("$0.00", text: $viewModel.downPayment)
-                                .keyboardType(.decimalPad)
-                                .multilineTextAlignment(.trailing)
-                                .foregroundColor(viewModel.downPayment.isEmpty ? .secondary : .primary)
-                                .font(.body)
-                                .accessibilityLabel("Down Payment")
-                        }
-                        HStack {
-                            Text("Interest Rate")
-                            Spacer()
-                            TextField("%", text: $viewModel.interestRate)
-                                .keyboardType(.decimalPad)
-                                .multilineTextAlignment(.trailing)
-                                .foregroundColor(viewModel.interestRate.isEmpty ? .secondary : .primary)
-                                .font(.body)
-                                .accessibilityLabel("Interest Rate")
-                        }
-                        HStack {
-                            Text("Term")
-                            Spacer()
-                            TextField("Years", text: $viewModel.term)
-                                .keyboardType(.numberPad)
-                                .multilineTextAlignment(.trailing)
-                                .foregroundColor(viewModel.term.isEmpty ? .secondary : .primary)
-                                .font(.body)
-                                .accessibilityLabel("Term")
+                        Section(header: Text("Schedule options")) {
+                            DatePicker("Start date of loan", selection: $viewModel.startDate, displayedComponents: .date)
+                                .accessibilityLabel("Start date of loan")
+                            HStack {
+                                Text("Extra payment")
+                                Spacer()
+                                TextField("$0.00", text: $viewModel.extraPayment)
+                                    .keyboardType(.decimalPad)
+                                    .multilineTextAlignment(.trailing)
+                                    .foregroundColor(viewModel.extraPayment.isEmpty ? .secondary : .primary)
+                                    .font(.body)
+                                    .accessibilityLabel("Optional extra payment per period")
+                            }
                         }
                     }
                     .scrollContentBackground(.hidden)
@@ -98,6 +115,19 @@ struct PaymentView: View {
                                 .cornerRadius(12)
                         }
                         .padding(.horizontal, 16)
+
+                        if viewModel.canShowReport {
+                            Button {
+                                dismissKeyboard()
+                                showAmortizationReport = true
+                            } label: {
+                                Text("View Schedule")
+                                    .foregroundColor(Color(red: 0.058, green: 0.439, blue: 0.192))
+                                    .frame(maxWidth: .infinity)
+                                    .frame(minHeight: 44)
+                            }
+                            .padding(.horizontal, 16)
+                        }
                     }
 
                     Spacer()
@@ -112,6 +142,9 @@ struct PaymentView: View {
                     }
                     .accessibilityLabel(viewModel.soundOn ? "Sound on" : "Sound off")
                 }
+            }
+            .navigationDestination(isPresented: $showAmortizationReport) {
+                AmortizationReportView(viewModel: viewModel)
             }
         } // NavigationStack
     }
@@ -130,6 +163,33 @@ class PaymentViewModel: ObservableObject {
     @Published var paymentAmount = "0.00"
     @Published var soundOn = false
 
+    // Schedule / report inputs
+    @Published var startDate = PaymentViewModel.firstDayOfNextMonth
+
+    private static var firstDayOfNextMonth: Date {
+        let cal = Calendar.current
+        let now = Date()
+        guard let nextMonth = cal.date(byAdding: .month, value: 1, to: now),
+              let first = cal.date(from: cal.dateComponents([.year, .month], from: nextMonth)) else { return now }
+        return first
+    }
+    @Published var extraPayment = ""
+    @Published var lenderName = ""
+    @Published var paymentsPerYear: Int = 12
+
+    // Amortization schedule (populated after calculate)
+    @Published var paymentSchedule: [AmortizationScheduleRow] = []
+    @Published var amortizationSummary: AmortizationSummary?
+
+    var canShowReport: Bool { !paymentSchedule.isEmpty }
+
+    /// Loan amount (principal) for report display.
+    var loanAmount: Double {
+        let amt = Double(amount) ?? 0
+        let dp = Double(downPayment) ?? 0
+        return max(0, amt - dp)
+    }
+
     private let speechSynthesizer = AVSpeechSynthesizer()
 
     func calculate() {
@@ -147,11 +207,33 @@ class PaymentViewModel: ObservableObject {
 
         if payment.isNaN || payment.isInfinite {
             paymentAmount = "You must enter all required fields."
+            paymentSchedule = []
+            amortizationSummary = nil
         } else {
             paymentAmount = String(format: "%.02f", payment)
             if soundOn {
                 speak(words: paymentAmount)
             }
+
+            let principal = amt - dp
+            guard principal > 0, t > 0 else {
+                paymentSchedule = []
+                amortizationSummary = nil
+                return
+            }
+
+            let extra = Double(extraPayment) ?? 0
+            let years = Int(t)
+            let result = PaymentService.shared.buildAmortizationSchedule(
+                loanAmount: Double(principal),
+                annualRate: Double(rate),
+                loanPeriodYears: years,
+                paymentsPerYear: paymentsPerYear,
+                startDate: startDate,
+                extraPayment: max(0, extra)
+            )
+            paymentSchedule = result.schedule
+            amortizationSummary = result.summary
         }
     }
 
@@ -161,6 +243,9 @@ class PaymentViewModel: ObservableObject {
         interestRate = ""
         term = ""
         paymentAmount = "0.00"
+        startDate = PaymentViewModel.firstDayOfNextMonth
+        paymentSchedule = []
+        amortizationSummary = nil
     }
 
     func toggleSound() {
