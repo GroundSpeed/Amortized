@@ -57,7 +57,7 @@ struct PaymentService {
         let scheduledPayment = Double(pmt)
         let scheduledNumberOfPayments = loanPeriodYears * paymentsPerYear
         let ratePerPeriod = annualRate / 100.0 / Double(paymentsPerYear)
-        var calendar = Calendar.current
+        let calendar = Calendar.current
 
         var schedule: [AmortizationScheduleRow] = []
         var balance = loanAmount

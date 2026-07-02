@@ -35,7 +35,7 @@ struct SplashScreen: View {
                 .frame(maxWidth: .infinity)
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
-            .background(Color("Background").ignoresSafeArea()) // Assuming a color set for adaptive bg
+            .background(Color(.systemBackground).ignoresSafeArea()) // adaptive light/dark background
         }
         .preferredColorScheme(.none) // adaptive for light/dark mode
     }
