@@ -212,7 +212,7 @@ struct AmortizationReportView: View {
     }
 
     private func exportCSV() {
-        let csv = buildCSV()
+        _ = buildCSV()
         // Stub: in a full implementation, write to temp file and present share sheet
         exportMessage = "CSV export prepared (\(schedule.count) rows). Share integration coming soon."
         showExportAlert = true
