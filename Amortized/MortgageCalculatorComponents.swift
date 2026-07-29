@@ -9,7 +9,7 @@ enum PaymentSection: String, CaseIterable, Identifiable {
 
     var systemImage: String {
         switch self {
-        case .calculator: "calculator"
+        case .calculator: "rectangle.grid.3x2.fill"
         case .schedule: "calendar"
         }
     }

@@ -27,7 +27,7 @@ struct AmortizedApp: App {
                     TabView {
                         PaymentView()
                             .tabItem {
-                                Image(systemName: "rectangle.grid.3x2.fill")
+                                Image(systemName: "rectangle.grid.3x3.fill")
                                 Text("Calculate")
                             }
 
