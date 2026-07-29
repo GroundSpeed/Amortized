@@ -40,30 +40,34 @@ struct PaymentView: View {
     }
 
     private var calculatorContent: some View {
-        ScrollView {
-            VStack(spacing: 12) {
-                inputCard
+        ZStack {
+            Color.clear
+                .contentShape(Rectangle())
+                .onTapGesture { dismissKeyboard() }
 
-                if let validationMessage = viewModel.validationMessage {
-                    Label(validationMessage, systemImage: "exclamationmark.circle.fill")
-                        .font(.footnote)
-                        .foregroundStyle(.red)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .accessibilityLabel("Input error. \(validationMessage)")
+            ScrollView {
+                VStack(spacing: 12) {
+                    inputCard
+
+                    if let validationMessage = viewModel.validationMessage {
+                        Label(validationMessage, systemImage: "exclamationmark.circle.fill")
+                            .font(.footnote)
+                            .foregroundStyle(.red)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .accessibilityLabel("Input error. \(validationMessage)")
+                    }
+
+                    actionButtons
+
+                    PaymentPreviewCard(paymentAmount: viewModel.paymentAmount)
+                    LoanSummaryCard(summary: viewModel.amortizationSummary)
+                    scheduleButton
                 }
-
-                actionButtons
-
-                PaymentPreviewCard(paymentAmount: viewModel.paymentAmount)
-                LoanSummaryCard(summary: viewModel.amortizationSummary)
-                scheduleButton
+                .padding(.horizontal, MortgageClarityTheme.Spacing.standard)
+                .padding(.bottom, MortgageClarityTheme.Spacing.section)
             }
-            .padding(.horizontal, MortgageClarityTheme.Spacing.standard)
-            .padding(.bottom, MortgageClarityTheme.Spacing.section)
+            .scrollDismissesKeyboard(.interactively)
         }
-        .scrollDismissesKeyboard(.interactively)
-        .contentShape(Rectangle())
-        .onTapGesture { dismissKeyboard() }
     }
 
     private var inputCard: some View {
