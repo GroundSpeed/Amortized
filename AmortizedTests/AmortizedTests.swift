@@ -1,9 +1,20 @@
 import XCTest
 @testable import Amortized
 
+// MARK: - Report Formatter Tests
+
+final class ReportFormatterTests: XCTestCase {
+
+    func testPercentFormatsWholePercentInput() {
+        XCTAssertEqual(ReportFormatters.percent(6.41), "6.41%")
+    }
+}
+
 // MARK: - PaymentService Tests
 
 final class PaymentServiceTests: XCTestCase {
+
+    private let fixedStartDate = Date(timeIntervalSince1970: 1_704_067_200)
 
     func testMonthlyPayment_30Year_7Percent() {
         // $300k, 30yr, 7% → ~$1,995.91
@@ -42,6 +53,82 @@ final class PaymentServiceTests: XCTestCase {
             amount: 0, downPayment: 0, term: 0, interestRate: 0
         )
         XCTAssertTrue(result.isNaN)
+    }
+
+    func testExtraPaymentImprovesPayoffAndTotals() throws {
+        let standard = PaymentService.shared.buildAmortizationSchedule(
+            loanAmount: 300_000,
+            annualRate: 7,
+            loanPeriodYears: 30,
+            paymentsPerYear: 12,
+            startDate: fixedStartDate,
+            extraPayment: 0
+        )
+        let accelerated = PaymentService.shared.buildAmortizationSchedule(
+            loanAmount: 300_000,
+            annualRate: 7,
+            loanPeriodYears: 30,
+            paymentsPerYear: 12,
+            startDate: fixedStartDate,
+            extraPayment: 250
+        )
+
+        let standardPayoff = try XCTUnwrap(standard.summary.payoffDate)
+        let acceleratedPayoff = try XCTUnwrap(accelerated.summary.payoffDate)
+
+        XCTAssertLessThan(accelerated.summary.actualNumberOfPayments, standard.summary.actualNumberOfPayments)
+        XCTAssertLessThan(acceleratedPayoff, standardPayoff)
+        XCTAssertLessThan(accelerated.summary.totalInterest, standard.summary.totalInterest)
+        XCTAssertLessThan(accelerated.summary.totalPaid, standard.summary.totalPaid)
+        XCTAssertGreaterThan(accelerated.summary.totalEarlyPayments, 0)
+    }
+
+    func testFinalPaymentDoesNotOverpayRemainingBalance() throws {
+        let result = PaymentService.shared.buildAmortizationSchedule(
+            loanAmount: 300_000,
+            annualRate: 7,
+            loanPeriodYears: 30,
+            paymentsPerYear: 12,
+            startDate: fixedStartDate,
+            extraPayment: 10_000
+        )
+        let finalPayment = try XCTUnwrap(result.schedule.last)
+
+        XCTAssertEqual(finalPayment.principal, finalPayment.beginningBalance, accuracy: 0.001)
+        XCTAssertEqual(
+            finalPayment.totalPayment,
+            finalPayment.beginningBalance + finalPayment.interest,
+            accuracy: 0.001
+        )
+        XCTAssertEqual(finalPayment.endingBalance, 0, accuracy: 0.001)
+    }
+
+    func testSummaryTotalPaidMatchesActualSchedulePayments() {
+        let result = PaymentService.shared.buildAmortizationSchedule(
+            loanAmount: 240_000,
+            annualRate: 6.41,
+            loanPeriodYears: 30,
+            paymentsPerYear: 12,
+            startDate: fixedStartDate,
+            extraPayment: 175
+        )
+        let scheduleTotal = result.schedule.reduce(0) { $0 + $1.totalPayment }
+
+        XCTAssertFalse(result.schedule.isEmpty)
+        XCTAssertEqual(result.summary.totalPaid, scheduleTotal, accuracy: 0.001)
+    }
+
+    func testSummaryPayoffDateMatchesLastScheduleEntry() throws {
+        let result = PaymentService.shared.buildAmortizationSchedule(
+            loanAmount: 240_000,
+            annualRate: 6.41,
+            loanPeriodYears: 30,
+            paymentsPerYear: 12,
+            startDate: fixedStartDate,
+            extraPayment: 175
+        )
+
+        XCTAssertEqual(result.summary.payoffDate, try XCTUnwrap(result.schedule.last).paymentDate)
     }
 }
 
@@ -100,7 +187,12 @@ final class PaymentViewModelTests: XCTestCase {
         XCTAssertEqual(vm.downPayment, "")
         XCTAssertEqual(vm.interestRate, "")
         XCTAssertEqual(vm.term, "")
+        XCTAssertEqual(vm.extraPayment, "")
         XCTAssertEqual(vm.paymentAmount, "0.00")
+        XCTAssertTrue(vm.paymentSchedule.isEmpty)
+        XCTAssertNil(vm.amortizationSummary)
+        XCTAssertNil(vm.validationMessage)
+        XCTAssertFalse(vm.canShowReport)
         XCTAssertFalse(vm.soundOn)
     }
 
@@ -115,36 +207,126 @@ final class PaymentViewModelTests: XCTestCase {
         let result = Float(vm.paymentAmount)
         XCTAssertNotNil(result, "paymentAmount should be a parseable number")
         XCTAssertEqual(result!, 1995.91, accuracy: 0.5)
+        XCTAssertFalse(vm.paymentSchedule.isEmpty)
+        XCTAssertNotNil(vm.amortizationSummary)
+        XCTAssertTrue(vm.canShowReport)
     }
 
     func testCalculate_emptyInputs_showsErrorMessage() {
         let vm = PaymentViewModel()
         vm.calculate()
-        XCTAssertEqual(vm.paymentAmount, "You must enter all required fields.")
+        XCTAssertEqual(vm.paymentAmount, "0.00")
+        XCTAssertNotNil(vm.validationMessage)
+        XCTAssertFalse(vm.canShowReport)
     }
 
     func testCalculate_missingRateAndTerm_showsErrorMessage() {
         let vm = PaymentViewModel()
         vm.amount = "300000"
-        // rate and term default to 0 → PMT formula yields NaN
         vm.calculate()
-        XCTAssertEqual(vm.paymentAmount, "You must enter all required fields.")
+        XCTAssertEqual(vm.paymentAmount, "0.00")
+        XCTAssertNotNil(vm.validationMessage)
+        XCTAssertTrue(vm.paymentSchedule.isEmpty)
+        XCTAssertNil(vm.amortizationSummary)
     }
 
     func testClear_resetsAllFields() {
         let vm = PaymentViewModel()
-        vm.amount = "300000"
-        vm.downPayment = "60000"
-        vm.interestRate = "7.0"
-        vm.term = "30"
-        vm.paymentAmount = "1800.00"
+        let defaultStartDate = vm.startDate
+        configureValidLoan(vm)
+        vm.extraPayment = "200"
+        vm.calculate()
+        XCTAssertTrue(vm.canShowReport)
+
+        vm.validationMessage = "Old validation"
+        vm.startDate = Date(timeIntervalSince1970: 1_800_000_000)
         vm.clear()
 
         XCTAssertEqual(vm.amount, "")
         XCTAssertEqual(vm.downPayment, "")
         XCTAssertEqual(vm.interestRate, "")
         XCTAssertEqual(vm.term, "")
+        XCTAssertEqual(vm.extraPayment, "")
+        XCTAssertEqual(vm.startDate, defaultStartDate)
         XCTAssertEqual(vm.paymentAmount, "0.00")
+        XCTAssertTrue(vm.paymentSchedule.isEmpty)
+        XCTAssertNil(vm.amortizationSummary)
+        XCTAssertNil(vm.validationMessage)
+        XCTAssertFalse(vm.canShowReport)
+    }
+
+    func testEditingInputInvalidatesExistingResultsImmediately() {
+        let vm = PaymentViewModel()
+        configureValidLoan(vm)
+        vm.calculate()
+        XCTAssertTrue(vm.canShowReport)
+
+        vm.amount = ""
+
+        XCTAssertEqual(vm.paymentAmount, "0.00")
+        XCTAssertTrue(vm.paymentSchedule.isEmpty)
+        XCTAssertNil(vm.amortizationSummary)
+        XCTAssertFalse(vm.canShowReport)
+
+        vm.calculate()
+        XCTAssertNotNil(vm.validationMessage)
+        XCTAssertFalse(vm.canShowReport)
+    }
+
+    func testDownPaymentGreaterThanLoanAmountIsRejected() {
+        let vm = PaymentViewModel()
+        configureValidLoan(vm)
+        vm.downPayment = "300001"
+
+        vm.calculate()
+
+        XCTAssertEqual(vm.validationMessage, "Down payment must be less than the loan amount.")
+        XCTAssertEqual(vm.paymentAmount, "0.00")
+        XCTAssertFalse(vm.canShowReport)
+    }
+
+    func testNegativeInputsAreRejected() {
+        let vm = PaymentViewModel()
+        configureValidLoan(vm)
+        vm.downPayment = "-1"
+        vm.calculate()
+        XCTAssertEqual(vm.validationMessage, "Down payment cannot be negative.")
+        XCTAssertFalse(vm.canShowReport)
+
+        configureValidLoan(vm)
+        vm.extraPayment = "-1"
+        vm.calculate()
+        XCTAssertEqual(vm.validationMessage, "Extra payment cannot be negative.")
+        XCTAssertFalse(vm.canShowReport)
+
+        configureValidLoan(vm)
+        vm.amount = "-300000"
+        vm.calculate()
+        XCTAssertNotNil(vm.validationMessage)
+        XCTAssertFalse(vm.canShowReport)
+
+        configureValidLoan(vm)
+        vm.interestRate = "-7"
+        vm.calculate()
+        XCTAssertNotNil(vm.validationMessage)
+        XCTAssertFalse(vm.canShowReport)
+
+        configureValidLoan(vm)
+        vm.term = "-30"
+        vm.calculate()
+        XCTAssertNotNil(vm.validationMessage)
+        XCTAssertFalse(vm.canShowReport)
+    }
+
+    func testScheduleUnavailableBeforeValidCalculation() {
+        let vm = PaymentViewModel()
+        XCTAssertFalse(vm.canShowReport)
+
+        configureValidLoan(vm)
+        XCTAssertFalse(vm.canShowReport)
+
+        vm.calculate()
+        XCTAssertTrue(vm.canShowReport)
     }
 
     func testToggleSound_flipsState() {
@@ -154,6 +336,13 @@ final class PaymentViewModelTests: XCTestCase {
         XCTAssertTrue(vm.soundOn)
         vm.toggleSound()
         XCTAssertFalse(vm.soundOn)
+    }
+
+    private func configureValidLoan(_ vm: PaymentViewModel) {
+        vm.amount = "300000"
+        vm.downPayment = "0"
+        vm.interestRate = "7.0"
+        vm.term = "30"
     }
 }
 

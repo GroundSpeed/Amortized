@@ -28,4 +28,16 @@ struct AmortizationSummary {
     let actualNumberOfPayments: Int
     let totalEarlyPayments: Double
     let totalInterest: Double
+    let totalPaid: Double
+    let payoffDate: Date?
+
+    static let empty = AmortizationSummary(
+        scheduledPayment: 0,
+        scheduledNumberOfPayments: 0,
+        actualNumberOfPayments: 0,
+        totalEarlyPayments: 0,
+        totalInterest: 0,
+        totalPaid: 0,
+        payoffDate: nil
+    )
 }

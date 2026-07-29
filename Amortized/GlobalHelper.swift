@@ -43,7 +43,7 @@ struct PaymentService {
         extraPayment: Double
     ) -> (schedule: [AmortizationScheduleRow], summary: AmortizationSummary) {
         guard loanAmount > 0, loanPeriodYears > 0, paymentsPerYear > 0, annualRate >= 0 else {
-            return ([], AmortizationSummary(scheduledPayment: 0, scheduledNumberOfPayments: 0, actualNumberOfPayments: 0, totalEarlyPayments: 0, totalInterest: 0))
+            return ([], .empty)
         }
 
         let principal = Float(loanAmount)
@@ -51,7 +51,7 @@ struct PaymentService {
         let term = Float(loanPeriodYears)
         let pmt = calculateMonthlyPayment(amount: principal, downPayment: 0, term: term, interestRate: rate)
         guard pmt.isFinite, !pmt.isNaN, pmt > 0 else {
-            return ([], AmortizationSummary(scheduledPayment: 0, scheduledNumberOfPayments: 0, actualNumberOfPayments: 0, totalEarlyPayments: 0, totalInterest: 0))
+            return ([], .empty)
         }
 
         let scheduledPayment = Double(pmt)
@@ -62,6 +62,8 @@ struct PaymentService {
         var schedule: [AmortizationScheduleRow] = []
         var balance = loanAmount
         var cumulativeInterest: Double = 0
+        var totalEarlyPayments: Double = 0
+        var totalPaid: Double = 0
         var paymentNumber = 1
 
         while balance > 0 && paymentNumber <= scheduledNumberOfPayments * 2 {
@@ -69,15 +71,16 @@ struct PaymentService {
             let interest = beginningBalance * ratePerPeriod
             cumulativeInterest += interest
 
-            var principalPortion = scheduledPayment - interest
-            if principalPortion > beginningBalance { principalPortion = beginningBalance }
-            if principalPortion < 0 { principalPortion = 0 }
-
-            let extra = extraPayment
-            let totalPrincipal = principalPortion + extra
-            let totalPayment = scheduledPayment + extra
-            balance = beginningBalance - totalPrincipal
-            if balance < 0 { balance = 0 }
+            let plannedPrincipal = max(0, scheduledPayment - interest)
+            let scheduledPrincipal = min(plannedPrincipal, beginningBalance)
+            let balanceAfterScheduledPayment = beginningBalance - scheduledPrincipal
+            let appliedExtraPayment = min(max(0, extraPayment), balanceAfterScheduledPayment)
+            let totalPrincipal = scheduledPrincipal + appliedExtraPayment
+            let appliedScheduledPayment = interest + scheduledPrincipal
+            let totalPayment = appliedScheduledPayment + appliedExtraPayment
+            balance = max(0, beginningBalance - totalPrincipal)
+            totalEarlyPayments += appliedExtraPayment
+            totalPaid += totalPayment
 
             let paymentDate = calendar.date(byAdding: .month, value: paymentNumber, to: startDate) ?? startDate
 
@@ -85,8 +88,8 @@ struct PaymentService {
                 paymentNumber: paymentNumber,
                 paymentDate: paymentDate,
                 beginningBalance: beginningBalance,
-                scheduledPayment: scheduledPayment,
-                extraPayment: extra,
+                scheduledPayment: appliedScheduledPayment,
+                extraPayment: appliedExtraPayment,
                 totalPayment: totalPayment,
                 principal: totalPrincipal,
                 interest: interest,
@@ -99,7 +102,6 @@ struct PaymentService {
         }
 
         let actualNumberOfPayments = schedule.count
-        let totalEarlyPayments = extraPayment * Double(actualNumberOfPayments)
         let totalInterest = cumulativeInterest
 
         let summary = AmortizationSummary(
@@ -107,7 +109,9 @@ struct PaymentService {
             scheduledNumberOfPayments: scheduledNumberOfPayments,
             actualNumberOfPayments: actualNumberOfPayments,
             totalEarlyPayments: totalEarlyPayments,
-            totalInterest: totalInterest
+            totalInterest: totalInterest,
+            totalPaid: totalPaid,
+            payoffDate: schedule.last?.paymentDate
         )
 
         return (schedule, summary)

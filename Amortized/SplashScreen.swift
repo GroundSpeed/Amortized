@@ -5,7 +5,7 @@ struct SplashScreen: View {
         GeometryReader { geometry in
             VStack {
                 // Title at the top
-                Text("Amortized")
+                Text("Mortgage Clarity")
                     .font(.largeTitle.bold())
                     .padding(.top, geometry.safeAreaInsets.top + 20)
                     .frame(maxWidth: .infinity, alignment: .center)
