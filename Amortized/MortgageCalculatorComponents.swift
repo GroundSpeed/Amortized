@@ -80,6 +80,9 @@ struct MortgageTextFieldRow: View {
         HStack(spacing: 12) {
             Text(label)
                 .foregroundStyle(MortgageClarityTheme.primaryText)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
+                .layoutPriority(1)
 
             Spacer(minLength: 16)
 
@@ -88,7 +91,7 @@ struct MortgageTextFieldRow: View {
                 .multilineTextAlignment(.trailing)
                 .foregroundStyle(MortgageClarityTheme.brandAccent)
                 .fontWeight(text.isEmpty ? .regular : .semibold)
-                .frame(minWidth: 100)
+                .frame(minWidth: 72, idealWidth: 100)
                 .accessibilityLabel(label)
 
             if let suffix, !text.isEmpty {
