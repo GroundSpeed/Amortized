@@ -19,6 +19,7 @@ struct AmortizationReportView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
+                reportHeader
                 loanDetailsCard
                 loanSummaryCard
                 paymentScheduleSection
@@ -26,38 +27,53 @@ struct AmortizationReportView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 32)
         }
-        .background(Color(.systemGroupedBackground))
-        .navigationTitle("Amortization Schedule")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Menu {
-                    Button {
-                        exportPDF()
-                    } label: {
-                        Label("Export PDF", systemImage: "doc.richtext")
-                    }
-                    Button {
-                        exportCSV()
-                    } label: {
-                        Label("Export CSV", systemImage: "table")
-                    }
-                    Button {
-                        shareReport()
-                    } label: {
-                        Label("Share Report", systemImage: "square.and.arrow.up")
-                    }
-                } label: {
-                    Image(systemName: "square.and.arrow.up")
-                }
-                .accessibilityLabel("Export and share options")
-            }
-        }
+        .background(MortgageClarityTheme.screenBackground)
         .alert("Export", isPresented: $showExportAlert) {
             Button("OK", role: .cancel) {}
         } message: {
             if let msg = exportMessage { Text(msg) }
         }
+    }
+
+    // MARK: - Report Header
+
+    private var reportHeader: some View {
+        HStack(alignment: .center, spacing: 12) {
+            Text("Amortization Schedule")
+                .font(.title3.bold())
+                .foregroundStyle(MortgageClarityTheme.primaryText)
+
+            Spacer()
+
+            Menu {
+                Button {
+                    exportPDF()
+                } label: {
+                    Label("Export PDF", systemImage: "doc.richtext")
+                }
+                Button {
+                    exportCSV()
+                } label: {
+                    Label("Export CSV", systemImage: "table")
+                }
+                Button {
+                    shareReport()
+                } label: {
+                    Label("Share Report", systemImage: "square.and.arrow.up")
+                }
+            } label: {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.body.weight(.semibold))
+                    .frame(width: 44, height: 44)
+                    .background(
+                        MortgageClarityTheme.brandAccent.opacity(0.12),
+                        in: Circle()
+                    )
+            }
+            .foregroundStyle(MortgageClarityTheme.brandAccent)
+            .accessibilityLabel("Export and share options")
+        }
+        .padding(.top, 4)
     }
 
     // MARK: - Loan Details Card
@@ -86,8 +102,8 @@ struct AmortizationReportView: View {
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(.secondarySystemGroupedBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .mortgageClarityCard()
+        .accessibilityElement(children: .contain)
     }
 
     private var rateFormatted: String {
@@ -121,8 +137,8 @@ struct AmortizationReportView: View {
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(.secondarySystemGroupedBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .mortgageClarityCard()
+        .accessibilityElement(children: .contain)
     }
 
     @ViewBuilder
@@ -137,7 +153,7 @@ struct AmortizationReportView: View {
                     .fontWeight(.semibold)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .accessibilityElement(children: .combine)
+            .accessibilityElement(children: .ignore)
             .accessibilityLabel("Scheduled payment")
             .accessibilityValue(ReportFormatters.currency(s.scheduledPayment))
 
@@ -149,6 +165,13 @@ struct AmortizationReportView: View {
                 .accessibilityLabel("Total early payments")
             DetailRow(label: "Total interest", value: ReportFormatters.currency(s.totalInterest))
                 .accessibilityLabel("Total interest")
+            DetailRow(label: "Total paid", value: ReportFormatters.currency(s.totalPaid))
+                .accessibilityLabel("Total paid")
+            DetailRow(
+                label: "Payoff date",
+                value: s.payoffDate.map(ReportFormatters.shortDate) ?? "—"
+            )
+            .accessibilityLabel("Payoff date")
         }
     }
 
@@ -171,7 +194,7 @@ struct AmortizationReportView: View {
                 }
                 .padding(.horizontal, 4)
             }
-            .background(Color(.secondarySystemGroupedBackground))
+            .background(MortgageClarityTheme.cardBackground)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
         }
     }
@@ -241,16 +264,36 @@ struct DetailRow: View {
     let value: String
 
     var body: some View {
-        HStack {
-            Text(label)
-                .font(.body)
-                .foregroundColor(.primary)
-            Spacer()
-            Text(value)
-                .font(.body)
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.trailing)
+        ViewThatFits(in: .horizontal) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                labelText
+                Spacer(minLength: 12)
+                valueText
+                    .multilineTextAlignment(.trailing)
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                labelText
+                valueText
+                    .multilineTextAlignment(.leading)
+            }
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityValue(value)
+    }
+
+    private var labelText: some View {
+        Text(label)
+            .font(.body)
+            .foregroundStyle(MortgageClarityTheme.primaryText)
+    }
+
+    private var valueText: some View {
+        Text(value)
+            .font(.body)
+            .foregroundStyle(MortgageClarityTheme.secondaryText)
     }
 }
 

@@ -37,6 +37,13 @@ enum ReportFormatters {
         return f
     }()
 
+    private static let monthYearFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.locale = Locale.current
+        f.setLocalizedDateFormatFromTemplate("MMM yyyy")
+        return f
+    }()
+
     /// Format as currency, e.g. "$1,207.47"
     static func currency(_ value: Double) -> String {
         currencyFormatter.string(from: NSNumber(value: value)) ?? String(format: "%.2f", value)
@@ -44,11 +51,16 @@ enum ReportFormatters {
 
     /// Format as percent, e.g. "7.89%"
     static func percent(_ value: Double) -> String {
-        percentFormatter.string(from: NSNumber(value: value / 100)) ?? String(format: "%.2f%%", value)
+        percentFormatter.string(from: NSNumber(value: value)) ?? String(format: "%.2f%%", value)
     }
 
     /// Format as short date, e.g. "4/21/2025"
     static func shortDate(_ date: Date) -> String {
         shortDateFormatter.string(from: date)
+    }
+
+    /// Format a compact payoff date, e.g. "May 2044".
+    static func monthYear(_ date: Date) -> String {
+        monthYearFormatter.string(from: date)
     }
 }

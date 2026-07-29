@@ -11,6 +11,9 @@
 		952A77E41C3762F700B2A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E31C3762F700B2A2B6 /* Assets.xcassets */; };
 		952A77E71C3762F700B2A2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */; };
 		9552FCED2F55CE0200D39736 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552FCEC2F55CE0200D39736 /* SplashScreen.swift */; };
+		95D200012F70000100D20001 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D200012F70000100D20002 /* DesignSystem.swift */; };
+		95D200012F70000100D20003 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D200012F70000100D20004 /* PlaceholderView.swift */; };
+		95D300012F70000100D30001 /* MortgageCalculatorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D300012F70000100D30002 /* MortgageCalculatorComponents.swift */; };
 		95C4EA802E21F2FC0096A6AA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */; };
 		95C4EA812E21F2FC0096A6AA /* RatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */; };
 		95C4EA832E21F3190096A6AA /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C4EA822E21F3190096A6AA /* Rates.swift */; };
@@ -40,6 +43,9 @@
 		952A77E81C3762F700B2A2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		952A77ED1C3762F700B2A2B6 /* AmortizedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmortizedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9552FCEC2F55CE0200D39736 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		95D200012F70000100D20002 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		95D200012F70000100D20004 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		95D300012F70000100D30002 /* MortgageCalculatorComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorComponents.swift; sourceTree = "<group>"; };
 		95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesView.swift; sourceTree = "<group>"; };
 		95C4EA822E21F3190096A6AA /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
@@ -104,7 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				95C4EA892E21F2FC0096A6AA /* AmortizationReportView.swift */,
+				95D300012F70000100D30002 /* MortgageCalculatorComponents.swift */,
 				95C4EA7E2E21F2FC0096A6AA /* PaymentView.swift */,
+				95D200012F70000100D20004 /* PlaceholderView.swift */,
 				95C4EA7F2E21F2FC0096A6AA /* RatesView.swift */,
 			);
 			name = Views;
@@ -124,6 +132,7 @@
 			children = (
 				95C4EA842E2201F20096A6AA /* ApiService.swift */,
 				95C4EA842E2201F20096A6AB /* AmortizedApp.swift */,
+				95D200012F70000100D20002 /* DesignSystem.swift */,
 				952A77E31C3762F700B2A2B6 /* Assets.xcassets */,
 				952A77E51C3762F700B2A2B6 /* LaunchScreen.storyboard */,
 				952A77E81C3762F700B2A2B6 /* Info.plist */,
@@ -286,12 +295,15 @@
 			files = (
 				95C4EA8A2E21F3190096A6AA /* AmortizationModels.swift in Sources */,
 				95C4EA8C2E21F2FC0096A6AA /* AmortizationReportView.swift in Sources */,
+				95D200012F70000100D20001 /* DesignSystem.swift in Sources */,
+				95D300012F70000100D30001 /* MortgageCalculatorComponents.swift in Sources */,
 				95C4EA8B2E21F3190096A6AA /* ReportFormatters.swift in Sources */,
 				95C4EA832E21F3190096A6AA /* Rates.swift in Sources */,
 				95C4EA802E21F2FC0096A6AA /* PaymentView.swift in Sources */,
 				9552FCED2F55CE0200D39736 /* SplashScreen.swift in Sources */,
 				95C4EA852E2201F20096A6AA /* ApiService.swift in Sources */,
 				95C4EA812E21F2FC0096A6AA /* RatesView.swift in Sources */,
+				95D200012F70000100D20003 /* PlaceholderView.swift in Sources */,
 				95265B2E1C39CCC600987976 /* GlobalHelper.swift in Sources */,
 				95C4EA862E2201F20096A6AB /* AmortizedApp.swift in Sources */,
 			);
